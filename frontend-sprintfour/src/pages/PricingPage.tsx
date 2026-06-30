@@ -1,206 +1,129 @@
 import { useTriageStore } from "@/store/useTriageStore";
 
+const FREE_FEATURES = [
+  { text: "Batch Triage workflow", included: true },
+  { text: "Regex PII detection", included: true },
+  { text: "Click-based document review", included: true },
+  { text: "Export redacted documents", included: true },
+  { text: "AI-enhanced detection", included: false },
+  { text: "Vim Mode (keyboard triage)", included: false },
+  { text: "Priority processing queue", included: false },
+  { text: "Unlimited documents", included: false },
+];
+
+const PRO_FEATURES = [
+  { text: "Unlimited documents", highlight: true },
+  { text: "AI + Regex hybrid detection", highlight: true },
+  { text: "Vim Mode — keyboard triage", highlight: true },
+  { text: "Priority processing queue", highlight: true },
+  { text: "Batch Triage workflow", highlight: false },
+  { text: "Cross-document bulk decisions", highlight: false },
+  { text: "Export redacted documents", highlight: false },
+  { text: "Processing analytics", highlight: false },
+];
+
+const COMPARISON: Array<[string, string, string]> = [
+  ["PII Detection", "Regex only", "AI + Regex hybrid"],
+  ["Documents / day", "5", "Unlimited"],
+  ["Processing queue", "Standard", "Priority (2x faster)"],
+  ["Triage interfaces", "Batch + Document", "Batch + Document + Vim"],
+  ["Auto-approve", "Basic (>95%)", "Smart (>90% + AI boost)"],
+  ["Bulk class decisions", "Included", "Included"],
+];
+
 export function PricingPage() {
   const { userTier, setUserTier } = useTriageStore();
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <div className="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
-        <h1 className="text-4xl font-bold text-white mb-3">
-          Choose your speed
-        </h1>
-        <p className="text-slate-400 text-sm max-w-lg mx-auto">
+      <div className="mx-auto max-w-5xl px-6 pb-12 pt-16 text-center">
+        <h1 className="mb-3 text-4xl font-bold text-white">Choose your speed</h1>
+        <p className="mx-auto max-w-lg text-sm text-slate-400">
           Free gets you started. Pro makes you unstoppable. Both keep your data 100% local.
         </p>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="max-w-4xl mx-auto px-6 pb-20">
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Free Tier */}
-          <div
-            className={`rounded-xl border p-8 transition-all ${
-              userTier === "free"
-                ? "border-cyan-500/50 bg-slate-900/80 shadow-lg shadow-cyan-500/10"
-                : "border-slate-800 bg-slate-900/30 hover:border-slate-700"
-            }`}
+      <div className="mx-auto max-w-4xl px-6 pb-20">
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Free */}
+          <PlanCard
+            active={userTier === "free"}
+            accent="slate"
+            name="Free"
+            price="$0"
+            blurb="Perfect for occasional document review"
           >
-            {userTier === "free" && (
-              <div className="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-4">
-                Current Plan
-              </div>
-            )}
-            <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              Free
-            </div>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-bold text-white">$0</span>
-              <span className="text-sm text-slate-500">/month</span>
-            </div>
-            <p className="text-xs text-slate-500 mb-6">
-              Perfect for occasional document review
-            </p>
-
-            <ul className="space-y-3 mb-8">
-              {[
-                { text: "5 documents per day", included: true },
-                { text: "Regex-only PII detection", included: true },
-                { text: "Click-based review UI", included: true },
-                { text: "Standard processing queue", included: true },
-                { text: "AI-enhanced detection", included: false },
-                { text: "Vim Mode (keyboard triage)", included: false },
-                { text: "Priority processing queue", included: false },
-                { text: "Batch upload", included: false },
-              ].map((feature) => (
-                <li
-                  key={feature.text}
-                  className={`flex items-center gap-2 text-xs ${
-                    feature.included ? "text-slate-300" : "text-slate-600"
-                  }`}
-                >
-                  <span
-                    className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] ${
-                      feature.included
-                        ? "bg-emerald-500/20 text-emerald-400"
-                        : "bg-slate-800 text-slate-600"
-                    }`}
-                  >
-                    {feature.included ? "✓" : "—"}
-                  </span>
-                  {feature.text}
-                </li>
-              ))}
-            </ul>
-
-            <button
+            <FeatureList
+              items={FREE_FEATURES.map((f) => ({ text: f.text, on: f.included }))}
+            />
+            <PlanButton
               onClick={() => setUserTier("free")}
               disabled={userTier === "free"}
-              className={`w-full py-2.5 rounded-lg text-sm font-medium transition-all ${
-                userTier === "free"
-                  ? "bg-slate-800 text-slate-500 cursor-not-allowed"
-                  : "bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700"
-              }`}
+              tone="muted"
             >
-              {userTier === "free" ? "Current Plan" : "Downgrade to Free"}
-            </button>
-          </div>
+              {userTier === "free" ? "Current plan" : "Downgrade to Free"}
+            </PlanButton>
+          </PlanCard>
 
-          {/* Pro Tier */}
-          <div
-            className={`rounded-xl border p-8 relative overflow-hidden transition-all ${
-              userTier === "pro"
-                ? "border-violet-500/50 bg-slate-900/80 shadow-lg shadow-violet-500/10"
-                : "border-violet-500/30 bg-gradient-to-b from-violet-500/5 to-transparent hover:border-violet-500/50"
-            }`}
+          {/* Pro */}
+          <PlanCard
+            active={userTier === "pro"}
+            accent="cyan"
+            name="Pro"
+            price="$29"
+            blurb="For paralegals processing 100+ docs daily"
+            badge="Most popular"
           >
-            {/* Popular badge */}
-            <div className="absolute top-0 right-0 px-3 py-1 bg-gradient-to-r from-violet-600 to-cyan-600 text-white text-[10px] font-bold rounded-bl-lg">
-              MOST POPULAR
-            </div>
-
-            {userTier === "pro" && (
-              <div className="text-[10px] font-bold text-violet-400 uppercase tracking-wider mb-4">
-                Current Plan
-              </div>
-            )}
-            <div className="text-xs font-semibold text-violet-400 uppercase tracking-wider mb-1">
-              Pro
-            </div>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-bold text-white">$29</span>
-              <span className="text-sm text-slate-500">/month</span>
-            </div>
-            <p className="text-xs text-slate-500 mb-6">
-              For paralegals processing 100+ docs daily
-            </p>
-
-            <ul className="space-y-3 mb-8">
-              {[
-                { text: "Unlimited documents", highlight: true },
-                { text: "AI + Regex hybrid detection", highlight: true },
-                { text: "Vim Mode — keyboard triage", highlight: true },
-                { text: "Priority processing queue", highlight: true },
-                { text: "Click-based review UI", highlight: false },
-                { text: "Batch upload (up to 50)", highlight: false },
-                { text: "Export redacted documents", highlight: false },
-                { text: "Processing analytics", highlight: false },
-              ].map((feature) => (
-                <li
-                  key={feature.text}
-                  className={`flex items-center gap-2 text-xs ${
-                    feature.highlight ? "text-white font-medium" : "text-slate-300"
-                  }`}
-                >
-                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] bg-violet-500/20 text-violet-400">
-                    ✓
-                  </span>
-                  {feature.text}
-                  {feature.highlight && (
-                    <span className="px-1.5 py-0.5 rounded bg-violet-500/20 text-violet-400 text-[9px] font-bold">
-                      PRO
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-
-            <button
+            <FeatureList
+              items={PRO_FEATURES.map((f) => ({ text: f.text, on: true, strong: f.highlight }))}
+            />
+            <PlanButton
               onClick={() => setUserTier("pro")}
               disabled={userTier === "pro"}
-              className={`w-full py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                userTier === "pro"
-                  ? "bg-violet-500/20 text-violet-400 cursor-not-allowed border border-violet-500/30"
-                  : "bg-gradient-to-r from-violet-600 to-cyan-600 text-white hover:from-violet-500 hover:to-cyan-500 shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40"
-              }`}
+              tone="primary"
             >
-              {userTier === "pro" ? "Current Plan" : "Upgrade to Pro"}
-            </button>
+              {userTier === "pro" ? "Current plan" : "Upgrade to Pro"}
+            </PlanButton>
 
-            {/* Speed comparison micro-stat */}
-            <div className="mt-6 pt-4 border-t border-violet-500/20 text-center">
-              <div className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Average throughput</div>
+            <div className="mt-6 border-t border-white/10 pt-4 text-center">
+              <div className="mb-1 text-[10px] uppercase tracking-wider text-slate-500">
+                Average throughput
+              </div>
               <div className="flex items-center justify-center gap-3">
                 <div>
-                  <div className="text-lg font-bold text-violet-400 font-mono">3s</div>
+                  <div className="font-mono text-lg font-bold text-cyan-300">3s</div>
                   <div className="text-[10px] text-slate-500">per doc</div>
                 </div>
                 <div className="text-slate-600">vs</div>
                 <div>
-                  <div className="text-lg font-bold text-red-400 font-mono line-through opacity-50">45s</div>
+                  <div className="font-mono text-lg font-bold text-rose-400 line-through opacity-60">
+                    45s
+                  </div>
                   <div className="text-[10px] text-slate-500">manual</div>
                 </div>
               </div>
             </div>
-          </div>
+          </PlanCard>
         </div>
 
-        {/* Feature Details */}
+        {/* Comparison */}
         <div className="mt-16">
-          <h3 className="text-lg font-bold text-white text-center mb-8">Feature Comparison</h3>
-          <div className="rounded-xl border border-slate-800 overflow-hidden">
+          <h3 className="mb-8 text-center text-lg font-bold text-white">Feature comparison</h3>
+          <div className="overflow-hidden rounded-xl border border-white/10">
             <table className="w-full text-xs">
               <thead>
-                <tr className="border-b border-slate-800 bg-slate-900/50">
-                  <th className="text-left py-3 px-4 text-slate-400 font-medium">Feature</th>
-                  <th className="text-center py-3 px-4 text-slate-400 font-medium">Free</th>
-                  <th className="text-center py-3 px-4 text-violet-400 font-medium">Pro</th>
+                <tr className="border-b border-white/10 bg-white/[0.03]">
+                  <th className="px-4 py-3 text-left font-medium text-slate-400">Feature</th>
+                  <th className="px-4 py-3 text-center font-medium text-slate-400">Free</th>
+                  <th className="px-4 py-3 text-center font-medium text-cyan-300">Pro</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  ["PII Detection", "Regex only", "AI + Regex hybrid"],
-                  ["Documents / Day", "5", "Unlimited"],
-                  ["Processing Queue", "Standard", "Priority (2x faster)"],
-                  ["Triage Interface", "Click-based", "Click + Vim Mode"],
-                  ["Auto-Approve", "Basic (>95%)", "Smart (>90% + AI boost)"],
-                  ["Processing Time", "~1s (regex)", "~3s (regex + AI)"],
-                  ["Confidence Boost", "—", "Cross-validated AI"],
-                ].map(([feature, free, pro]) => (
-                  <tr key={feature} className="border-b border-slate-800/50 hover:bg-slate-800/20">
-                    <td className="py-3 px-4 text-slate-300">{feature}</td>
-                    <td className="py-3 px-4 text-center text-slate-500">{free}</td>
-                    <td className="py-3 px-4 text-center text-violet-300">{pro}</td>
+                {COMPARISON.map(([feature, free, pro]) => (
+                  <tr key={feature} className="border-b border-white/5 hover:bg-white/[0.02]">
+                    <td className="px-4 py-3 text-slate-300">{feature}</td>
+                    <td className="px-4 py-3 text-center text-slate-500">{free}</td>
+                    <td className="px-4 py-3 text-center text-cyan-200">{pro}</td>
                   </tr>
                 ))}
               </tbody>
@@ -209,5 +132,116 @@ export function PricingPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function PlanCard({
+  active,
+  accent,
+  name,
+  price,
+  blurb,
+  badge,
+  children,
+}: {
+  active: boolean;
+  accent: "slate" | "cyan";
+  name: string;
+  price: string;
+  blurb: string;
+  badge?: string;
+  children: React.ReactNode;
+}) {
+  const ring =
+    active && accent === "cyan"
+      ? "border-cyan-400/40 ring-1 ring-cyan-400/20"
+      : active
+        ? "border-white/20"
+        : "border-white/10 hover:border-white/20";
+
+  return (
+    <div className={`relative rounded-xl border bg-slate-900/40 p-8 transition ${ring}`}>
+      {badge ? (
+        <div className="absolute right-0 top-0 rounded-bl-lg rounded-tr-xl bg-cyan-300 px-3 py-1 text-[10px] font-bold text-slate-950">
+          {badge}
+        </div>
+      ) : null}
+      {active ? (
+        <div
+          className={`mb-4 text-[10px] font-bold uppercase tracking-wider ${
+            accent === "cyan" ? "text-cyan-300" : "text-slate-400"
+          }`}
+        >
+          Current plan
+        </div>
+      ) : null}
+      <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-slate-400">
+        {name}
+      </div>
+      <div className="mb-1 flex items-baseline gap-1">
+        <span className="text-4xl font-bold text-white">{price}</span>
+        <span className="text-sm text-slate-500">/month</span>
+      </div>
+      <p className="mb-6 text-xs text-slate-500">{blurb}</p>
+      {children}
+    </div>
+  );
+}
+
+function FeatureList({
+  items,
+}: {
+  items: Array<{ text: string; on: boolean; strong?: boolean }>;
+}) {
+  return (
+    <ul className="mb-8 space-y-3">
+      {items.map((item) => (
+        <li
+          key={item.text}
+          className={`flex items-center gap-2 text-xs ${
+            !item.on ? "text-slate-600" : item.strong ? "font-medium text-white" : "text-slate-300"
+          }`}
+        >
+          <span
+            className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] ${
+              item.on ? "bg-emerald-500/15 text-emerald-300" : "bg-white/5 text-slate-600"
+            }`}
+          >
+            {item.on ? "✓" : "—"}
+          </span>
+          {item.text}
+          {item.strong ? (
+            <span className="rounded bg-cyan-500/15 px-1.5 py-0.5 text-[9px] font-bold text-cyan-300">
+              PRO
+            </span>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PlanButton({
+  onClick,
+  disabled,
+  tone,
+  children,
+}: {
+  onClick: () => void;
+  disabled: boolean;
+  tone: "primary" | "muted";
+  children: React.ReactNode;
+}) {
+  const base = "w-full rounded-lg py-2.5 text-sm font-semibold transition";
+  const styles = disabled
+    ? "cursor-not-allowed bg-white/5 text-slate-500"
+    : tone === "primary"
+      ? "bg-cyan-300 text-slate-950 hover:bg-cyan-200"
+      : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10";
+
+  return (
+    <button onClick={onClick} disabled={disabled} className={`${base} ${styles}`}>
+      {children}
+    </button>
   );
 }

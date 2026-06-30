@@ -101,8 +101,8 @@ export function LandingPage() {
             <div className="text-4xl font-bold text-secondary mb-2 font-mono">3s</div>
             <div className="text-sm text-muted-foreground mb-4">per document, AI-assisted</div>
             <ul className="space-y-2 text-xs text-muted-foreground">
-              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> AI scans entire document</li>
-              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> 12+ PII types auto-detected</li>
+              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> Batch triage across all files at once</li>
+              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> One decision redacts a name everywhere</li>
               <li className="flex items-center gap-2"><span className="text-secondary">✓</span> Vim-mode keyboard triage</li>
               <li className="flex items-center gap-2"><span className="text-secondary">✓</span> Auto-approve @ 90%+ confidence</li>
             </ul>
@@ -135,8 +135,8 @@ export function LandingPage() {
               },
               {
                 step: "03",
-                title: "You Verify",
-                desc: "Review highlighted PII, approve or reject with keyboard shortcuts. Finalize in seconds.",
+                title: "You Sweep",
+                desc: "Approve whole classes of PII across every file at once, handle the few edge cases, and export the entire batch in one click.",
               },
             ].map((item) => (
               <div key={item.step} className="relative group">

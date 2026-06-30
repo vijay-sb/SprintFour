@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { AdminDashboard } from "@/components/AdminDashboard";
+import { BatchTriage } from "@/components/BatchTriage";
 
 const API_BASE = "http://localhost:3001";
 
@@ -219,199 +220,232 @@ export function ProcessPage() {
   }
 
   return (
-    <div className="mx-auto flex h-[calc(100svh-73px)] max-w-[1500px] flex-col overflow-hidden px-6 py-4">
-      <div className="mb-4 overflow-hidden rounded-3xl border border-white/10 bg-[#0f172a]">
-        <AdminDashboard />
-      </div>
+    <div className="mx-auto flex h-[calc(100svh-57px)] max-w-[1600px] flex-col gap-3 px-5 py-4">
+      <AdminDashboard />
 
-      <div className="mb-4 grid gap-4 lg:grid-cols-[1.6fr_1fr]">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap items-center gap-3">
-              <button
-                onClick={clearQueue}
-                className="rounded-xl border border-white/10 bg-white/6 px-3 py-2 text-xs font-medium text-slate-300 hover:bg-white/10"
-              >
-                Clear Queue
-              </button>
-              <StatusPill label="Manual review" value={`${pendingManualCount}`} tone="amber" />
-              <StatusPill label="Hands-free" value={`${autopilotQueue.length}`} tone="cyan" />
-              <StatusPill label="Exported" value={`${completedCount}`} tone="emerald" />
-            </div>
+      <WorkspaceToolbar
+        triageMode={triageMode}
+        setTriageMode={setTriageMode}
+        userTier={userTier}
+        isPdf={isPdf && triageMode === "normal"}
+        viewMode={viewMode}
+        setViewMode={setViewMode}
+        pendingManualCount={pendingManualCount}
+        autopilotCount={autopilotQueue.length}
+        completedCount={completedCount}
+        onClear={clearQueue}
+      />
 
-            <div className="flex items-center gap-3">
-              {isPdf && (
-                <div className="flex rounded-xl border border-white/10 bg-black/20 p-1">
-                  <ToggleButton active={viewMode === "text"} onClick={() => setViewMode("text")}>
-                    Text
-                  </ToggleButton>
-                  <ToggleButton active={viewMode === "pdf"} onClick={() => setViewMode("pdf")}>
-                    PDF
-                  </ToggleButton>
-                </div>
-              )}
+      <main className="min-h-0 flex-1">
+        {triageMode === "batch" ? (
+          <BatchTriage />
+        ) : (
+          <div className="grid h-full min-h-0 grid-rows-[minmax(0,1fr)] gap-3 xl:grid-cols-[260px_minmax(0,1fr)_340px]">
+            <QueueSidebar
+              docs={uploadedQueue}
+              currentDocIndex={currentDocIndex}
+              metricsProcessed={metrics.processed}
+              onSelect={setCurrentDocIndex}
+            />
 
-              <div className="flex rounded-xl border border-white/10 bg-black/20 p-1">
-                <ToggleButton active onClick={() => setTriageMode("normal")}>
-                  Normal
-                </ToggleButton>
-                <ToggleButton
-                  active={false}
-                  onClick={() => {
-                    if (userTier === "pro") setTriageMode("vim");
-                  }}
-                  disabled={userTier === "free"}
-                >
-                  Vim Focus
-                </ToggleButton>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <BenchmarkPanel benchmark={benchmark} userTier={userTier} compact />
-      </div>
-
-      {manualQueue.length === 0 && autopilotQueue.length > 0 ? (
-        <AutopilotState docs={autopilotQueue} exportedDocs={exportedQueue} />
-      ) : null}
-
-      <div className="grid min-h-0 flex-1 gap-4 xl:grid-cols-[280px_minmax(0,1fr)_360px]">
-        <QueueSidebar
-          docs={uploadedQueue}
-          currentDocIndex={currentDocIndex}
-          metricsProcessed={metrics.processed}
-          onSelect={setCurrentDocIndex}
-        />
-
-        <div className="flex min-h-0 flex-col gap-4">
-          <ReviewBanner doc={doc} />
-          <div className="min-h-0 flex-1">
-            {viewMode === "pdf" && isPdf ? (
-              <PdfViewer filePath={doc.filePath} />
-            ) : (
-              <DocumentTextViewer
-                text={doc.text}
-                redactions={redactions}
-                activeIndex={currentRedactionIndex}
-                filename={doc.filename}
-                compact={false}
-              />
-            )}
-          </div>
-        </div>
-
-        <div className="flex min-h-0 flex-col gap-4">
-          <ActionPanel
-            doc={doc}
-            activeRedaction={activeRedaction}
-            allReviewed={allReviewed}
-            triageMode={triageMode}
-            onApprove={approveRedaction}
-            onReject={rejectRedaction}
-            onApproveAll={approveAllRedactions}
-            onFinalize={() => void finalizeDocument()}
-          />
-
-          <Card className="min-h-0 flex-1 border-white/10 bg-white/[0.04] text-slate-100">
-            <CardContent className="flex h-full min-h-0 flex-col p-5">
-              <div className="mb-3 flex items-center justify-between">
-                <div className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
-                  Detected PII
-                </div>
-                <Badge variant="outline" className="border-white/10 text-slate-300">
-                  {redactions.length}
-                </Badge>
-              </div>
-
-              <div className="min-h-0 flex-1 space-y-2 overflow-y-auto">
-                {redactions.length === 0 ? (
-                  <div className="rounded-xl border border-white/10 bg-black/10 px-4 py-5 text-center text-sm text-slate-400">
-                    No PII detected in this document.
-                  </div>
+            <div className="flex min-h-0 flex-col gap-3">
+              <ReviewBanner doc={doc} />
+              <div className="min-h-0 flex-1">
+                {viewMode === "pdf" && isPdf ? (
+                  <PdfViewer filePath={doc.filePath} />
                 ) : (
-                  redactions.map((redaction, index) => (
-                    <RedactionItem
-                      key={`${redaction.type}-${redaction.startIndex}-${redaction.endIndex}`}
-                      redaction={redaction}
-                      index={index}
-                      isActive={index === currentRedactionIndex}
-                      flashEffect={index === currentRedactionIndex ? flashEffect : null}
-                      onApprove={() => {
-                        useTriageStore.setState({ currentRedactionIndex: index });
-                        approveRedaction();
-                      }}
-                      onReject={() => {
-                        useTriageStore.setState({ currentRedactionIndex: index });
-                        rejectRedaction();
-                      }}
-                      onSelect={() => useTriageStore.setState({ currentRedactionIndex: index })}
-                    />
-                  ))
+                  <DocumentTextViewer
+                    text={doc.text}
+                    redactions={redactions}
+                    activeIndex={currentRedactionIndex}
+                    filename={doc.filename}
+                    compact={false}
+                  />
                 )}
               </div>
-            </CardContent>
-          </Card>
+            </div>
 
-          <Card className="border-white/10 bg-white/[0.04] text-slate-100">
-            <CardContent className="space-y-3 p-5">
-              <div className="flex items-center justify-between">
-                <div className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
-                  Manual Flag
-                </div>
-                <Badge variant="outline" className="border-white/10 text-slate-300">
-                  Add custom
-                </Badge>
-              </div>
-              <input
-                value={manualFlagValue}
-                onChange={(event) => setManualFlagValue(event.target.value)}
-                placeholder="Type exact word or phrase"
-                className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-sm text-slate-100 outline-none placeholder:text-slate-500"
+            <div className="flex min-h-0 flex-col gap-3 overflow-y-auto pr-1">
+              <ActionPanel
+                doc={doc}
+                activeRedaction={activeRedaction}
+                allReviewed={allReviewed}
+                triageMode={triageMode}
+                onApprove={approveRedaction}
+                onReject={rejectRedaction}
+                onApproveAll={approveAllRedactions}
+                onFinalize={() => void finalizeDocument()}
               />
-              <select
-                value={manualFlagType}
-                onChange={(event) => setManualFlagType(event.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-sm text-slate-100 outline-none"
-              >
-                <option value="MANUAL_FLAG">Manual Flag</option>
-                <option value="PERSON">Person</option>
-                <option value="ADDRESS">Address</option>
-                <option value="EMAIL">Email</option>
-                <option value="PHONE">Phone</option>
-                <option value="FINANCIAL">Financial</option>
-              </select>
-              <button
-                onClick={handleManualFlag}
-                className="w-full rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-4 py-3 text-sm font-semibold text-cyan-100"
-              >
-                Flag phrase
-              </button>
-              {manualFlagError ? <div className="text-xs text-amber-200">{manualFlagError}</div> : null}
-            </CardContent>
-          </Card>
 
-          <Card className="border-white/10 bg-white/[0.04] text-slate-100">
-            <CardContent className="space-y-3 p-5">
-              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
-                Pipeline
-              </div>
-              <PipelineStep label="Text extracted" done />
-              <PipelineStep label="Regex scan" done={doc.phase !== "uploaded"} />
-              <PipelineStep
-                label="AI queued"
-                done={doc.phase !== "uploaded" && doc.phase !== "regex"}
-                active={doc.phase === "ai-queued"}
-              />
-              <PipelineStep
-                label="AI processing"
-                done={doc.phase === "complete"}
-                active={doc.phase === "ai-processing"}
-              />
-              <PipelineStep label="Export written to results" done={Boolean(doc.exportPath)} />
-            </CardContent>
-          </Card>
+              <Card className="border-white/10 bg-slate-900/40 text-slate-100">
+                <CardContent className="flex flex-col p-4">
+                  <div className="mb-3 flex items-center justify-between">
+                    <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                      Detected PII
+                    </div>
+                    <Badge variant="outline" className="border-white/10 text-slate-300">
+                      {redactions.length}
+                    </Badge>
+                  </div>
+
+                  <div className="max-h-[42vh] space-y-2 overflow-y-auto">
+                    {redactions.length === 0 ? (
+                      <div className="rounded-lg border border-white/10 bg-black/10 px-4 py-5 text-center text-sm text-slate-400">
+                        No PII detected in this document.
+                      </div>
+                    ) : (
+                      redactions.map((redaction, index) => (
+                        <RedactionItem
+                          key={`${redaction.type}-${redaction.startIndex}-${redaction.endIndex}`}
+                          redaction={redaction}
+                          index={index}
+                          isActive={index === currentRedactionIndex}
+                          flashEffect={index === currentRedactionIndex ? flashEffect : null}
+                          onApprove={() => {
+                            useTriageStore.setState({ currentRedactionIndex: index });
+                            approveRedaction();
+                          }}
+                          onReject={() => {
+                            useTriageStore.setState({ currentRedactionIndex: index });
+                            rejectRedaction();
+                          }}
+                          onSelect={() => useTriageStore.setState({ currentRedactionIndex: index })}
+                        />
+                      ))
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-white/10 bg-slate-900/40 text-slate-100">
+                <CardContent className="space-y-3 p-4">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    Manual Flag
+                  </div>
+                  <input
+                    value={manualFlagValue}
+                    onChange={(event) => setManualFlagValue(event.target.value)}
+                    placeholder="Type exact word or phrase"
+                    className="w-full rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-cyan-400/40 placeholder:text-slate-500"
+                  />
+                  <select
+                    value={manualFlagType}
+                    onChange={(event) => setManualFlagType(event.target.value)}
+                    className="w-full rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-cyan-400/40"
+                  >
+                    <option value="MANUAL_FLAG">Manual Flag</option>
+                    <option value="PERSON">Person</option>
+                    <option value="ADDRESS">Address</option>
+                    <option value="EMAIL">Email</option>
+                    <option value="PHONE">Phone</option>
+                    <option value="FINANCIAL">Financial</option>
+                  </select>
+                  <button
+                    onClick={handleManualFlag}
+                    className="w-full rounded-lg border border-cyan-300/30 bg-cyan-400/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/16"
+                  >
+                    Flag phrase
+                  </button>
+                  {manualFlagError ? (
+                    <div className="text-xs text-amber-200">{manualFlagError}</div>
+                  ) : null}
+                </CardContent>
+              </Card>
+
+              <Card className="border-white/10 bg-slate-900/40 text-slate-100">
+                <CardContent className="space-y-2.5 p-4">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    Pipeline
+                  </div>
+                  <PipelineStep label="Text extracted" done />
+                  <PipelineStep label="Regex scan" done={doc.phase !== "uploaded"} />
+                  <PipelineStep
+                    label="AI queued"
+                    done={doc.phase !== "uploaded" && doc.phase !== "regex"}
+                    active={doc.phase === "ai-queued"}
+                  />
+                  <PipelineStep
+                    label="AI processing"
+                    done={doc.phase === "complete"}
+                    active={doc.phase === "ai-processing"}
+                  />
+                  <PipelineStep label="Exported to results" done={Boolean(doc.exportPath)} />
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        )}
+      </main>
+    </div>
+  );
+}
+
+function WorkspaceToolbar({
+  triageMode,
+  setTriageMode,
+  userTier,
+  isPdf,
+  viewMode,
+  setViewMode,
+  pendingManualCount,
+  autopilotCount,
+  completedCount,
+  onClear,
+}: {
+  triageMode: "normal" | "batch" | "vim";
+  setTriageMode: (mode: "normal" | "batch" | "vim") => void;
+  userTier: "free" | "pro";
+  isPdf: boolean;
+  viewMode: "pdf" | "text";
+  setViewMode: (mode: "pdf" | "text") => void;
+  pendingManualCount: number;
+  autopilotCount: number;
+  completedCount: number;
+  onClear: () => void;
+}) {
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-slate-900/40 px-4 py-3">
+      <div className="flex flex-wrap items-center gap-2">
+        <div className="flex rounded-lg border border-white/10 bg-black/25 p-1">
+          <ToggleButton active={triageMode === "batch"} onClick={() => setTriageMode("batch")}>
+            Batch
+          </ToggleButton>
+          <ToggleButton active={triageMode === "normal"} onClick={() => setTriageMode("normal")}>
+            Document
+          </ToggleButton>
+          <ToggleButton
+            active={triageMode === "vim"}
+            onClick={() => {
+              if (userTier === "pro") setTriageMode("vim");
+            }}
+            disabled={userTier === "free"}
+          >
+            Vim {userTier === "free" ? "· Pro" : ""}
+          </ToggleButton>
         </div>
+
+        {isPdf && (
+          <div className="flex rounded-lg border border-white/10 bg-black/25 p-1">
+            <ToggleButton active={viewMode === "text"} onClick={() => setViewMode("text")}>
+              Text
+            </ToggleButton>
+            <ToggleButton active={viewMode === "pdf"} onClick={() => setViewMode("pdf")}>
+              PDF
+            </ToggleButton>
+          </div>
+        )}
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <StatusPill label="Needs review" value={`${pendingManualCount}`} tone="amber" />
+        <StatusPill label="Hands-free" value={`${autopilotCount}`} tone="cyan" />
+        <StatusPill label="Exported" value={`${completedCount}`} tone="emerald" />
+        <button
+          onClick={onClear}
+          className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:bg-white/10"
+        >
+          Clear queue
+        </button>
       </div>
     </div>
   );
@@ -486,22 +520,23 @@ function UploadState({
   return (
     <div className="mx-auto max-w-6xl px-6 py-12">
       <div className="mb-8 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-        <div className="rounded-3xl border border-white/10 bg-[#101828] p-8 shadow-2xl shadow-black/20">
+        <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-8">
           <div className="mb-4 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200">
-            Fast Review Pipeline
+            Built for 200 files before lunch
           </div>
           <h1 className="mb-4 text-4xl font-semibold tracking-tight text-white">
-            Review only what the model is uncertain about.
+            Review decisions, not documents.
           </h1>
           <p className="max-w-2xl text-sm leading-7 text-slate-300">
-            High-confidence detections now stay off the manual queue, AI can keep running in the
-            background, and completed documents export straight into the `results` folder with
-            sensitive content hidden.
+            Drop your whole caseload. We group every detection across the batch by type and by
+            repeated value — so one click redacts a client's name in all 47 files it appears in.
+            The high-confidence majority auto-clears; you only touch the ambiguous tail, then export
+            everything at once.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <StatCard label="Auto-pass threshold" value="90%+" tone="cyan" />
-            <StatCard label="Results export" value="Instant" tone="emerald" />
-            <StatCard label="Review surface" value="Only low confidence" tone="amber" />
+            <StatCard label="Work unit" value="The whole batch" tone="cyan" />
+            <StatCard label="Auto-pass" value="90%+ confidence" tone="emerald" />
+            <StatCard label="You review" value="Only the edge cases" tone="amber" />
           </div>
         </div>
 
@@ -512,8 +547,8 @@ function UploadState({
         onDragOver={onDragOver}
         onDragLeave={onDragLeave}
         onDrop={handleDrop}
-        className={`rounded-3xl border p-10 transition ${
-          dragOver ? "border-cyan-300 bg-cyan-400/10" : "border-white/10 bg-white/[0.04]"
+        className={`rounded-2xl border p-10 transition ${
+          dragOver ? "border-cyan-300 bg-cyan-400/10" : "border-white/10 bg-slate-900/40"
         }`}
       >
         <input
@@ -582,18 +617,19 @@ function QueueSidebar({
   const progress = docs.length > 0 ? (metricsProcessed / docs.length) * 100 : 0;
 
   return (
-    <Card className="min-h-0 border-white/10 bg-white/[0.04] text-slate-100">
+    <Card className="flex h-full min-h-0 flex-col border-white/10 bg-slate-900/40 py-0 text-slate-100">
       <CardContent className="flex h-full min-h-0 flex-col p-4">
-        <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
-          Queue
+        <div className="mb-3 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+          <span>Queue</span>
+          <span className="text-slate-500">{docs.length}</span>
         </div>
-        <Progress value={progress} className="mb-4 h-2" />
-        <div className="min-h-0 flex-1 space-y-2 overflow-y-auto">
+        <Progress value={progress} className="mb-4 h-1.5" />
+        <div className="min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
           {docs.map((doc, index) => (
             <button
               key={doc.id}
               onClick={() => onSelect(index)}
-              className={`w-full rounded-2xl border px-3 py-3 text-left ${
+              className={`w-full rounded-lg border px-3 py-2.5 text-left transition ${
                 index === currentDocIndex
                   ? "border-cyan-300/50 bg-cyan-300/10"
                   : "border-white/8 bg-black/10 hover:border-white/16"
@@ -609,32 +645,6 @@ function QueueSidebar({
               </div>
             </button>
           ))}
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-function AutopilotState({
-  docs,
-  exportedDocs,
-}: {
-  docs: UploadedDocument[];
-  exportedDocs: UploadedDocument[];
-}) {
-  return (
-    <Card className="mb-6 border-cyan-300/20 bg-cyan-400/8 text-slate-100">
-      <CardContent className="grid gap-4 p-5 lg:grid-cols-[1.4fr_1fr]">
-        <div>
-          <div className="mb-2 text-sm font-semibold text-cyan-100">Manual queue is clear</div>
-          <div className="text-sm leading-7 text-slate-300">
-            The remaining documents are moving through AI enrichment and will export automatically
-            when complete. Nothing else is blocked on your side.
-          </div>
-        </div>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <MiniMetric label="Auto-exporting" value={`${docs.length}`} />
-          <MiniMetric label="Already exported" value={`${exportedDocs.length}`} />
         </div>
       </CardContent>
     </Card>
@@ -734,14 +744,14 @@ function DocumentTextViewer({
   }
 
   return (
-    <Card className="h-full border-white/10 bg-white/[0.04] text-slate-100">
-      <CardContent className="p-0">
-        <div className="border-b border-white/8 px-5 py-4 text-sm font-semibold text-white">
+    <Card className="flex h-full min-h-0 flex-col border-white/10 bg-slate-900/40 py-0 text-slate-100">
+      <CardContent className="flex min-h-0 flex-1 flex-col p-0">
+        <div className="shrink-0 border-b border-white/8 px-5 py-3.5 text-sm font-semibold text-white">
           {filename}
         </div>
-        <div className="h-[calc(100%-57px)] overflow-y-auto p-5">
+        <div className="min-h-0 flex-1 overflow-y-auto p-5">
           <div
-            className={`rounded-2xl border border-white/8 bg-[#0b1120] font-mono whitespace-pre-wrap ${
+            className={`rounded-lg border border-white/8 bg-[#0b1120] font-mono whitespace-pre-wrap ${
               compact ? "p-8 text-[15px] leading-8" : "p-6 text-[13px] leading-7"
             }`}
           >
@@ -755,9 +765,13 @@ function DocumentTextViewer({
 
 function PdfViewer({ filePath }: { filePath: string }) {
   return (
-    <Card className="h-full overflow-hidden border-white/10 bg-white/[0.04]">
-      <CardContent className="p-0">
-        <iframe src={`${API_BASE}${filePath}`} title="PDF viewer" className="h-full min-h-[70vh] w-full border-0 bg-white" />
+    <Card className="flex h-full min-h-0 flex-col overflow-hidden border-white/10 bg-slate-900/40 py-0">
+      <CardContent className="min-h-0 flex-1 p-0">
+        <iframe
+          src={`${API_BASE}${filePath}`}
+          title="PDF viewer"
+          className="h-full w-full border-0 bg-white"
+        />
       </CardContent>
     </Card>
   );
@@ -891,7 +905,7 @@ function ActionPanel({
   doc: UploadedDocument;
   activeRedaction?: Redaction;
   allReviewed: boolean;
-  triageMode: "normal" | "vim";
+  triageMode: "normal" | "batch" | "vim";
   onApprove: () => void;
   onReject: () => void;
   onApproveAll: () => void;
@@ -1201,15 +1215,6 @@ function StatCard({ label, value, tone }: { label: string; value: string; tone: 
     <div className={`rounded-2xl border p-4 ${tones[tone]}`}>
       <div className="text-[11px] uppercase tracking-[0.18em] text-slate-300">{label}</div>
       <div className="mt-2 text-xl font-semibold">{value}</div>
-    </div>
-  );
-}
-
-function MiniMetric({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
-      <div className="text-[11px] uppercase tracking-[0.18em] text-slate-400">{label}</div>
-      <div className="mt-2 text-2xl font-semibold text-white">{value}</div>
     </div>
   );
 }

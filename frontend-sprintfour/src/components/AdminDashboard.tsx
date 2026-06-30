@@ -1,5 +1,4 @@
 import { useTriageStore } from "@/store/useTriageStore";
-import { Progress } from "@/components/ui/progress";
 
 export function AdminDashboard() {
   const { uploadedQueue, metrics, userTier } = useTriageStore();
@@ -12,97 +11,67 @@ export function AdminDashboard() {
   const queueTotal = uploadedQueue.length + metrics.processed;
   const queueProgress =
     queueTotal > 0 ? Math.round((metrics.processed / queueTotal) * 100) : 0;
-  const freeEta = Math.max(18, uploadedQueue.length * 6 + 18);
-  const proEta = Math.max(6, Math.round(freeEta * 0.42));
-  const autoYield = uploadedQueue.length > 0
-    ? Math.round(
-        (uploadedQueue.filter((doc) => !doc.requiresReview).length / uploadedQueue.length) * 100
-      )
-    : 0;
+  const autoYield =
+    uploadedQueue.length > 0
+      ? Math.round(
+          (uploadedQueue.filter((doc) => !doc.requiresReview).length / uploadedQueue.length) * 100
+        )
+      : 0;
 
   return (
-    <div className="bg-[#0b1220] text-slate-100">
-      <div className="flex flex-wrap items-center justify-between gap-3 px-6 py-4">
-        <div className="flex items-center gap-3">
-          <div className="h-2 w-2 rounded-full bg-cyan-300" />
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-100/80">
-              Conseal Triage Engine
-            </div>
-            <div className="mt-1 text-sm text-slate-300">
-              Pro users stay ahead with priority AI and fewer manual stops.
-            </div>
-          </div>
-        </div>
-        <div className="rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-xs text-slate-300">
-          Active lane: <span className="ml-1 font-semibold text-white">{userTier}</span>
-        </div>
-      </div>
-
-      <div className="grid gap-px border-t border-white/8 bg-white/8 md:grid-cols-5">
-        <MetricCell
-          label="Processed"
-          value={metrics.processed.toString()}
-          sublabel={`of ${queueTotal}`}
-          color="text-cyan-100"
-        />
-        <MetricCell
-          label="Avg Time"
-          value={`${avgTime}s`}
-          sublabel="manual review"
-          color="text-amber-100"
-        />
-        <MetricCell
-          label="Auto-Exported"
-          value={metrics.autoFinalizedDocs.toString()}
-          sublabel="no reviewer needed"
-          color="text-emerald-100"
-        />
-        <MetricCell
-          label="Auto Yield"
-          value={`${autoYield}%`}
-          sublabel="hands-free docs"
-          color="text-violet-100"
-        />
-        <MetricCell
-          label="Benchmark"
-          value={`${proEta}s`}
-          sublabel={`pro vs ${freeEta}s free`}
-          color="text-sky-100"
-        />
-      </div>
-
-      <div className="border-t border-white/8 px-6 py-3">
-        <div className="flex items-center gap-3">
-          <span className="w-24 text-xs uppercase tracking-[0.2em] text-slate-400">Queue</span>
-          <Progress value={queueProgress} className="flex-1 h-1.5" />
-          <span className="w-12 text-right text-xs text-slate-400">
-            {queueProgress}%
+    <div className="rounded-xl border border-white/10 bg-slate-900/50">
+      <div className="flex flex-wrap items-center justify-between gap-4 px-4 py-3">
+        <div className="flex items-center gap-2.5">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400/60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-300" />
+          </span>
+          <span className="text-sm font-semibold text-white">Conseal Triage Engine</span>
+          <span className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] uppercase tracking-wide text-slate-300">
+            {userTier} lane
           </span>
         </div>
+
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <Metric label="Processed" value={`${metrics.processed}`} sub={`of ${queueTotal}`} color="text-cyan-200" />
+          <Metric label="Auto-exported" value={`${metrics.autoFinalizedDocs}`} sub="no reviewer" color="text-emerald-200" />
+          <Metric label="Auto yield" value={`${autoYield}%`} sub="hands-free" color="text-violet-200" />
+          <Metric label="Avg time" value={`${avgTime}s`} sub="per doc" color="text-amber-200" />
+        </div>
+      </div>
+
+      <div className="flex items-center gap-3 border-t border-white/8 px-4 py-2">
+        <span className="text-[11px] uppercase tracking-[0.2em] text-slate-500">Batch</span>
+        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/8">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-500"
+            style={{ width: `${queueProgress}%` }}
+          />
+        </div>
+        <span className="w-10 text-right text-xs text-slate-400">{queueProgress}%</span>
       </div>
     </div>
   );
 }
 
-function MetricCell({
+function Metric({
   label,
   value,
-  sublabel,
+  sub,
   color,
 }: {
   label: string;
   value: string;
-  sublabel: string;
+  sub: string;
   color: string;
 }) {
   return (
-    <div className="bg-[#0b1220] px-4 py-4 text-center">
-      <div className="mb-1 text-[10px] uppercase tracking-[0.22em] text-slate-500">
-        {label}
-      </div>
-      <div className={`text-lg font-semibold ${color}`}>{value}</div>
-      <div className="text-[10px] text-slate-400">{sublabel}</div>
+    <div className="flex flex-col">
+      <span className="text-[10px] uppercase tracking-[0.18em] text-slate-500">{label}</span>
+      <span className="flex items-baseline gap-1.5">
+        <span className={`text-base font-semibold ${color}`}>{value}</span>
+        <span className="text-[10px] text-slate-500">{sub}</span>
+      </span>
     </div>
   );
 }

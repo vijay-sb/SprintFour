@@ -1,0 +1,56 @@
+S B Vijay
+ +91-[REDACTED:PHONE] # [REDACTED:EMAIL] ï linkedin § github
+Education
+Amrita Vishwa Vidyapeetham Aug. 2023 – May 2027
+Bachelor of Technology in Computer Science Coimbatore, Tamil Nadu
+Experience
+Larsen & Toubro Apr. 2026 – May 2026
+Software Developer Intern Chennai, Tamil Nadu, India
+• Designed and built a distributed remote software deployment system enabling IT admins to silently install and
+uninstall packages across corporate Windows networks without physical machine access.
+• Developed a deployment agent that is pushed to target machines, executes installations locally, maintains deployment
+logs, and self-removes from [REDACTED:PERSON] completion.
+• Created a Streamlit dashboard to manage and track deployments across multiple machines, with support for network
+file storage, scheduled tasks, and secure credential-based authentication.
+• Worked with enterprise Windows infrastructure including shared network storage, remote PowerShell execution, firewall
+configuration, and HTTP-based communication for reliable cross-network deployments.
+Amrita School of Business | Pragati’26 Jan. 2026 – Feb. 2026
+Software Developer Lead Coimbatore, Tamil Nadu, India
+• Led a 10-member dev team to ship Pragati 2026 end-to-end; managed sprint planning, coordinated with organisers, and
+delivered registration, payment, and event management modules on schedule.
+• Integrated PayU payment gateway with idempotent webhook validation and failure-handling logic, achieving zero
+duplicate transactions under peak concurrent registration load.
+• Managed production infrastructure with reverse proxies and Grafana + Prometheus monitoring, maintaining uptime
+throughout live event operations.
+Projects
+ACM Open Source Platforms | Next.js, Go, PostgreSQL, Valkey, React, Tailwind CSS § github
+∗ Architected and shipped two open-source tracking platforms (Winter of Code Summer of Code) serving 1,000+ users
+across 100+ GitHub repositories.
+∗ Engineered a real-time leaderboard using Server-Sent Events, delivering sub-second updates to 1,000+ concurrent
+users, eliminating polling overhead entirely.
+∗ Architected the frontend with React and Zustand for global state management with GitHub OAuth; configured
+Valkey caching on the backend and containerised the full dev environment with Docker.
+CrisisOps AI | Google ADK, Gemini API, Flask, PostgreSQL, React, pgvector § github
+∗ Built an autonomous incident response platform using the Google ADK, orchestrating 6 specialized agents in a
+Leader-Follower pipeline to automate triage, Slack alerting, and post-mortem generation.
+∗ Implemented pgvector semantic search over 768-dim Gemini embeddings for past-incident retrieval; deployed on
+Google Cloud Run with Cloud SQL (PostgreSQL).
+∗ Developed a real-time React dashboard with agent status tracking, tabbed analysis views, and human-in-the-loop
+resolution feedback to build a verified incident knowledge base.
+Research & Publications
+Benchmarking Deep Learning Models for Surgical Instrument Detection
+Accepted – FACEIT 2026, July 2026
+· Constructed a novel dataset of 1,500 images across 19 classes via large-scale web scraping using BeautifulSoup.
+· Benchmarked YOLOv8/11/12, RF-DETR, and Roboflow v3; achieved peak detection accuracy of 90%.
+Technical Skills
+Programming Languages: Java, Python, Go, TypeScript, C++ (familiar)
+Frameworks & Libraries: Next.js, React.js, Node.js, Express.js, Gin, Flask, Elysia, React Native, Flutter, Tanstack,
+Zustand, Tailwind CSS
+Databases & Storage: PostgreSQL, MySQL, Redis, Valkey, pgvector, Supabase, Snowflake, Drizzle ORM
+Infrastructure & DevOps: Linux (bare metal), Google Cloud Run, Cloud SQL, AWS, Docker, Caddy, Grafana,
+Prometheus, ELK Stack
+AI & ML: Google ADK, LangChain, MCP, pgvector semantic search, YOLOv8/RF-DETR
+Core CS: Data Structures & Algorithms, Distributed Systems Design, Cloud Computing
+
+-- 1 of 1 --
+

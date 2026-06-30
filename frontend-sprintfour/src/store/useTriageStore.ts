@@ -69,6 +69,16 @@ interface ApiDocumentStatus {
   exportFilename?: string;
 }
 
+export type TriageMode = "normal" | "batch" | "vim";
+
+export interface BulkFilter {
+  types?: string[];
+  value?: string;
+  confidenceLt?: number;
+  confidenceGte?: number;
+  onlyPending?: boolean;
+}
+
 interface TriageState {
   userTier: "free" | "pro";
   setUserTier: (tier: "free" | "pro") => void;
@@ -79,20 +89,34 @@ interface TriageState {
   uploadLoading: boolean;
   uploadError: string | null;
   flashEffect: string | null;
-  triageMode: "normal" | "vim";
+  triageMode: TriageMode;
+  batchFinalizing: boolean;
   metrics: Metrics;
   batchUpload: (files: File[]) => Promise<void>;
   pollQueueStatus: () => void;
   clearQueue: () => void;
-  setTriageMode: (mode: "normal" | "vim") => void;
+  setTriageMode: (mode: TriageMode) => void;
   approveRedaction: () => void;
   approveAllRedactions: () => void;
   rejectRedaction: () => void;
   addManualRedaction: (value: string, type?: string) => { ok: boolean; message?: string };
   navigateRedaction: (direction: "next" | "prev") => void;
   finalizeDocument: () => Promise<void>;
+  bulkDecide: (filter: BulkFilter, status: "approved" | "rejected") => number;
+  finalizeAll: () => Promise<void>;
   clearFlash: () => void;
   setCurrentDocIndex: (index: number) => void;
+}
+
+function matchesFilter(redaction: Redaction, filter: BulkFilter) {
+  if (filter.onlyPending && redaction.status !== "pending") return false;
+  if (filter.types && !filter.types.includes(redaction.type)) return false;
+  if (filter.value !== undefined && redaction.value !== filter.value) return false;
+  if (filter.confidenceLt !== undefined && !(redaction.confidence < filter.confidenceLt))
+    return false;
+  if (filter.confidenceGte !== undefined && !(redaction.confidence >= filter.confidenceGte))
+    return false;
+  return true;
 }
 
 function getStoredTier(): "free" | "pro" {
@@ -375,7 +399,8 @@ export const useTriageStore = create<TriageState>((set, get) => {
     uploadLoading: false,
     uploadError: null,
     flashEffect: null,
-    triageMode: "normal",
+    triageMode: "batch",
+    batchFinalizing: false,
 
     metrics: {
       processed: 0,
@@ -661,6 +686,95 @@ export const useTriageStore = create<TriageState>((set, get) => {
       });
 
       await maybeAutoFinalizeDocuments();
+    },
+
+    bulkDecide: (filter, status) => {
+      let affected = 0;
+
+      set((state) => {
+        const queue = state.uploadedQueue.map((doc) => {
+          if (doc.finalizedAt) return doc;
+
+          let changed = false;
+          const nextRedactions = doc.redactions.map((redaction) => {
+            if (!matchesFilter(redaction, filter)) return redaction;
+            changed = true;
+            affected += 1;
+            return { ...redaction, status };
+          });
+
+          if (!changed) return doc;
+          return { ...doc, redactions: nextRedactions, ...deriveReviewState(nextRedactions) };
+        });
+
+        if (affected === 0) return state;
+
+        return {
+          uploadedQueue: queue,
+          flashEffect: status === "approved" ? "approve" : "reject",
+          metrics: {
+            ...state.metrics,
+            totalApproved:
+              status === "approved" ? state.metrics.totalApproved + affected : state.metrics.totalApproved,
+            totalRejected:
+              status === "rejected" ? state.metrics.totalRejected + affected : state.metrics.totalRejected,
+          },
+        };
+      });
+
+      return affected;
+    },
+
+    finalizeAll: async () => {
+      if (get().batchFinalizing) return;
+      const candidates = get().uploadedQueue.filter((doc) => !doc.finalizedAt);
+      if (candidates.length === 0) return;
+
+      set({ batchFinalizing: true });
+
+      for (const doc of candidates) {
+        try {
+          const res = await fetch(`${API_BASE}/api/document/${doc.id}/finalize`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              decisions: decisionsForDocument(doc),
+              manualRedactions: manualRedactionsForDocument(doc),
+            }),
+          });
+
+          if (!res.ok) continue;
+          const data = await res.json();
+
+          set((state) => {
+            const queue = state.uploadedQueue.map((existing) =>
+              existing.id === doc.id
+                ? {
+                    ...existing,
+                    finalizedAt: data.finalizedAt ?? Date.now(),
+                    exportPath: data.exportPath,
+                    exportFilename: data.exportFilename,
+                    requiresReview: false,
+                    pendingReviewCount: 0,
+                  }
+                : existing
+            );
+
+            return {
+              uploadedQueue: queue,
+              ...syncSelection(queue, state.currentDocId, state.currentRedactionIndex),
+              metrics: {
+                ...state.metrics,
+                processed: state.metrics.processed + 1,
+              },
+            };
+          });
+        } catch {
+          // Leave the document in the queue if export fails.
+        }
+      }
+
+      set({ batchFinalizing: false, flashEffect: "finalize" });
     },
 
     setCurrentDocIndex: (index) => {

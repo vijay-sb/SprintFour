@@ -11,14 +11,6 @@ export interface Redaction {
   status: "pending" | "approved" | "rejected";
 }
 
-export interface Document {
-  documentId: string;
-  priorityScore: number;
-  content: string;
-  suggestedRedactions: Redaction[];
-  status: "in-review" | "finalized";
-}
-
 export interface UploadedDocument {
   id: string;
   filename: string;
@@ -48,43 +40,32 @@ interface TriageState {
   userTier: "free" | "pro";
   setUserTier: (tier: "free" | "pro") => void;
 
-  // Upload flow
-  uploadedDoc: UploadedDocument | null;
+  // Queue mode (Bulk Upload)
+  uploadedQueue: UploadedDocument[];
+  currentDocIndex: number;
+  currentRedactionIndex: number;
   uploadLoading: boolean;
   uploadError: string | null;
-  uploadDocument: (file: File) => Promise<void>;
-  pollDocumentStatus: (id: string) => Promise<void>;
-  clearUploadedDoc: () => void;
+  flashEffect: string | null;
+
+  batchUpload: (files: File[]) => Promise<void>;
+  pollQueueStatus: () => void;
+  clearQueue: () => void;
 
   // Triage mode
   triageMode: "normal" | "vim";
   setTriageMode: (mode: "normal" | "vim") => void;
 
-  // Queue mode (legacy / demo)
-  documents: Document[];
-  currentDocIndex: number;
-  currentRedactionIndex: number;
-  loading: boolean;
-  error: string | null;
+  // Metrics
   metrics: Metrics;
-  flashEffect: string | null;
 
-  // Current uploaded doc redaction navigation
-  currentUploadRedactionIndex: number;
-
-  // Actions
-  fetchQueue: () => Promise<void>;
+  // Triage actions for current document in queue
   approveRedaction: () => void;
   rejectRedaction: () => void;
   navigateRedaction: (direction: "next" | "prev") => void;
   finalizeDocument: () => void;
   clearFlash: () => void;
-
-  // Uploaded doc triage actions
-  approveUploadRedaction: () => void;
-  rejectUploadRedaction: () => void;
-  navigateUploadRedaction: (direction: "next" | "prev") => void;
-  finalizeUploadedDocument: () => void;
+  setCurrentDocIndex: (index: number) => void;
 }
 
 const AUTO_APPROVE_THRESHOLD = 90;
@@ -98,360 +79,288 @@ function getStoredTier(): "free" | "pro" {
   }
 }
 
-export const useTriageStore = create<TriageState>((set, get) => ({
-  // User
-  userTier: getStoredTier(),
-  setUserTier: (tier) => {
-    localStorage.setItem("conseal_tier", tier);
-    set({ userTier: tier });
-  },
+export const useTriageStore = create<TriageState>((set, get) => {
+  let pollingInterval: number | null = null;
 
-  // Upload
-  uploadedDoc: null,
-  uploadLoading: false,
-  uploadError: null,
-  currentUploadRedactionIndex: 0,
+  const startPolling = () => {
+    if (pollingInterval) clearInterval(pollingInterval);
+    pollingInterval = window.setInterval(async () => {
+      const state = get();
+      if (state.uploadedQueue.length === 0) return;
 
-  uploadDocument: async (file: File) => {
-    set({ uploadLoading: true, uploadError: null, uploadedDoc: null });
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("userTier", get().userTier);
-
-      const res = await fetch(`${API_BASE}/api/upload`, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || `Upload failed: ${res.status}`);
-      }
-
-      const data = await res.json();
-
-      // Fetch full document
-      const docRes = await fetch(`${API_BASE}/api/document/${data.documentId}`);
-      const docData = await docRes.json();
-
-      const doc: UploadedDocument = {
-        id: docData.id,
-        filename: docData.filename,
-        mimeType: docData.mimeType,
-        text: docData.text,
-        filePath: docData.filePath,
-        redactions: docData.redactions.map((r: Omit<Redaction, "status">) => ({
-          ...r,
-          status: r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending",
-        })),
-        phase: docData.phase,
-        userTier: docData.userTier,
-        uploadedAt: docData.uploadedAt,
-      };
-
-      set({
-        uploadedDoc: doc,
-        uploadLoading: false,
-        currentUploadRedactionIndex: 0,
-        metrics: {
-          ...get().metrics,
-          documentStartTime: Date.now(),
-        },
-      });
-
-      // Start polling for AI results if not complete
-      if (doc.phase !== "complete") {
-        get().pollDocumentStatus(doc.id);
-      }
-    } catch (err) {
-      set({ uploadLoading: false, uploadError: (err as Error).message });
-    }
-  },
-
-  pollDocumentStatus: async (id: string) => {
-    const poll = async () => {
-      try {
-        const res = await fetch(`${API_BASE}/api/document/${id}/status`);
-        if (!res.ok) return;
-
-        const data = await res.json();
-        const doc = get().uploadedDoc;
-        if (!doc || doc.id !== id) return;
-
-        const updatedDoc: UploadedDocument = {
-          ...doc,
-          phase: data.phase,
-          redactions: data.redactions.map((r: Omit<Redaction, "status">) => {
-            // Preserve existing decisions
-            const existing = doc.redactions.find(
-              (e) => e.startIndex === r.startIndex && e.endIndex === r.endIndex
-            );
-            return {
-              ...r,
-              status: existing?.status !== "pending"
-                ? existing?.status || (r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending")
-                : r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending",
-            };
-          }),
-        };
-
-        set({ uploadedDoc: updatedDoc });
-
-        // Keep polling if not complete
-        if (data.phase !== "complete" && data.phase !== "error") {
-          setTimeout(poll, 1500);
-        }
-      } catch {
-        // Silently fail, try again
-        setTimeout(poll, 3000);
-      }
-    };
-
-    setTimeout(poll, 2000);
-  },
-
-  clearUploadedDoc: () => set({ uploadedDoc: null, uploadError: null, currentUploadRedactionIndex: 0 }),
-
-  // Triage mode
-  triageMode: "normal",
-  setTriageMode: (mode) => set({ triageMode: mode }),
-
-  // Queue (legacy)
-  documents: [],
-  currentDocIndex: 0,
-  currentRedactionIndex: 0,
-  loading: false,
-  error: null,
-  flashEffect: null,
-  metrics: {
-    processed: 0,
-    totalApproved: 0,
-    totalRejected: 0,
-    autoApproved: 0,
-    manualOverrides: 0,
-    startTime: Date.now(),
-    totalTimeSpent: 0,
-    documentStartTime: Date.now(),
-  },
-
-  fetchQueue: async () => {
-    set({ loading: true, error: null });
-    try {
-      const res = await fetch(`${API_BASE}/api/queue`);
-      if (!res.ok) throw new Error(`API error: ${res.status}`);
-      const raw = await res.json();
-      const documents: Document[] = raw.map(
-        (doc: Omit<Document, "status"> & { suggestedRedactions: Omit<Redaction, "status">[] }) => ({
-          ...doc,
-          status: "in-review" as const,
-          suggestedRedactions: doc.suggestedRedactions.map((r) => ({
-            ...r,
-            status: r.confidence >= AUTO_APPROVE_THRESHOLD ? ("approved" as const) : ("pending" as const),
-          })),
-        })
+      // Find documents that are not complete/error
+      const pendingDocs = state.uploadedQueue.filter(
+        (doc) => doc.phase !== "complete" && doc.phase !== "error"
       );
 
-      let autoApproved = 0;
-      documents.forEach((doc) => {
-        doc.suggestedRedactions.forEach((r) => {
-          if (r.status === "approved") autoApproved++;
+      if (pendingDocs.length === 0) {
+        clearInterval(pollingInterval!);
+        return;
+      }
+
+      // Fetch status for pending docs
+      for (const doc of pendingDocs) {
+        try {
+          const res = await fetch(`${API_BASE}/api/document/${doc.id}/status`);
+          if (res.ok) {
+            const data = await res.json();
+            set((prev) => {
+              const newQueue = [...prev.uploadedQueue];
+              const docIndex = newQueue.findIndex((d) => d.id === doc.id);
+              if (docIndex !== -1) {
+                const currentDoc = newQueue[docIndex];
+                newQueue[docIndex] = {
+                  ...currentDoc,
+                  phase: data.phase,
+                  redactions: data.redactions.map((r: Omit<Redaction, "status">) => {
+                    const existing = currentDoc.redactions.find(
+                      (e) => e.startIndex === r.startIndex && e.endIndex === r.endIndex
+                    );
+                    return {
+                      ...r,
+                      status:
+                        existing?.status !== "pending"
+                          ? existing?.status || (r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending")
+                          : r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending",
+                    };
+                  }),
+                };
+              }
+              return { uploadedQueue: newQueue };
+            });
+          }
+        } catch (err) {
+          // Ignore polling errors
+        }
+      }
+    }, 2000);
+  };
+
+  return {
+    // User
+    userTier: getStoredTier(),
+    setUserTier: (tier) => {
+      localStorage.setItem("conseal_tier", tier);
+      set({ userTier: tier });
+    },
+
+    // Queue state
+    uploadedQueue: [],
+    currentDocIndex: 0,
+    currentRedactionIndex: 0,
+    uploadLoading: false,
+    uploadError: null,
+    flashEffect: null,
+
+    metrics: {
+      processed: 0,
+      totalApproved: 0,
+      totalRejected: 0,
+      autoApproved: 0,
+      manualOverrides: 0,
+      startTime: Date.now(),
+      totalTimeSpent: 0,
+      documentStartTime: Date.now(),
+    },
+
+    // Upload
+    batchUpload: async (files: File[]) => {
+      set({ uploadLoading: true, uploadError: null });
+      try {
+        const formData = new FormData();
+        files.forEach((file) => formData.append("files", file));
+        formData.append("userTier", get().userTier);
+
+        const res = await fetch(`${API_BASE}/api/upload-batch`, {
+          method: "POST",
+          body: formData,
         });
-      });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.error || `Upload failed: ${res.status}`);
+        }
+
+        const data = await res.json();
+        const documentIds = data.documents.map((d: any) => d.documentId);
+
+        // Fetch all full documents
+        const fullDocs: UploadedDocument[] = [];
+        for (const id of documentIds) {
+          const docRes = await fetch(`${API_BASE}/api/document/${id}`);
+          if (docRes.ok) {
+            const docData = await docRes.json();
+            fullDocs.push({
+              id: docData.id,
+              filename: docData.filename,
+              mimeType: docData.mimeType,
+              text: docData.text,
+              filePath: docData.filePath,
+              redactions: docData.redactions.map((r: Omit<Redaction, "status">) => ({
+                ...r,
+                status: r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending",
+              })),
+              phase: docData.phase,
+              userTier: docData.userTier,
+              uploadedAt: docData.uploadedAt,
+            });
+          }
+        }
+
+        let autoApproved = get().metrics.autoApproved;
+        fullDocs.forEach((doc) => {
+          doc.redactions.forEach((r) => {
+            if (r.status === "approved") autoApproved++;
+          });
+        });
+
+        set({
+          uploadedQueue: [...get().uploadedQueue, ...fullDocs],
+          uploadLoading: false,
+          currentDocIndex: get().uploadedQueue.length, // Start at first new document
+          currentRedactionIndex: 0,
+          metrics: {
+            ...get().metrics,
+            autoApproved,
+            documentStartTime: Date.now(),
+          },
+        });
+
+        startPolling();
+      } catch (err) {
+        set({ uploadLoading: false, uploadError: (err as Error).message });
+      }
+    },
+
+    pollQueueStatus: () => {
+      startPolling();
+    },
+
+    clearQueue: () => {
+      if (pollingInterval) clearInterval(pollingInterval);
+      set({ uploadedQueue: [], uploadError: null, currentDocIndex: 0, currentRedactionIndex: 0 });
+    },
+
+    // Triage mode
+    triageMode: "normal",
+    setTriageMode: (mode) => set({ triageMode: mode }),
+
+    // Actions
+    approveRedaction: () => {
+      const { uploadedQueue, currentDocIndex, currentRedactionIndex, metrics } = get();
+      const doc = uploadedQueue[currentDocIndex];
+      if (!doc) return;
+      const redaction = doc.redactions[currentRedactionIndex];
+      if (!redaction) return;
+
+      const wasAutoApproved = redaction.status === "approved";
+      const newQueue = [...uploadedQueue];
+      newQueue[currentDocIndex] = {
+        ...doc,
+        redactions: doc.redactions.map((r, i) =>
+          i === currentRedactionIndex ? { ...r, status: "approved" as const } : r
+        ),
+      };
+
+      const newMetrics = { ...metrics };
+      if (!wasAutoApproved) newMetrics.totalApproved++;
+
+      set({ uploadedQueue: newQueue, metrics: newMetrics, flashEffect: "approve" });
+    },
+
+    rejectRedaction: () => {
+      const { uploadedQueue, currentDocIndex, currentRedactionIndex, metrics } = get();
+      const doc = uploadedQueue[currentDocIndex];
+      if (!doc) return;
+      const redaction = doc.redactions[currentRedactionIndex];
+      if (!redaction) return;
+
+      const wasAutoApproved = redaction.status === "approved";
+      const newQueue = [...uploadedQueue];
+      newQueue[currentDocIndex] = {
+        ...doc,
+        redactions: doc.redactions.map((r, i) =>
+          i === currentRedactionIndex ? { ...r, status: "rejected" as const } : r
+        ),
+      };
+
+      const newMetrics = { ...metrics };
+      newMetrics.totalRejected++;
+      if (wasAutoApproved) {
+        newMetrics.manualOverrides++;
+        newMetrics.autoApproved--;
+      }
+
+      set({ uploadedQueue: newQueue, metrics: newMetrics, flashEffect: "reject" });
+    },
+
+    navigateRedaction: (direction) => {
+      const { uploadedQueue, currentDocIndex, currentRedactionIndex } = get();
+      const doc = uploadedQueue[currentDocIndex];
+      if (!doc) return;
+
+      const maxIdx = doc.redactions.length - 1;
+      const newIdx =
+        direction === "next"
+          ? Math.min(currentRedactionIndex + 1, maxIdx)
+          : Math.max(currentRedactionIndex - 0 - 1, 0);
 
       set({
-        documents,
-        loading: false,
-        currentDocIndex: 0,
+        currentRedactionIndex: newIdx,
+        flashEffect: direction === "next" ? "nav-down" : "nav-up",
+      });
+    },
+
+    finalizeDocument: () => {
+      const { uploadedQueue, currentDocIndex, metrics } = get();
+      const doc = uploadedQueue[currentDocIndex];
+      if (!doc) return;
+
+      const timeOnDoc = Date.now() - metrics.documentStartTime;
+
+      // Send finalize to backend
+      const decisions = doc.redactions.map((r) => ({
+        startIndex: r.startIndex,
+        endIndex: r.endIndex,
+        status: r.status === "pending" ? "approved" : r.status,
+      }));
+
+      fetch(`${API_BASE}/api/document/${doc.id}/finalize`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ decisions }),
+      }).catch(console.error);
+
+      // Move to next document automatically! (or if last, stay on it but mark done)
+      const nextIndex =
+        currentDocIndex + 1 < uploadedQueue.length ? currentDocIndex + 1 : currentDocIndex;
+
+      set({
+        currentDocIndex: nextIndex,
         currentRedactionIndex: 0,
+        flashEffect: "finalize",
         metrics: {
-          ...get().metrics,
-          autoApproved,
-          startTime: Date.now(),
+          ...metrics,
+          processed: metrics.processed + 1,
+          totalTimeSpent: metrics.totalTimeSpent + timeOnDoc,
           documentStartTime: Date.now(),
         },
       });
-    } catch (err) {
-      set({ loading: false, error: (err as Error).message });
-    }
-  },
+    },
 
-  approveRedaction: () => {
-    const { documents, currentDocIndex, currentRedactionIndex } = get();
-    const doc = documents[currentDocIndex];
-    if (!doc) return;
-    const redaction = doc.suggestedRedactions[currentRedactionIndex];
-    if (!redaction) return;
+    setCurrentDocIndex: (index: number) => {
+      if (index >= 0 && index < get().uploadedQueue.length) {
+        set({
+          currentDocIndex: index,
+          currentRedactionIndex: 0,
+          metrics: {
+            ...get().metrics,
+            documentStartTime: Date.now(),
+          },
+        });
+      }
+    },
 
-    const wasAutoApproved = redaction.status === "approved";
-    const newDocs = [...documents];
-    newDocs[currentDocIndex] = {
-      ...doc,
-      suggestedRedactions: doc.suggestedRedactions.map((r, i) =>
-        i === currentRedactionIndex ? { ...r, status: "approved" as const } : r
-      ),
-    };
-
-    const metrics = { ...get().metrics };
-    if (!wasAutoApproved) metrics.totalApproved++;
-
-    set({ documents: newDocs, metrics, flashEffect: "approve" });
-  },
-
-  rejectRedaction: () => {
-    const { documents, currentDocIndex, currentRedactionIndex } = get();
-    const doc = documents[currentDocIndex];
-    if (!doc) return;
-    const redaction = doc.suggestedRedactions[currentRedactionIndex];
-    if (!redaction) return;
-
-    const wasAutoApproved = redaction.status === "approved";
-    const newDocs = [...documents];
-    newDocs[currentDocIndex] = {
-      ...doc,
-      suggestedRedactions: doc.suggestedRedactions.map((r, i) =>
-        i === currentRedactionIndex ? { ...r, status: "rejected" as const } : r
-      ),
-    };
-
-    const metrics = { ...get().metrics };
-    metrics.totalRejected++;
-    if (wasAutoApproved) {
-      metrics.manualOverrides++;
-      metrics.autoApproved--;
-    }
-
-    set({ documents: newDocs, metrics, flashEffect: "reject" });
-  },
-
-  navigateRedaction: (direction) => {
-    const { documents, currentDocIndex, currentRedactionIndex } = get();
-    const doc = documents[currentDocIndex];
-    if (!doc) return;
-
-    const maxIdx = doc.suggestedRedactions.length - 1;
-    const newIdx = direction === "next"
-      ? Math.min(currentRedactionIndex + 1, maxIdx)
-      : Math.max(currentRedactionIndex - 1, 0);
-
-    set({ currentRedactionIndex: newIdx, flashEffect: direction === "next" ? "nav-down" : "nav-up" });
-  },
-
-  finalizeDocument: () => {
-    const { documents, currentDocIndex, metrics } = get();
-    const doc = documents[currentDocIndex];
-    if (!doc) return;
-
-    const timeOnDoc = Date.now() - metrics.documentStartTime;
-    const newDocs = documents.filter((_, i) => i !== currentDocIndex);
-    const newIndex = Math.min(currentDocIndex, newDocs.length - 1);
-
-    set({
-      documents: newDocs,
-      currentDocIndex: Math.max(newIndex, 0),
-      currentRedactionIndex: 0,
-      flashEffect: "finalize",
-      metrics: {
-        ...metrics,
-        processed: metrics.processed + 1,
-        totalTimeSpent: metrics.totalTimeSpent + timeOnDoc,
-        documentStartTime: Date.now(),
-      },
-    });
-  },
-
-  clearFlash: () => set({ flashEffect: null }),
-
-  // Uploaded doc triage actions
-  approveUploadRedaction: () => {
-    const { uploadedDoc, currentUploadRedactionIndex } = get();
-    if (!uploadedDoc) return;
-    const redaction = uploadedDoc.redactions[currentUploadRedactionIndex];
-    if (!redaction) return;
-
-    const wasAutoApproved = redaction.status === "approved";
-    const newRedactions = uploadedDoc.redactions.map((r, i) =>
-      i === currentUploadRedactionIndex ? { ...r, status: "approved" as const } : r
-    );
-
-    const metrics = { ...get().metrics };
-    if (!wasAutoApproved) metrics.totalApproved++;
-
-    set({
-      uploadedDoc: { ...uploadedDoc, redactions: newRedactions },
-      metrics,
-      flashEffect: "approve",
-    });
-  },
-
-  rejectUploadRedaction: () => {
-    const { uploadedDoc, currentUploadRedactionIndex } = get();
-    if (!uploadedDoc) return;
-    const redaction = uploadedDoc.redactions[currentUploadRedactionIndex];
-    if (!redaction) return;
-
-    const wasAutoApproved = redaction.status === "approved";
-    const newRedactions = uploadedDoc.redactions.map((r, i) =>
-      i === currentUploadRedactionIndex ? { ...r, status: "rejected" as const } : r
-    );
-
-    const metrics = { ...get().metrics };
-    metrics.totalRejected++;
-    if (wasAutoApproved) {
-      metrics.manualOverrides++;
-      metrics.autoApproved--;
-    }
-
-    set({
-      uploadedDoc: { ...uploadedDoc, redactions: newRedactions },
-      metrics,
-      flashEffect: "reject",
-    });
-  },
-
-  navigateUploadRedaction: (direction) => {
-    const { uploadedDoc, currentUploadRedactionIndex } = get();
-    if (!uploadedDoc) return;
-    const maxIdx = uploadedDoc.redactions.length - 1;
-    const newIdx = direction === "next"
-      ? Math.min(currentUploadRedactionIndex + 1, maxIdx)
-      : Math.max(currentUploadRedactionIndex - 1, 0);
-
-    set({
-      currentUploadRedactionIndex: newIdx,
-      flashEffect: direction === "next" ? "nav-down" : "nav-up",
-    });
-  },
-
-  finalizeUploadedDocument: () => {
-    const { uploadedDoc, metrics } = get();
-    if (!uploadedDoc) return;
-
-    const timeOnDoc = Date.now() - metrics.documentStartTime;
-
-    // Send finalize to backend
-    const decisions = uploadedDoc.redactions.map((r) => ({
-      startIndex: r.startIndex,
-      endIndex: r.endIndex,
-      status: r.status === "pending" ? "approved" : r.status,
-    }));
-
-    fetch(`${API_BASE}/api/document/${uploadedDoc.id}/finalize`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ decisions }),
-    }).catch(console.error);
-
-    set({
-      uploadedDoc: null,
-      currentUploadRedactionIndex: 0,
-      flashEffect: "finalize",
-      metrics: {
-        ...metrics,
-        processed: metrics.processed + 1,
-        totalTimeSpent: metrics.totalTimeSpent + timeOnDoc,
-        documentStartTime: Date.now(),
-      },
-    });
-  },
-}));
+    clearFlash: () => set({ flashEffect: null }),
+  };
+});

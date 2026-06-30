@@ -143,6 +143,78 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
   }
 });
 
+// Bulk upload
+app.post("/api/upload-batch", upload.array("files", 500), async (req, res) => {
+  try {
+    const files = req.files as Express.Multer.File[];
+    if (!files || files.length === 0) {
+      res.status(400).json({ error: "No files uploaded" });
+      return;
+    }
+
+    const userTier = (req.body?.userTier as "free" | "pro") || "free";
+    const ollamaUp = await isOllamaAvailable();
+    const results = [];
+
+    // Process all files in parallel for the initial regex pass
+    await Promise.all(
+      files.map(async (file) => {
+        const docId = uuidv4();
+        const filePath = file.path;
+        let text = "";
+
+        if (file.mimetype === "application/pdf") {
+          const { PDFParse } = await import("pdf-parse");
+          const buffer = readFileSync(filePath);
+          const parser = new PDFParse({ data: buffer });
+          const pdfData = await parser.getText();
+          text = pdfData.text;
+        } else {
+          text = readFileSync(filePath, "utf-8");
+        }
+
+        const regexResults = runRegexEngine(text);
+
+        const doc: ProcessedDocument = {
+          id: docId,
+          originalFilename: file.originalname,
+          mimeType: file.mimetype,
+          text,
+          filePath: `/uploads/${file.filename}`,
+          redactions: regexResults,
+          phase: "regex",
+          userTier,
+          uploadedAt: Date.now(),
+        };
+
+        priorityQueue.setDocument(doc);
+
+        if (ollamaUp) {
+          priorityQueue.enqueueAIJob(docId, userTier);
+        } else {
+          doc.phase = "complete";
+          priorityQueue.setDocument(doc);
+        }
+
+        results.push({
+          documentId: docId,
+          filename: file.originalname,
+          phase: doc.phase,
+        });
+      })
+    );
+
+    res.json({
+      success: true,
+      count: results.length,
+      documents: results,
+    });
+  } catch (err) {
+    console.error("Batch upload error:", err);
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
 // Get document with current results
 app.get("/api/document/:id", (req, res) => {
   const doc = priorityQueue.getDocument(req.params.id!);

@@ -10,27 +10,30 @@ const API_BASE = "http://localhost:3001";
 
 export function ProcessPage() {
   const {
-    uploadedDoc,
+    uploadedQueue,
+    currentDocIndex,
     uploadLoading,
     uploadError,
-    uploadDocument,
-    clearUploadedDoc,
+    batchUpload,
+    clearQueue,
     userTier,
     triageMode,
     setTriageMode,
-    currentUploadRedactionIndex,
-    approveUploadRedaction,
-    rejectUploadRedaction,
-    navigateUploadRedaction,
-    finalizeUploadedDocument,
+    currentRedactionIndex,
+    approveRedaction,
+    rejectRedaction,
+    navigateRedaction,
+    finalizeDocument,
     flashEffect,
     clearFlash,
     metrics,
+    setCurrentDocIndex,
   } = useTriageStore();
 
   const [viewMode, setViewMode] = useState<"pdf" | "text">("text");
   const [dragOver, setDragOver] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const folderInputRef = useRef<HTMLInputElement>(null);
 
   // Flash effect cleanup
   useEffect(() => {
@@ -40,27 +43,29 @@ export function ProcessPage() {
     }
   }, [flashEffect, clearFlash]);
 
-  // Vim-mode keyboard bindings (only when vim mode active and doc loaded)
+  // Vim-mode keyboard bindings
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (!uploadedDoc || triageMode !== "vim") return;
+      const currentDoc = uploadedQueue[currentDocIndex];
+      if (!currentDoc || triageMode !== "vim") return;
+      
       // Don't capture if typing in an input
       if ((e.target as HTMLElement).tagName === "INPUT" || (e.target as HTMLElement).tagName === "TEXTAREA") return;
 
       if (e.key === "Enter" && e.shiftKey) {
         e.preventDefault();
-        finalizeUploadedDocument();
+        finalizeDocument();
         return;
       }
 
       switch (e.key) {
-        case "j": navigateUploadRedaction("next"); break;
-        case "k": navigateUploadRedaction("prev"); break;
-        case "y": approveUploadRedaction(); break;
-        case "x": rejectUploadRedaction(); break;
+        case "j": navigateRedaction("next"); break;
+        case "k": navigateRedaction("prev"); break;
+        case "y": approveRedaction(); break;
+        case "x": rejectRedaction(); break;
       }
     },
-    [uploadedDoc, triageMode, navigateUploadRedaction, approveUploadRedaction, rejectUploadRedaction, finalizeUploadedDocument]
+    [uploadedQueue, currentDocIndex, triageMode, navigateRedaction, approveRedaction, rejectRedaction, finalizeDocument]
   );
 
   useEffect(() => {
@@ -69,39 +74,42 @@ export function ProcessPage() {
   }, [handleKeyDown]);
 
   // File handlers
-  const handleFile = useCallback(
-    (file: File) => {
-      uploadDocument(file);
+  const handleFiles = useCallback(
+    (files: FileList | File[]) => {
+      const fileArray = Array.from(files).filter(
+        (f) => f.name.endsWith(".pdf") || f.name.endsWith(".txt") || f.name.endsWith(".doc") || f.name.endsWith(".docx")
+      );
+      if (fileArray.length > 0) {
+        batchUpload(fileArray);
+      }
     },
-    [uploadDocument]
+    [batchUpload]
   );
 
   const handleDrop = useCallback(
     (e: React.DragEvent) => {
       e.preventDefault();
       setDragOver(false);
-      const file = e.dataTransfer.files[0];
-      if (file) handleFile(file);
+      handleFiles(e.dataTransfer.files);
     },
-    [handleFile]
+    [handleFiles]
   );
 
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (file) handleFile(file);
+      if (e.target.files) handleFiles(e.target.files);
     },
-    [handleFile]
+    [handleFiles]
   );
 
   // If no document uploaded yet, show upload zone
-  if (!uploadedDoc && !uploadLoading) {
+  if (uploadedQueue.length === 0 && !uploadLoading) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-white mb-3">Process Document</h1>
+          <h1 className="text-3xl font-bold text-white mb-3">Process Documents</h1>
           <p className="text-sm text-slate-400">
-            Upload a PDF or text file to begin PII detection and redaction.
+            Upload files or an entire directory to begin bulk PII detection and redaction.
           </p>
         </div>
 
@@ -110,35 +118,57 @@ export function ProcessPage() {
           onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
-          onClick={() => fileInputRef.current?.click()}
-          className={`relative cursor-pointer rounded-xl border-2 border-dashed p-16 text-center transition-all ${
+          className={`relative rounded-xl border-2 border-dashed p-16 text-center transition-all ${
             dragOver
               ? "border-cyan-500 bg-cyan-500/10 scale-[1.01]"
-              : "border-slate-700 bg-slate-900/30 hover:border-slate-600 hover:bg-slate-900/50"
+              : "border-slate-700 bg-slate-900/30"
           }`}
         >
           <input
             ref={fileInputRef}
             type="file"
+            multiple
             accept=".pdf,.txt,.doc,.docx"
             onChange={handleInputChange}
             className="hidden"
           />
-          <div className={`text-5xl mb-4 transition-transform ${dragOver ? "scale-110" : ""}`}>
-            📄
+          <input
+            ref={folderInputRef}
+            type="file"
+            // @ts-ignore
+            webkitdirectory="true"
+            directory="true"
+            onChange={handleInputChange}
+            className="hidden"
+          />
+          <div className={`text-5xl mb-6 transition-transform ${dragOver ? "scale-110" : ""}`}>
+            📂
           </div>
-          <div className="text-sm font-medium text-slate-300 mb-2">
-            Drop your document here, or{" "}
-            <span className="text-cyan-400 underline underline-offset-2">browse files</span>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              className="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg transition-colors border border-slate-700"
+            >
+              Select Files
+            </button>
+            <button
+              onClick={() => folderInputRef.current?.click()}
+              className="px-6 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 text-sm font-medium rounded-lg transition-colors border border-cyan-500/30"
+            >
+              Select Folder
+            </button>
+          </div>
+          <div className="text-sm font-medium text-slate-400 mb-2">
+            Or drag and drop files/folders here
           </div>
           <div className="text-xs text-slate-500">
-            Supports PDF, TXT, DOC, DOCX — up to 50MB
+            Supports PDF, TXT, DOC, DOCX
           </div>
 
           {userTier === "pro" && (
-            <div className="mt-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-[10px] text-violet-400">
+            <div className="mt-6 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-[10px] text-violet-400">
               <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
-              Priority processing enabled
+              Priority batch processing enabled
             </div>
           )}
         </div>
@@ -155,7 +185,7 @@ export function ProcessPage() {
             <StatCard label="Processed Today" value={metrics.processed.toString()} color="text-cyan-400" />
             <StatCard
               label="Avg Time"
-              value={`${metrics.processed > 0 ? Math.round(metrics.totalTimeSpent / metrics.processed / 1000) : 0}s`}
+              value={`${metrics.processed > 0 ? (metrics.totalTimeSpent / metrics.processed / 1000).toFixed(1) : 0}s`}
               color="text-amber-400"
             />
             <StatCard label="Redactions Made" value={(metrics.totalApproved + metrics.totalRejected).toString()} color="text-emerald-400" />
@@ -172,8 +202,8 @@ export function ProcessPage() {
         <div className="text-center space-y-6">
           <div className="w-12 h-12 border-3 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto" />
           <div>
-            <div className="text-sm font-medium text-slate-200">Processing document...</div>
-            <div className="text-xs text-slate-500 mt-1">Running regex PII detection</div>
+            <div className="text-sm font-medium text-slate-200">Uploading and queuing documents...</div>
+            <div className="text-xs text-slate-500 mt-1">Initial regex pass is running</div>
           </div>
         </div>
       </div>
@@ -181,27 +211,40 @@ export function ProcessPage() {
   }
 
   // Document loaded — show viewer + triage
-  const doc = uploadedDoc!;
+  const doc = uploadedQueue[currentDocIndex];
+  if (!doc) {
+    return (
+      <div className="text-center py-20">
+        <h2 className="text-2xl font-bold text-white">All documents processed!</h2>
+        <button onClick={clearQueue} className="mt-4 px-4 py-2 bg-cyan-600 rounded text-white">Process More</button>
+      </div>
+    );
+  }
+
   const redactions = doc.redactions;
-  const activeRedaction = redactions[currentUploadRedactionIndex];
+  const activeRedaction = redactions[currentRedactionIndex];
   const allReviewed = redactions.every((r) => r.status !== "pending");
   const isPdf = doc.mimeType === "application/pdf";
 
+  const pendingCount = uploadedQueue.filter(d => d.redactions.some(r => r.status === 'pending')).length;
+
   return (
-    <div className="max-w-7xl mx-auto px-6 py-6">
+    <div className="max-w-[1400px] mx-auto px-6 py-6">
       {/* Top Bar */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <button
-            onClick={clearUploadedDoc}
+            onClick={clearQueue}
             className="px-3 py-1.5 text-xs font-medium text-slate-400 bg-slate-800 rounded-lg border border-slate-700 hover:bg-slate-700 transition-colors"
           >
-            ← Back
+            ← Clear Queue
           </button>
-          <span className="text-sm font-medium text-slate-200 truncate max-w-[300px]">
-            {doc.filename}
-          </span>
-          <PhaseIndicator phase={doc.phase} />
+          
+          <div className="flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-700">
+            <span className="text-xs text-slate-500 uppercase font-mono">Queue</span>
+            <span className="text-sm font-bold text-cyan-400">{currentDocIndex + 1} / {uploadedQueue.length}</span>
+            <span className="text-xs text-slate-500">({pendingCount} pending)</span>
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
@@ -267,8 +310,50 @@ export function ProcessPage() {
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Document Viewer — 2/3 width */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        {/* Document List Sidebar (1/4) */}
+        <div className="hidden lg:block space-y-4">
+           <Card className="bg-slate-900/80 border-slate-700/50 h-[80vh] flex flex-col">
+            <div className="p-4 border-b border-slate-800/50">
+              <div className="text-xs font-mono text-slate-500 uppercase tracking-wider mb-2">
+                Document Queue
+              </div>
+              <Progress value={(metrics.processed / uploadedQueue.length) * 100} className="h-1.5" />
+            </div>
+            <div className="flex-1 overflow-y-auto p-2 space-y-1">
+              {uploadedQueue.map((d, idx) => {
+                const isActive = idx === currentDocIndex;
+                const isPending = d.redactions.some(r => r.status === "pending");
+                return (
+                  <button
+                    key={d.id}
+                    onClick={() => setCurrentDocIndex(idx)}
+                    className={`w-full text-left px-3 py-2 rounded-lg text-xs font-medium truncate transition-colors ${
+                      isActive 
+                        ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30" 
+                        : isPending
+                        ? "text-slate-300 hover:bg-slate-800"
+                        : "text-slate-500 hover:bg-slate-800/50 opacity-60"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="truncate max-w-[150px]">{d.filename}</span>
+                      {!isPending && <span className="text-emerald-500">✓</span>}
+                    </div>
+                    {isActive && (
+                      <div className="mt-1 flex items-center gap-2">
+                        <PhaseIndicator phase={d.phase} />
+                      </div>
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+           </Card>
+        </div>
+
+        {/* Document Viewer — (2/4) */}
         <div className="lg:col-span-2">
           {viewMode === "pdf" && isPdf ? (
             <PdfViewer filePath={doc.filePath} />
@@ -276,18 +361,90 @@ export function ProcessPage() {
             <DocumentTextViewer
               text={doc.text}
               redactions={redactions}
-              activeIndex={currentUploadRedactionIndex}
+              activeIndex={currentRedactionIndex}
+              filename={doc.filename}
             />
           )}
         </div>
 
-        {/* Sidebar — Redactions Panel */}
+        {/* Sidebar — Redactions Panel (1/4) */}
         <div className="space-y-4">
-          {/* Processing Status */}
+          
+          {/* Action Buttons */}
+          <div className="space-y-2">
+            {triageMode === "normal" && activeRedaction && (
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={approveRedaction}
+                  className="py-3 px-4 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-sm font-bold hover:bg-emerald-500/30 transition-colors"
+                >
+                  ✓ Approve
+                </button>
+                <button
+                  onClick={rejectRedaction}
+                  className="py-3 px-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/30 text-sm font-bold hover:bg-red-500/30 transition-colors"
+                >
+                  ✗ Reject
+                </button>
+              </div>
+            )}
+
+            <button
+              onClick={finalizeDocument}
+              className={`w-full py-3.5 rounded-lg text-sm font-bold transition-all ${
+                allReviewed
+                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transform hover:-translate-y-0.5"
+                  : "bg-slate-800 text-slate-500 border border-slate-700"
+              }`}
+            >
+              {allReviewed ? "✓ Finalize & Next Doc" : `Review remaining (${redactions.filter((r) => r.status === "pending").length})`}
+            </button>
+          </div>
+
+          {/* Redaction List */}
           <Card className="bg-slate-900/80 border-slate-700/50">
             <CardContent className="p-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="text-xs font-mono text-slate-500 uppercase tracking-wider">
+                  Detected PII
+                </div>
+                <Badge variant="outline" className="text-[10px] border-slate-700 text-slate-500">
+                  {redactions.length} items
+                </Badge>
+              </div>
+              
+              <div className="space-y-1.5 max-h-[40vh] overflow-y-auto">
+                {redactions.length === 0 && (
+                   <div className="text-xs text-slate-500 py-4 text-center">No PII detected. Ready to finalize.</div>
+                )}
+                {redactions.map((r, i) => (
+                  <RedactionItem
+                    key={`${r.type}-${r.startIndex}`}
+                    redaction={r}
+                    isActive={i === currentRedactionIndex}
+                    index={i}
+                    mode={triageMode}
+                    flashEffect={i === currentRedactionIndex ? flashEffect : null}
+                    onApprove={() => {
+                      useTriageStore.setState({ currentRedactionIndex: i });
+                      approveRedaction();
+                    }}
+                    onReject={() => {
+                      useTriageStore.setState({ currentRedactionIndex: i });
+                      rejectRedaction();
+                    }}
+                    onSelect={() => useTriageStore.setState({ currentRedactionIndex: i })}
+                  />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+           {/* Processing Status */}
+           <Card className="bg-slate-900/80 border-slate-700/50">
+            <CardContent className="p-4">
               <div className="text-xs font-mono text-slate-500 uppercase tracking-wider mb-3">
-                Processing Pipeline
+                Pipeline Status
               </div>
               <div className="space-y-2">
                 <PipelineStep label="Text Extracted" done={true} />
@@ -298,72 +455,8 @@ export function ProcessPage() {
                   active={doc.phase === "ai-processing" || doc.phase === "ai-queued"}
                 />
               </div>
-              <div className="mt-3 text-xs text-slate-500">
-                {redactions.length} PII items detected
-              </div>
             </CardContent>
           </Card>
-
-          {/* Redaction List */}
-          <Card className="bg-slate-900/80 border-slate-700/50">
-            <CardContent className="p-4">
-              <div className="text-xs font-mono text-slate-500 uppercase tracking-wider mb-3">
-                Detected PII ({redactions.length})
-              </div>
-              <div className="space-y-1.5 max-h-[400px] overflow-y-auto">
-                {redactions.map((r, i) => (
-                  <RedactionItem
-                    key={`${r.type}-${r.startIndex}`}
-                    redaction={r}
-                    isActive={i === currentUploadRedactionIndex}
-                    index={i}
-                    mode={triageMode}
-                    flashEffect={i === currentUploadRedactionIndex ? flashEffect : null}
-                    onApprove={() => {
-                      useTriageStore.setState({ currentUploadRedactionIndex: i });
-                      approveUploadRedaction();
-                    }}
-                    onReject={() => {
-                      useTriageStore.setState({ currentUploadRedactionIndex: i });
-                      rejectUploadRedaction();
-                    }}
-                    onSelect={() => useTriageStore.setState({ currentUploadRedactionIndex: i })}
-                  />
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Action Buttons */}
-          <div className="space-y-2">
-            {triageMode === "normal" && activeRedaction && (
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  onClick={approveUploadRedaction}
-                  className="py-2 px-4 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-medium hover:bg-emerald-500/30 transition-colors"
-                >
-                  ✓ Approve
-                </button>
-                <button
-                  onClick={rejectUploadRedaction}
-                  className="py-2 px-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-medium hover:bg-red-500/30 transition-colors"
-                >
-                  ✗ Reject
-                </button>
-              </div>
-            )}
-
-            <button
-              onClick={finalizeUploadedDocument}
-              className={`w-full py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                allReviewed
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40"
-                  : "bg-slate-800 text-slate-500 border border-slate-700"
-              }`}
-            >
-              {allReviewed ? "✓ Finalize Document" : `Review remaining (${redactions.filter((r) => r.status === "pending").length})`}
-            </button>
-          </div>
 
           {/* Vim Mode Legend */}
           {triageMode === "vim" && (
@@ -377,7 +470,7 @@ export function ProcessPage() {
                   <span className="text-slate-400"><kbd className="kbd-key">K</kbd> prev</span>
                   <span className="text-slate-400"><kbd className="kbd-key bg-emerald-500/10 text-emerald-500 border-emerald-500/30">Y</kbd> approve</span>
                   <span className="text-slate-400"><kbd className="kbd-key bg-red-500/10 text-red-500 border-red-500/30">X</kbd> reject</span>
-                  <span className="col-span-2 text-slate-400"><kbd className="kbd-key bg-cyan-500/10 text-cyan-400 border-cyan-500/30">⇧↵</kbd> finalize</span>
+                  <span className="col-span-2 text-slate-400 mt-1"><kbd className="kbd-key bg-cyan-500/10 text-cyan-400 border-cyan-500/30 w-full text-center">⇧ + Enter</kbd> finalize & next</span>
                 </div>
               </CardContent>
             </Card>
@@ -414,7 +507,7 @@ function PhaseIndicator({ phase }: { phase: string }) {
   return (
     <div className="flex items-center gap-1.5">
       <span className={`w-1.5 h-1.5 rounded-full ${c.color}`} />
-      <span className="text-xs text-slate-400">{c.label}</span>
+      <span className="text-[10px] font-medium text-slate-400">{c.label}</span>
     </div>
   );
 }
@@ -459,10 +552,12 @@ function DocumentTextViewer({
   text,
   redactions,
   activeIndex,
+  filename,
 }: {
   text: string;
   redactions: Redaction[];
   activeIndex: number;
+  filename: string;
 }) {
   const sorted = [...redactions]
     .map((r, i) => ({ ...r, originalIndex: i }))
@@ -516,15 +611,12 @@ function DocumentTextViewer({
   return (
     <Card className="bg-slate-900/80 border-slate-700/50">
       <CardContent className="p-0">
-        <div className="px-4 py-2 border-b border-slate-700/50 flex items-center justify-between">
-          <span className="text-xs font-mono text-slate-500 uppercase tracking-wider">
-            Document Text — PII Highlighted
+        <div className="px-4 py-3 border-b border-slate-700/50 flex items-center justify-between bg-slate-900">
+          <span className="text-sm font-bold text-slate-300 truncate">
+            {filename}
           </span>
-          <Badge variant="outline" className="text-[10px] border-slate-700 text-slate-500">
-            {redactions.length} PII items
-          </Badge>
         </div>
-        <div className="p-8 max-h-[80vh] overflow-y-auto">
+        <div className="p-8 max-h-[75vh] overflow-y-auto">
           <div className="max-w-none bg-slate-950/50 rounded-lg p-8 border border-slate-800/50 font-mono text-sm leading-7 whitespace-pre-wrap">
             {parts}
           </div>

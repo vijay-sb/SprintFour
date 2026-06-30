@@ -8,7 +8,7 @@ if (!existsSync(DATASET_DIR)) {
 }
 
 function randomElement<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(Math.random() * arr.length)] as T;
 }
 
 function randomDigits(length: number): string {
@@ -455,9 +455,9 @@ function generateDoc(index: number) {
     generateSettlementAgreement,
     generateDiscoveryDocument,
     generateEmployeeOnboardingForm
-  ];
+  ] as const;
 
-  const generator = generators[(index - 1) % generators.length];
+  const generator = generators[(index - 1) % generators.length]!;
   const content = generator(params);
 
   const filename = `document_${String(index).padStart(3, "0")}_${name.split(" ")[1]}.txt`;

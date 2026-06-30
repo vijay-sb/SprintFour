@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import multer from "multer";
-import { readFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, mkdirSync, existsSync, writeFileSync } from "fs";
 import { fileURLToPath } from "url";
-import { dirname, join, extname } from "path";
+import { dirname, join, extname, basename } from "path";
 import { v4 as uuidv4 } from "uuid";
 import { runRegexEngine } from "./services/regexEngine.js";
 import { isOllamaAvailable } from "./services/ollamaEngine.js";
@@ -18,11 +18,17 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = 3001;
+const AUTO_APPROVE_THRESHOLD = 90;
 
 // Ensure uploads directory exists
 const UPLOADS_DIR = join(__dirname, "..", "uploads");
 if (!existsSync(UPLOADS_DIR)) {
   mkdirSync(UPLOADS_DIR, { recursive: true });
+}
+
+const RESULTS_DIR = join(__dirname, "..", "results");
+if (!existsSync(RESULTS_DIR)) {
+  mkdirSync(RESULTS_DIR, { recursive: true });
 }
 
 // Configure multer for disk storage
@@ -55,6 +61,133 @@ const upload = multer({
 
 // Serve uploaded files statically (for PDF viewer)
 app.use("/uploads", express.static(UPLOADS_DIR));
+app.use("/results", express.static(RESULTS_DIR));
+
+type FinalizeDecision = {
+  startIndex: number;
+  endIndex: number;
+  status: "approved" | "rejected";
+};
+
+type ManualRedaction = {
+  type: string;
+  value: string;
+  startIndex: number;
+  endIndex: number;
+  confidence: number;
+};
+
+function getReviewStats(redactions: ProcessedDocument["redactions"]) {
+  const manualReviewCount = redactions.filter(
+    (redaction) => redaction.confidence < AUTO_APPROVE_THRESHOLD
+  ).length;
+
+  return {
+    requiresReview: manualReviewCount > 0,
+    autoApprovedCount: redactions.length - manualReviewCount,
+    manualReviewCount,
+  };
+}
+
+function applyDecisions(
+  text: string,
+  redactions: ProcessedDocument["redactions"],
+  decisions: FinalizeDecision[]
+) {
+  const decisionMap = new Map(
+    decisions.map((decision) => [
+      `${decision.startIndex}:${decision.endIndex}`,
+      decision.status,
+    ])
+  );
+
+  const resolved = redactions.map((redaction) => ({
+    ...redaction,
+    status:
+      decisionMap.get(`${redaction.startIndex}:${redaction.endIndex}`) ??
+      (redaction.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "rejected"),
+  }));
+
+  const approved = resolved
+    .filter((redaction) => redaction.status === "approved")
+    .sort((a, b) => b.startIndex - a.startIndex);
+
+  let sanitizedText = text;
+  for (const redaction of approved) {
+    sanitizedText =
+      sanitizedText.slice(0, redaction.startIndex) +
+      `[REDACTED:${redaction.type}]` +
+      sanitizedText.slice(redaction.endIndex);
+  }
+
+  return { resolved, sanitizedText };
+}
+
+function mergeManualRedactions(
+  existing: ProcessedDocument["redactions"],
+  manualRedactions: ManualRedaction[] = []
+) {
+  const merged = [...existing];
+
+  for (const redaction of manualRedactions) {
+    const alreadyExists = merged.some(
+      (existingRedaction) =>
+        existingRedaction.startIndex === redaction.startIndex &&
+        existingRedaction.endIndex === redaction.endIndex
+    );
+
+    if (!alreadyExists) {
+      merged.push(redaction);
+    }
+  }
+
+  return merged.sort((a, b) => a.startIndex - b.startIndex);
+}
+
+function exportDocument(
+  doc: ProcessedDocument,
+  decisions: FinalizeDecision[],
+  manualRedactions: ManualRedaction[] = []
+) {
+  const exportableRedactions = mergeManualRedactions(doc.redactions, manualRedactions);
+  const { resolved, sanitizedText } = applyDecisions(doc.text, exportableRedactions, decisions);
+  const safeBaseName = basename(doc.originalFilename, extname(doc.originalFilename))
+    .replace(/[^a-z0-9._-]+/gi, "_")
+    .replace(/^_+|_+$/g, "") || doc.id;
+  const exportFilename = `${safeBaseName}.${doc.id}.redacted.txt`;
+  const exportManifestName = `${safeBaseName}.${doc.id}.manifest.json`;
+  const exportFilePath = join(RESULTS_DIR, exportFilename);
+  const exportManifestPath = join(RESULTS_DIR, exportManifestName);
+
+  writeFileSync(exportFilePath, sanitizedText, "utf-8");
+  writeFileSync(
+    exportManifestPath,
+    JSON.stringify(
+      {
+        documentId: doc.id,
+        originalFilename: doc.originalFilename,
+        exportedAt: new Date().toISOString(),
+        redactionCount: resolved.length,
+        approvedCount: resolved.filter((redaction) => redaction.status === "approved").length,
+        rejectedCount: resolved.filter((redaction) => redaction.status === "rejected").length,
+        redactions: resolved,
+      },
+      null,
+      2
+    ),
+    "utf-8"
+  );
+
+  doc.redactions = resolved;
+  doc.finalizedAt = Date.now();
+  doc.exportFilename = exportFilename;
+  doc.exportPath = `/results/${exportFilename}`;
+
+  return {
+    exportPath: doc.exportPath,
+    exportFilename,
+  };
+}
 
 // ─── ENDPOINTS ───
 
@@ -136,6 +269,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
       phase: doc.phase,
       redactions: regexResults,
       redactionCount: regexResults.length,
+      ...getReviewStats(regexResults),
     });
   } catch (err) {
     console.error("Upload error:", err);
@@ -154,7 +288,14 @@ app.post("/api/upload-batch", upload.array("files", 500), async (req, res) => {
 
     const userTier = (req.body?.userTier as "free" | "pro") || "free";
     const ollamaUp = await isOllamaAvailable();
-    const results = [];
+    const results: Array<{
+      documentId: string;
+      filename: string;
+      phase: ProcessedDocument["phase"];
+      requiresReview: boolean;
+      autoApprovedCount: number;
+      manualReviewCount: number;
+    }> = [];
 
     // Process all files in parallel for the initial regex pass
     await Promise.all(
@@ -200,6 +341,7 @@ app.post("/api/upload-batch", upload.array("files", 500), async (req, res) => {
           documentId: docId,
           filename: file.originalname,
           phase: doc.phase,
+          ...getReviewStats(regexResults),
         });
       })
     );
@@ -234,6 +376,10 @@ app.get("/api/document/:id", (req, res) => {
     userTier: doc.userTier,
     uploadedAt: doc.uploadedAt,
     processedAt: doc.processedAt,
+    finalizedAt: doc.finalizedAt,
+    exportPath: doc.exportPath,
+    exportFilename: doc.exportFilename,
+    ...getReviewStats(doc.redactions),
     error: doc.error,
   });
 });
@@ -251,6 +397,10 @@ app.get("/api/document/:id/status", (req, res) => {
     phase: doc.phase,
     redactionCount: doc.redactions.length,
     redactions: doc.redactions,
+    finalizedAt: doc.finalizedAt,
+    exportPath: doc.exportPath,
+    exportFilename: doc.exportFilename,
+    ...getReviewStats(doc.redactions),
     queueStatus: priorityQueue.getQueueStatus(),
   });
 });
@@ -269,22 +419,28 @@ app.post("/api/document/:id/finalize", (req, res) => {
       endIndex: number;
       status: "approved" | "rejected";
     }>;
+    manualRedactions?: ManualRedaction[];
   };
 
-  // Apply decisions to redactions
-  if (decisions && Array.isArray(decisions)) {
-    for (const decision of decisions) {
-      const redaction = doc.redactions.find(
-        (r) => r.startIndex === decision.startIndex && r.endIndex === decision.endIndex
-      );
-      if (redaction) {
-        (redaction as typeof redaction & { status: string }).status = decision.status;
-      }
-    }
-    priorityQueue.setDocument(doc);
-  }
+  const normalizedDecisions: FinalizeDecision[] = Array.isArray(decisions)
+    ? decisions
+    : doc.redactions.map((redaction) => ({
+        startIndex: redaction.startIndex,
+        endIndex: redaction.endIndex,
+        status:
+          redaction.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "rejected",
+      }));
 
-  res.json({ success: true, documentId: doc.id });
+  const exportInfo = exportDocument(doc, normalizedDecisions, req.body.manualRedactions);
+  priorityQueue.setDocument(doc);
+
+  res.json({
+    success: true,
+    documentId: doc.id,
+    finalizedAt: doc.finalizedAt,
+    exportPath: exportInfo.exportPath,
+    exportFilename: exportInfo.exportFilename,
+  });
 });
 
 // Keep legacy queue endpoint for demo/mock data

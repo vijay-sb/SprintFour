@@ -17,6 +17,9 @@ export interface ProcessedDocument {
   userTier: "free" | "pro";
   uploadedAt: number;
   processedAt?: number;
+  finalizedAt?: number;
+  exportPath?: string;
+  exportFilename?: string;
   error?: string;
 }
 

@@ -4,168 +4,44 @@
 @import "@fontsource-variable/jetbrains-mono";
 
 @custom-variant dark (&:is(.dark *));
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: oklch(0.922 0 0);
-  --code-bg: #f4f3ec;
-  --accent: oklch(0.97 0 0);
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-
-  --background: #FFFCF0;
-  --foreground: #100F0F;
-  --card: #F2F0E5;
-  --card-foreground: #100F0F;
-  --popover: #F2F0E5;
-  --popover-foreground: #100F0F;
-  --primary: #AF3029;
-  --primary-foreground: #FFFCF0;
-  --secondary: #879A39;
-  --secondary-foreground: #FFFCF0;
-  --muted: #E6E4D9;
-  --muted-foreground: #878580;
-  --accent: #5A3A7E;
-  --accent-foreground: #FFFCF0;
-  --destructive: #D14D41;
-  --border: #E6E4D9;
-  --input: #E6E4D9;
-  --ring: #AF3029;
-  --chart-1: #AF3029;
-  --chart-2: #879A39;
-  --chart-3: #5A3A7E;
-  --chart-4: #D14D41;
-  --chart-5: #205EA6;
-  --radius: 0; /* Brutalist sharp corners */
-  --sidebar: #F2F0E5;
-  --sidebar-foreground: #100F0F;
-  --sidebar-primary: #AF3029;
-  --sidebar-primary-foreground: #FFFCF0;
-  --sidebar-accent: #E6E4D9;
-  --sidebar-accent-foreground: #100F0F;
-  --sidebar-border: #E6E4D9;
-  --sidebar-ring: #AF3029;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-#root {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.kbd-key {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.5rem;
-  height: 1.25rem;
-  padding: 0 0.375rem;
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 600;
-  border-radius: 4px;
-  border: 1px solid rgba(100, 116, 139, 0.3);
-  background: rgba(30, 41, 59, 0.5);
-  color: rgba(148, 163, 184, 0.8);
-  line-height: 1;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  --background: #07111f;
+  --foreground: #e5eefb;
+  --card: #0f172a;
+  --card-foreground: #e5eefb;
+  --popover: #0f172a;
+  --popover-foreground: #e5eefb;
+  --primary: #67e8f9;
+  --primary-foreground: #04111d;
+  --secondary: #172554;
+  --secondary-foreground: #dbeafe;
+  --muted: #111c31;
+  --muted-foreground: #8aa0bf;
+  --accent: #1d4ed8;
+  --accent-foreground: #eff6ff;
+  --destructive: #ef4444;
+  --border: rgba(148, 163, 184, 0.16);
+  --input: rgba(148, 163, 184, 0.16);
+  --ring: #67e8f9;
+  --chart-1: #67e8f9;
+  --chart-2: #34d399;
+  --chart-3: #f59e0b;
+  --chart-4: #f472b6;
+  --chart-5: #818cf8;
+  --radius: 1rem;
+  --sidebar: #0b1220;
+  --sidebar-foreground: #e5eefb;
+  --sidebar-primary: #67e8f9;
+  --sidebar-primary-foreground: #04111d;
+  --sidebar-accent: #111c31;
+  --sidebar-accent-foreground: #e5eefb;
+  --sidebar-border: rgba(148, 163, 184, 0.16);
+  --sidebar-ring: #67e8f9;
 }
 
 @theme inline {
-  --font-heading: var(--font-mono);
+  --font-heading: "JetBrains Mono Variable", monospace;
   --font-mono: "JetBrains Mono Variable", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -198,254 +74,74 @@ code {
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
+  --radius-sm: calc(var(--radius) - 0.5rem);
+  --radius-md: calc(var(--radius) - 0.25rem);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
-}
-
-.dark {
-  --background: #100F0F;
-  --foreground: #CECDC3;
-  --card: #1C1B1A;
-  --card-foreground: #CECDC3;
-  --popover: #1C1B1A;
-  --popover-foreground: #CECDC3;
-  --primary: #D14D41;
-  --primary-foreground: #100F0F;
-  --secondary: #879A39;
-  --secondary-foreground: #100F0F;
-  --muted: #282726;
-  --muted-foreground: #878580;
-  --accent: #8B7EC8;
-  --accent-foreground: #100F0F;
-  --destructive: #AF3029;
-  --border: #282726;
-  --input: #282726;
-  --ring: #D14D41;
-  --chart-1: #D14D41;
-  --chart-2: #879A39;
-  --chart-3: #8B7EC8;
-  --chart-4: #AF3029;
-  --chart-5: #205EA6;
-  --sidebar: #1C1B1A;
-  --sidebar-foreground: #CECDC3;
-  --sidebar-primary: #D14D41;
-  --sidebar-primary-foreground: #100F0F;
-  --sidebar-accent: #282726;
-  --sidebar-accent-foreground: #CECDC3;
-  --sidebar-border: #282726;
-  --sidebar-ring: #D14D41;
+  --radius-xl: calc(var(--radius) + 0.25rem);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
+
+  html {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-mono;
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+    min-height: 100svh;
+    background:
+      radial-gradient(circle at top, rgba(103, 232, 249, 0.12), transparent 32%),
+      linear-gradient(180deg, #091221 0%, #07111f 100%);
+    font-family: "JetBrains Mono Variable", monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 }
 
-/* Flexoki Light Default UI Overrides */
-.card, .bg-slate-900\/80 {
-  background: var(--card) !important;
-  border: 1px solid var(--border) !important;
-  box-shadow: 2px 2px 0px rgba(16, 15, 15, 0.1) !important;
-  border-radius: 0 !important;
-  transition: all 0.15s ease;
+#root {
+  min-height: 100svh;
 }
 
-.card:hover, .bg-slate-900\/80:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0px rgba(16, 15, 15, 0.15) !important;
-}
-
-/* Sticky topbar in AdminDashboard overrides */
-.sticky.top-0.z-50 {
-  background: var(--background) !important;
-  border-bottom: 2px solid var(--border) !important;
-}
-
-/* Styling for metric cells */
-.border-r.border-slate-800 {
-  border-right-color: var(--border) !important;
-}
-
-/* Snappy, fast transitions for UI quickness */
-* {
-  transition-duration: 100ms !important;
-}
-
-/* Flexoki Active Redaction Highlight (Solid Brutalist Inky Block) */
-.ring-2.ring-cyan-400 {
-  background-color: var(--primary) !important;
-  border-color: var(--primary) !important;
-  color: var(--primary-foreground) !important;
-  box-shadow: 3px 3px 0px rgba(16, 15, 15, 0.8) !important;
-  border-radius: 0 !important;
-  font-weight: bold !important;
-  animation: none !important; /* No pulsing in brutalist */
-}
-
-/* Dim non-active redactions so the eyes immediately lock on the active one */
-.bg-amber-500\/20:not(.ring-2), 
-.bg-emerald-500\/20:not(.ring-2), 
-.bg-red-500\/20:not(.ring-2) {
-  opacity: 0.8;
-  filter: grayscale(0.5);
-  border-radius: 0 !important;
-}
-
-/* Flexoki Snappy Flash Effects */
-.border-emerald-500.bg-emerald-500\/5,
-.border-emerald-500.bg-emerald-500\/10 {
-  animation: flash-approve 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.border-red-500.bg-red-500\/5,
-.border-red-500.bg-red-500\/10 {
-  animation: flash-reject 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes flash-approve {
-  0% { background-color: var(--secondary); border-color: var(--secondary); color: #FFFCF0; }
-  100% { background-color: transparent; border-color: var(--border); color: inherit; }
-}
-
-@keyframes flash-reject {
-  0% { background-color: var(--destructive); border-color: var(--destructive); color: #FFFCF0; }
-  100% { background-color: transparent; border-color: var(--border); color: inherit; }
-}
-
-/* VIM ZEN MODE OVERRIDES (Flexoki Dark) */
-body.vim-zen-active {
-  background-color: #100F0F !important; /* Inky Pitch Black */
-  color: #CECDC3 !important; /* Off-White Paper */
-}
-
-/* Hide standard navbar */
-body.vim-zen-active nav {
-  display: none !important;
-}
-
-/* Hide sidebars and panels */
-body.vim-zen-active .hidden.lg\:block.space-y-4, /* left sidebar (queue list) */
-body.vim-zen-active .space-y-4 > .space-y-2, /* action buttons */
-body.vim-zen-active .space-y-4 > .bg-slate-900\/80:not(.border-violet-500\/30) { /* right sidebar other widgets except legend card */
-  display: none !important;
-}
-
-/* Make main grid layout full-centered */
-body.vim-zen-active .grid.grid-cols-1.lg\:grid-cols-4 {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 100% !important;
-  max-width: 900px !important;
-  margin: 0 auto !important;
-  min-height: calc(100vh - 40px) !important;
-  gap: 0 !important;
-}
-
-/* Center and widen the main document viewer container */
-body.vim-zen-active .lg\:col-span-2 {
-  flex: 1 !important;
-  width: 100% !important;
-  max-width: 900px !important;
-  margin-top: 1rem !important;
-}
-
-/* Text viewer card modifications for Zen Feel */
-body.vim-zen-active .lg\:col-span-2 > .bg-slate-900\/80 {
-  background: #100F0F !important;
-  border: 1px solid #282726 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-body.vim-zen-active .max-h-\[75vh\] {
-  max-height: 68vh !important;
-}
-
-/* Monospace reading experience (Dark Editor) */
-body.vim-zen-active .bg-slate-950\/50 {
-  background-color: #100F0F !important;
-  border: none !important;
-  font-size: 17px !important;
-  line-height: 2 !important;
-  padding: 3.5rem !important;
-  color: #CECDC3 !important;
-  box-shadow: none !important;
-}
-
-/* Active Redaction in Zen Mode (Flexoki Dark Primary) */
-body.vim-zen-active .ring-2.ring-cyan-400 {
-  background-color: #D14D41 !important; /* Flexoki Dark Red */
-  border-color: #D14D41 !important;
-  color: #100F0F !important;
-  box-shadow: 2px 2px 0px rgba(206, 205, 195, 0.5) !important; /* Stark contrast shadow */
-}
-
-/* Queue progress top bar overlay in Zen mode */
-body.vim-zen-active .flex.items-center.justify-between.mb-6 {
-  opacity: 0.8;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 0.5rem auto !important;
-  color: #878580 !important; /* Muted foreground */
-}
-body.vim-zen-active .flex.items-center.justify-between.mb-6 button {
-  display: none !important; /* Hide 'Clear Queue' */
-}
-body.vim-zen-active .bg-slate-900\/80.border-slate-700 {
-  background: #1C1B1A !important;
-  border-color: #282726 !important;
-}
-
-/* Float the Vim Legend as a Bottom HUD Console */
-body.vim-zen-active .space-y-4 {
-  display: block !important;
-  position: fixed !important;
-  bottom: 2rem !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 480px !important;
-  max-width: 90vw !important;
-  z-index: 100 !important;
-}
-
-body.vim-zen-active .border-violet-500\/30 {
-  background: #1C1B1A !important;
-  border: 1px solid #282726 !important;
-  box-shadow: 4px 4px 0px #100F0F !important;
-  border-radius: 0 !important;
-  padding: 0.5rem !important;
-  color: #CECDC3 !important;
-}
-
-body.vim-zen-active .border-violet-500\/30 .text-violet-400 {
-  color: #878580 !important;
-}
-
-body.vim-zen-active .border-violet-500\/30 .p-3 {
-  padding: 0.75rem 1rem !important;
-}
-
-/* Custom premium hover and active states for keyboard keys */
 .kbd-key {
-  background: var(--muted) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--foreground) !important;
-  box-shadow: 1px 1px 0px var(--foreground) !important;
-  text-shadow: none !important;
-  border-radius: 0 !important;
-  font-weight: bold !important;
+  display: inline-flex;
+  min-width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.15rem 0.4rem;
+  font-size: 11px;
+  font-weight: 700;
+  color: #e2e8f0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+body.vim-zen-active nav {
+  display: none;
+}
+
+body.vim-zen-active {
+  background:
+    radial-gradient(circle at top, rgba(125, 211, 252, 0.08), transparent 28%),
+    linear-gradient(180deg, #050b15 0%, #040814 100%);
 }

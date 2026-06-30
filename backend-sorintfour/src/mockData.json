@@ -1,0 +1,254 @@
+[
+  {
+    "documentId": "DOC-0099",
+    "priorityScore": 99,
+    "content": "URGENT: The social security number on file is 000-12-3456 and needs to be verified before the deposition scheduled for Monday.",
+    "suggestedRedactions": [
+      {
+        "type": "SSN",
+        "value": "000-12-3456",
+        "startIndex": 51,
+        "endIndex": 62,
+        "confidence": 97
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-1042",
+    "priorityScore": 93,
+    "content": "CONFIDENTIAL: Client John Doe can be reached at 555-019-8372 regarding the settlement agreement. His email is john.doe@lawmail.com.",
+    "suggestedRedactions": [
+      {
+        "type": "PERSON",
+        "value": "John Doe",
+        "startIndex": 21,
+        "endIndex": 29,
+        "confidence": 95
+      },
+      {
+        "type": "PHONE",
+        "value": "555-019-8372",
+        "startIndex": 49,
+        "endIndex": 61,
+        "confidence": 98
+      },
+      {
+        "type": "EMAIL",
+        "value": "john.doe@lawmail.com",
+        "startIndex": 105,
+        "endIndex": 125,
+        "confidence": 99
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-2187",
+    "priorityScore": 91,
+    "content": "Witness testimony from Maria Garcia, DOB 03/15/1988, states she observed the incident at 742 Evergreen Terrace, Springfield, IL 62704.",
+    "suggestedRedactions": [
+      {
+        "type": "PERSON",
+        "value": "Maria Garcia",
+        "startIndex": 22,
+        "endIndex": 34,
+        "confidence": 96
+      },
+      {
+        "type": "DOB",
+        "value": "03/15/1988",
+        "startIndex": 40,
+        "endIndex": 50,
+        "confidence": 94
+      },
+      {
+        "type": "ADDRESS",
+        "value": "742 Evergreen Terrace, Springfield, IL 62704",
+        "startIndex": 86,
+        "endIndex": 130,
+        "confidence": 92
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-3301",
+    "priorityScore": 88,
+    "content": "Medical records for patient ID MRN-449182 indicate treatment at Cedar Sinai on 2024-01-15. Dr. Emily Chen authorized the release.",
+    "suggestedRedactions": [
+      {
+        "type": "MEDICAL_ID",
+        "value": "MRN-449182",
+        "startIndex": 31,
+        "endIndex": 41,
+        "confidence": 93
+      },
+      {
+        "type": "PERSON",
+        "value": "Emily Chen",
+        "startIndex": 96,
+        "endIndex": 106,
+        "confidence": 90
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-4455",
+    "priorityScore": 85,
+    "content": "Wire transfer of $45,000 was initiated to Bank of America account 7821-0039-4412 on behalf of the plaintiff's estate.",
+    "suggestedRedactions": [
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "7821-0039-4412",
+        "startIndex": 65,
+        "endIndex": 79,
+        "confidence": 96
+      },
+      {
+        "type": "FINANCIAL",
+        "value": "$45,000",
+        "startIndex": 17,
+        "endIndex": 24,
+        "confidence": 72
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-5519",
+    "priorityScore": 82,
+    "content": "Passport number US-X8842991 was submitted by defendant Robert Kim as proof of identity during the arraignment.",
+    "suggestedRedactions": [
+      {
+        "type": "PASSPORT",
+        "value": "US-X8842991",
+        "startIndex": 16,
+        "endIndex": 27,
+        "confidence": 91
+      },
+      {
+        "type": "PERSON",
+        "value": "Robert Kim",
+        "startIndex": 52,
+        "endIndex": 62,
+        "confidence": 94
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-6672",
+    "priorityScore": 78,
+    "content": "Server logs show unauthorized access from IP 192.168.14.221 at 02:34 UTC. The user agent string matched a known exploit toolkit.",
+    "suggestedRedactions": [
+      {
+        "type": "IP_ADDRESS",
+        "value": "192.168.14.221",
+        "startIndex": 45,
+        "endIndex": 59,
+        "confidence": 88
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-7788",
+    "priorityScore": 75,
+    "content": "Credit card ending in 4242 was used for a fraudulent purchase of $12,500. Full number: 4111-1111-1111-4242, expiry 09/27.",
+    "suggestedRedactions": [
+      {
+        "type": "CREDIT_CARD",
+        "value": "4111-1111-1111-4242",
+        "startIndex": 87,
+        "endIndex": 106,
+        "confidence": 99
+      },
+      {
+        "type": "FINANCIAL",
+        "value": "$12,500",
+        "startIndex": 65,
+        "endIndex": 72,
+        "confidence": 68
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-8891",
+    "priorityScore": 70,
+    "content": "Driver's license IL-D400-8829-1104 was presented at the checkpoint. License holder: Aisha Patel, residing in Cook County.",
+    "suggestedRedactions": [
+      {
+        "type": "DRIVERS_LICENSE",
+        "value": "IL-D400-8829-1104",
+        "startIndex": 18,
+        "endIndex": 36,
+        "confidence": 90
+      },
+      {
+        "type": "PERSON",
+        "value": "Aisha Patel",
+        "startIndex": 83,
+        "endIndex": 94,
+        "confidence": 95
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-9004",
+    "priorityScore": 65,
+    "content": "Employment records confirm that James Whitfield, SSN 321-44-9876, was terminated from Globex Corp on 2023-11-30 for cause.",
+    "suggestedRedactions": [
+      {
+        "type": "PERSON",
+        "value": "James Whitfield",
+        "startIndex": 35,
+        "endIndex": 50,
+        "confidence": 97
+      },
+      {
+        "type": "SSN",
+        "value": "321-44-9876",
+        "startIndex": 56,
+        "endIndex": 67,
+        "confidence": 98
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-1120",
+    "priorityScore": 58,
+    "content": "Lease agreement between tenant Lisa Nguyen and Sterling Properties LLC for unit 14B at 900 Lake Shore Drive, Chicago, IL 60611.",
+    "suggestedRedactions": [
+      {
+        "type": "PERSON",
+        "value": "Lisa Nguyen",
+        "startIndex": 32,
+        "endIndex": 43,
+        "confidence": 93
+      },
+      {
+        "type": "ADDRESS",
+        "value": "900 Lake Shore Drive, Chicago, IL 60611",
+        "startIndex": 86,
+        "endIndex": 125,
+        "confidence": 89
+      }
+    ]
+  },
+  {
+    "documentId": "DOC-1231",
+    "priorityScore": 52,
+    "content": "Insurance claim #CLM-20240089 filed by Daniel Torres for vehicle VIN 1HGCM82633A004352. Estimated damage: $8,200.",
+    "suggestedRedactions": [
+      {
+        "type": "PERSON",
+        "value": "Daniel Torres",
+        "startIndex": 44,
+        "endIndex": 57,
+        "confidence": 94
+      },
+      {
+        "type": "VEHICLE_ID",
+        "value": "1HGCM82633A004352",
+        "startIndex": 72,
+        "endIndex": 89,
+        "confidence": 87
+      }
+    ]
+  }
+]

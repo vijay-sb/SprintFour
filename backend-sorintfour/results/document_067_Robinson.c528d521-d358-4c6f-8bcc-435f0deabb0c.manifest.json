@@ -1,0 +1,2269 @@
+{
+  "documentId": "c528d521-d358-4c6f-8bcc-435f0deabb0c",
+  "originalFilename": "document_067_Robinson.txt",
+  "exportedAt": "2026-06-30T12:00:42.219Z",
+  "redactionCount": 251,
+  "approvedCount": 251,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "PERSON",
+      "value": "Stephanie Robinson",
+      "startIndex": 66,
+      "endIndex": 84,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "MEDICAL_ID",
+      "value": "MRN-7504459",
+      "startIndex": 94,
+      "endIndex": 105,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "07/19/1973",
+      "startIndex": 115,
+      "endIndex": 125,
+      "confidence": 78,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "SSN",
+      "value": "217-36-1120",
+      "startIndex": 135,
+      "endIndex": 146,
+      "confidence": 96,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "537) 722-6971",
+      "startIndex": 159,
+      "endIndex": 172,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "stephanie.robinson@company.net",
+      "startIndex": 184,
+      "endIndex": 214,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "7416 Washington St, Springfield, IL 29586",
+      "startIndex": 228,
+      "endIndex": 269,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "INTAKE SUMMARY\nPatient patient",
+      "startIndex": 290,
+      "endIndex": 320,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Stephanie Robinson",
+      "startIndex": 321,
+      "endIndex": 339,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Clinical history indicates long",
+      "startIndex": 386,
+      "endIndex": 417,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 562,
+      "endIndex": 579,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 754,
+      "endIndex": 771,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 946,
+      "endIndex": 963,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 1138,
+      "endIndex": 1155,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 1330,
+      "endIndex": 1347,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 1522,
+      "endIndex": 1539,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 1714,
+      "endIndex": 1731,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 1906,
+      "endIndex": 1923,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 2098,
+      "endIndex": 2115,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 2290,
+      "endIndex": 2307,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 2482,
+      "endIndex": 2499,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 2674,
+      "endIndex": 2691,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 2866,
+      "endIndex": 2883,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 3058,
+      "endIndex": 3075,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 3250,
+      "endIndex": 3267,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 3442,
+      "endIndex": 3459,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 3634,
+      "endIndex": 3651,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 3826,
+      "endIndex": 3843,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 4018,
+      "endIndex": 4035,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 4210,
+      "endIndex": 4227,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 4402,
+      "endIndex": 4419,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 4594,
+      "endIndex": 4611,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 4786,
+      "endIndex": 4803,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 4978,
+      "endIndex": 4995,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 5170,
+      "endIndex": 5187,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 5362,
+      "endIndex": 5379,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 5554,
+      "endIndex": 5571,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 5746,
+      "endIndex": 5763,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 5938,
+      "endIndex": 5955,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 6130,
+      "endIndex": 6147,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 6322,
+      "endIndex": 6339,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 6514,
+      "endIndex": 6531,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 6706,
+      "endIndex": 6723,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 6898,
+      "endIndex": 6915,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 7090,
+      "endIndex": 7107,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 7282,
+      "endIndex": 7299,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 7474,
+      "endIndex": 7491,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 7666,
+      "endIndex": 7683,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 7858,
+      "endIndex": 7875,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "checked in at the",
+      "startIndex": 8050,
+      "endIndex": 8067,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Visit Date",
+      "startIndex": 8241,
+      "endIndex": 8251,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/1/2023",
+      "startIndex": 8318,
+      "endIndex": 8327,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8342,
+      "endIndex": 8358,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8361,
+      "endIndex": 8373,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/2/2023",
+      "startIndex": 8383,
+      "endIndex": 8392,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8410,
+      "endIndex": 8426,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8429,
+      "endIndex": 8441,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/3/2023",
+      "startIndex": 8451,
+      "endIndex": 8460,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8476,
+      "endIndex": 8492,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8495,
+      "endIndex": 8507,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/4/2023",
+      "startIndex": 8517,
+      "endIndex": 8526,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8542,
+      "endIndex": 8558,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8561,
+      "endIndex": 8573,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/5/2023",
+      "startIndex": 8583,
+      "endIndex": 8592,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8608,
+      "endIndex": 8624,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8627,
+      "endIndex": 8639,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/6/2023",
+      "startIndex": 8649,
+      "endIndex": 8658,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8674,
+      "endIndex": 8690,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8693,
+      "endIndex": 8705,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/7/2023",
+      "startIndex": 8715,
+      "endIndex": 8724,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8740,
+      "endIndex": 8756,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8759,
+      "endIndex": 8771,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/8/2023",
+      "startIndex": 8781,
+      "endIndex": 8790,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8808,
+      "endIndex": 8824,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8827,
+      "endIndex": 8839,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/9/2023",
+      "startIndex": 8849,
+      "endIndex": 8858,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8873,
+      "endIndex": 8889,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8892,
+      "endIndex": 8904,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/10/2023",
+      "startIndex": 8914,
+      "endIndex": 8924,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 8939,
+      "endIndex": 8955,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 8958,
+      "endIndex": 8970,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/11/2023",
+      "startIndex": 8980,
+      "endIndex": 8990,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9006,
+      "endIndex": 9022,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9025,
+      "endIndex": 9037,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/12/2023",
+      "startIndex": 9047,
+      "endIndex": 9057,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9075,
+      "endIndex": 9091,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9094,
+      "endIndex": 9106,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/13/2023",
+      "startIndex": 9116,
+      "endIndex": 9126,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9142,
+      "endIndex": 9158,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9161,
+      "endIndex": 9173,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/14/2023",
+      "startIndex": 9183,
+      "endIndex": 9193,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9211,
+      "endIndex": 9227,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9230,
+      "endIndex": 9242,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/15/2023",
+      "startIndex": 9252,
+      "endIndex": 9262,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9278,
+      "endIndex": 9294,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9297,
+      "endIndex": 9309,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/16/2023",
+      "startIndex": 9319,
+      "endIndex": 9329,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9344,
+      "endIndex": 9360,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9363,
+      "endIndex": 9375,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/17/2023",
+      "startIndex": 9385,
+      "endIndex": 9395,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9410,
+      "endIndex": 9426,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9429,
+      "endIndex": 9441,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/18/2023",
+      "startIndex": 9451,
+      "endIndex": 9461,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9479,
+      "endIndex": 9495,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9498,
+      "endIndex": 9510,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/19/2023",
+      "startIndex": 9520,
+      "endIndex": 9530,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9545,
+      "endIndex": 9561,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9564,
+      "endIndex": 9576,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/20/2023",
+      "startIndex": 9586,
+      "endIndex": 9596,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9612,
+      "endIndex": 9628,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9631,
+      "endIndex": 9643,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/21/2023",
+      "startIndex": 9653,
+      "endIndex": 9663,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9679,
+      "endIndex": 9695,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9698,
+      "endIndex": 9710,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/22/2023",
+      "startIndex": 9720,
+      "endIndex": 9730,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9745,
+      "endIndex": 9761,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9764,
+      "endIndex": 9776,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/23/2023",
+      "startIndex": 9786,
+      "endIndex": 9796,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9811,
+      "endIndex": 9827,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9830,
+      "endIndex": 9842,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/24/2023",
+      "startIndex": 9852,
+      "endIndex": 9862,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9877,
+      "endIndex": 9893,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9896,
+      "endIndex": 9908,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/25/2023",
+      "startIndex": 9918,
+      "endIndex": 9928,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 9944,
+      "endIndex": 9960,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 9963,
+      "endIndex": 9975,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/26/2023",
+      "startIndex": 9985,
+      "endIndex": 9995,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 10010,
+      "endIndex": 10026,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 10029,
+      "endIndex": 10041,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/27/2023",
+      "startIndex": 10051,
+      "endIndex": 10061,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 10076,
+      "endIndex": 10092,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 10095,
+      "endIndex": 10107,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/28/2023",
+      "startIndex": 10117,
+      "endIndex": 10127,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 10144,
+      "endIndex": 10160,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 10163,
+      "endIndex": 10175,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/29/2023",
+      "startIndex": 10185,
+      "endIndex": 10195,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 10211,
+      "endIndex": 10227,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 10230,
+      "endIndex": 10242,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "09/30/2023",
+      "startIndex": 10252,
+      "endIndex": 10262,
+      "confidence": 93,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "General Medicine",
+      "startIndex": 10278,
+      "endIndex": 10294,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Code",
+      "startIndex": 10297,
+      "endIndex": 10309,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 10379,
+      "endIndex": 10413,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 10542,
+      "endIndex": 10576,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 10705,
+      "endIndex": 10739,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 10868,
+      "endIndex": 10902,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 11031,
+      "endIndex": 11065,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 11194,
+      "endIndex": 11228,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 11357,
+      "endIndex": 11391,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 11520,
+      "endIndex": 11554,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 11683,
+      "endIndex": 11717,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 11847,
+      "endIndex": 11881,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12011,
+      "endIndex": 12045,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12175,
+      "endIndex": 12209,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12339,
+      "endIndex": 12373,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12503,
+      "endIndex": 12537,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12667,
+      "endIndex": 12701,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12831,
+      "endIndex": 12865,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 12995,
+      "endIndex": 13029,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 13159,
+      "endIndex": 13193,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 13323,
+      "endIndex": 13357,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 13487,
+      "endIndex": 13521,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 13651,
+      "endIndex": 13685,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 13815,
+      "endIndex": 13849,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 13979,
+      "endIndex": 14013,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 14143,
+      "endIndex": 14177,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 14307,
+      "endIndex": 14341,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 14471,
+      "endIndex": 14505,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 14635,
+      "endIndex": 14669,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 14799,
+      "endIndex": 14833,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 14963,
+      "endIndex": 14997,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 15127,
+      "endIndex": 15161,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 15291,
+      "endIndex": 15325,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 15455,
+      "endIndex": 15489,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 15619,
+      "endIndex": 15653,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 15783,
+      "endIndex": 15817,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 15947,
+      "endIndex": 15981,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 16111,
+      "endIndex": 16145,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 16275,
+      "endIndex": 16309,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 16439,
+      "endIndex": 16473,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 16603,
+      "endIndex": 16637,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 16767,
+      "endIndex": 16801,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 16931,
+      "endIndex": 16965,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 17095,
+      "endIndex": 17129,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 17259,
+      "endIndex": 17293,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 17423,
+      "endIndex": 17457,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 17587,
+      "endIndex": 17621,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 17751,
+      "endIndex": 17785,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 17915,
+      "endIndex": 17949,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 18079,
+      "endIndex": 18113,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 18243,
+      "endIndex": 18277,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "patient Stephanie Robinson reports",
+      "startIndex": 18407,
+      "endIndex": 18441,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 28582,
+      "endIndex": 28596,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Michael Miller",
+      "startIndex": 28602,
+      "endIndex": 28616,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 28619,
+      "endIndex": 28633,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Oak Ln",
+      "startIndex": 28635,
+      "endIndex": 28641,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 28659,
+      "endIndex": 28673,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 28679,
+      "endIndex": 28691,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 28694,
+      "endIndex": 28708,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Pine Blvd",
+      "startIndex": 28710,
+      "endIndex": 28719,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 28735,
+      "endIndex": 28749,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 28755,
+      "endIndex": 28766,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 28769,
+      "endIndex": 28783,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Washington St",
+      "startIndex": 28785,
+      "endIndex": 28798,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 28816,
+      "endIndex": 28830,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Michael Miller",
+      "startIndex": 28836,
+      "endIndex": 28850,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 28853,
+      "endIndex": 28867,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Pine Blvd",
+      "startIndex": 28869,
+      "endIndex": 28878,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 28894,
+      "endIndex": 28908,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 28914,
+      "endIndex": 28927,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 28930,
+      "endIndex": 28944,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Maple Ave",
+      "startIndex": 28946,
+      "endIndex": 28955,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 28974,
+      "endIndex": 28988,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 28994,
+      "endIndex": 29007,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29010,
+      "endIndex": 29024,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Washington St",
+      "startIndex": 29026,
+      "endIndex": 29039,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29055,
+      "endIndex": 29069,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 29075,
+      "endIndex": 29088,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29091,
+      "endIndex": 29105,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Cedar Rd",
+      "startIndex": 29107,
+      "endIndex": 29115,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29132,
+      "endIndex": 29146,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 29152,
+      "endIndex": 29163,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29166,
+      "endIndex": 29180,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Main St",
+      "startIndex": 29182,
+      "endIndex": 29189,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29207,
+      "endIndex": 29221,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 29227,
+      "endIndex": 29240,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29243,
+      "endIndex": 29257,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Elm Dr",
+      "startIndex": 29259,
+      "endIndex": 29265,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29283,
+      "endIndex": 29297,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 29303,
+      "endIndex": 29316,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29319,
+      "endIndex": 29333,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Elm Dr",
+      "startIndex": 29335,
+      "endIndex": 29341,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29359,
+      "endIndex": 29373,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 29379,
+      "endIndex": 29390,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29393,
+      "endIndex": 29407,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Washington St",
+      "startIndex": 29409,
+      "endIndex": 29422,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29442,
+      "endIndex": 29456,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 29462,
+      "endIndex": 29475,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29478,
+      "endIndex": 29492,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Washington St",
+      "startIndex": 29494,
+      "endIndex": 29507,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29525,
+      "endIndex": 29539,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 29545,
+      "endIndex": 29558,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29561,
+      "endIndex": 29575,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Main St",
+      "startIndex": 29577,
+      "endIndex": 29584,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29604,
+      "endIndex": 29618,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith",
+      "startIndex": 29624,
+      "endIndex": 29635,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29638,
+      "endIndex": 29652,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Cedar Rd",
+      "startIndex": 29654,
+      "endIndex": 29662,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Physician Name",
+      "startIndex": 29679,
+      "endIndex": 29693,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 29699,
+      "endIndex": 29712,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "Clinic Address",
+      "startIndex": 29715,
+      "endIndex": 29729,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Washington St",
+      "startIndex": 29731,
+      "endIndex": 29744,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

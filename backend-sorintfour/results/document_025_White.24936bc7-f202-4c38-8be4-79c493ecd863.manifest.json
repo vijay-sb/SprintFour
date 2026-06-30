@@ -1,0 +1,2224 @@
+{
+  "documentId": "24936bc7-f202-4c38-8be4-79c493ecd863",
+  "originalFilename": "document_025_White.txt",
+  "exportedAt": "2026-06-30T12:00:52.235Z",
+  "redactionCount": 246,
+  "approvedCount": 246,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 67,
+      "endIndex": 80,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "SSN",
+      "value": "729-92-4020",
+      "startIndex": 90,
+      "endIndex": 101,
+      "confidence": 96,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "06/18/1955",
+      "startIndex": 111,
+      "endIndex": 121,
+      "confidence": 78,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "3621 Pine Blvd, Springfield, IL 74824",
+      "startIndex": 135,
+      "endIndex": 172,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "582) 319-3786",
+      "startIndex": 185,
+      "endIndex": 198,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 210,
+      "endIndex": 235,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "BANK ACCOUNT",
+      "startIndex": 238,
+      "endIndex": 250,
+      "confidence": 84,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 273,
+      "endIndex": 287,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Bank Account",
+      "startIndex": 424,
+      "endIndex": 436,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 437,
+      "endIndex": 451,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 570,
+      "endIndex": 583,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 718,
+      "endIndex": 731,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 866,
+      "endIndex": 879,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1014,
+      "endIndex": 1027,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1162,
+      "endIndex": 1175,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1310,
+      "endIndex": 1323,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1458,
+      "endIndex": 1471,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1606,
+      "endIndex": 1619,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1754,
+      "endIndex": 1767,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 1902,
+      "endIndex": 1915,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2050,
+      "endIndex": 2063,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2198,
+      "endIndex": 2211,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2346,
+      "endIndex": 2359,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2494,
+      "endIndex": 2507,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2642,
+      "endIndex": 2655,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2790,
+      "endIndex": 2803,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 2938,
+      "endIndex": 2951,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3086,
+      "endIndex": 3099,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3234,
+      "endIndex": 3247,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3382,
+      "endIndex": 3395,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3530,
+      "endIndex": 3543,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3678,
+      "endIndex": 3691,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3826,
+      "endIndex": 3839,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 3974,
+      "endIndex": 3987,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 4122,
+      "endIndex": 4135,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 4270,
+      "endIndex": 4283,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 4418,
+      "endIndex": 4431,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 4566,
+      "endIndex": 4579,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 4714,
+      "endIndex": 4727,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 4862,
+      "endIndex": 4875,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5010,
+      "endIndex": 5023,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5158,
+      "endIndex": 5171,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5306,
+      "endIndex": 5319,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5454,
+      "endIndex": 5467,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5602,
+      "endIndex": 5615,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5750,
+      "endIndex": 5763,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 5898,
+      "endIndex": 5911,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6046,
+      "endIndex": 6059,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6194,
+      "endIndex": 6207,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6342,
+      "endIndex": 6355,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6554,
+      "endIndex": 6567,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6610,
+      "endIndex": 6623,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6666,
+      "endIndex": 6679,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6722,
+      "endIndex": 6735,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6778,
+      "endIndex": 6791,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6834,
+      "endIndex": 6847,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6890,
+      "endIndex": 6903,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 6946,
+      "endIndex": 6959,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7002,
+      "endIndex": 7015,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7058,
+      "endIndex": 7071,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7114,
+      "endIndex": 7127,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7170,
+      "endIndex": 7183,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7226,
+      "endIndex": 7239,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7282,
+      "endIndex": 7295,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7338,
+      "endIndex": 7351,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7394,
+      "endIndex": 7407,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7450,
+      "endIndex": 7463,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7506,
+      "endIndex": 7519,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7562,
+      "endIndex": 7575,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7618,
+      "endIndex": 7631,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7674,
+      "endIndex": 7687,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7730,
+      "endIndex": 7743,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7786,
+      "endIndex": 7799,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7842,
+      "endIndex": 7855,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 7898,
+      "endIndex": 7911,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8004,
+      "endIndex": 8029,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8055,
+      "endIndex": 8069,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8141,
+      "endIndex": 8166,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8192,
+      "endIndex": 8206,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8278,
+      "endIndex": 8303,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8329,
+      "endIndex": 8343,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8415,
+      "endIndex": 8440,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8466,
+      "endIndex": 8480,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8552,
+      "endIndex": 8577,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8603,
+      "endIndex": 8617,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8689,
+      "endIndex": 8714,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8740,
+      "endIndex": 8754,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8826,
+      "endIndex": 8851,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 8877,
+      "endIndex": 8891,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 8963,
+      "endIndex": 8988,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9014,
+      "endIndex": 9028,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9100,
+      "endIndex": 9125,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9151,
+      "endIndex": 9165,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9238,
+      "endIndex": 9263,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9289,
+      "endIndex": 9303,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9376,
+      "endIndex": 9401,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9427,
+      "endIndex": 9441,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9514,
+      "endIndex": 9539,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9565,
+      "endIndex": 9579,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9652,
+      "endIndex": 9677,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9703,
+      "endIndex": 9717,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9790,
+      "endIndex": 9815,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9841,
+      "endIndex": 9855,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 9928,
+      "endIndex": 9953,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 9979,
+      "endIndex": 9993,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10066,
+      "endIndex": 10091,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10117,
+      "endIndex": 10131,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10204,
+      "endIndex": 10229,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10255,
+      "endIndex": 10269,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10342,
+      "endIndex": 10367,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10393,
+      "endIndex": 10407,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10480,
+      "endIndex": 10505,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10531,
+      "endIndex": 10545,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10618,
+      "endIndex": 10643,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10669,
+      "endIndex": 10683,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10756,
+      "endIndex": 10781,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10807,
+      "endIndex": 10821,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 10894,
+      "endIndex": 10919,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 10945,
+      "endIndex": 10959,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11032,
+      "endIndex": 11057,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11083,
+      "endIndex": 11097,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11170,
+      "endIndex": 11195,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11221,
+      "endIndex": 11235,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11308,
+      "endIndex": 11333,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11359,
+      "endIndex": 11373,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11446,
+      "endIndex": 11471,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11497,
+      "endIndex": 11511,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11584,
+      "endIndex": 11609,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11635,
+      "endIndex": 11649,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11722,
+      "endIndex": 11747,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11773,
+      "endIndex": 11787,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11860,
+      "endIndex": 11885,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 11911,
+      "endIndex": 11925,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 11998,
+      "endIndex": 12023,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12049,
+      "endIndex": 12063,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12136,
+      "endIndex": 12161,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12187,
+      "endIndex": 12201,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12274,
+      "endIndex": 12299,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12325,
+      "endIndex": 12339,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12412,
+      "endIndex": 12437,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12463,
+      "endIndex": 12477,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12550,
+      "endIndex": 12575,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12601,
+      "endIndex": 12615,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12688,
+      "endIndex": 12713,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12739,
+      "endIndex": 12753,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12826,
+      "endIndex": 12851,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 12877,
+      "endIndex": 12891,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 12964,
+      "endIndex": 12989,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13015,
+      "endIndex": 13029,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13102,
+      "endIndex": 13127,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13153,
+      "endIndex": 13167,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13240,
+      "endIndex": 13265,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13291,
+      "endIndex": 13305,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13378,
+      "endIndex": 13403,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13429,
+      "endIndex": 13443,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13516,
+      "endIndex": 13541,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13567,
+      "endIndex": 13581,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13654,
+      "endIndex": 13679,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13705,
+      "endIndex": 13719,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13792,
+      "endIndex": 13817,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13843,
+      "endIndex": 13857,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 13930,
+      "endIndex": 13955,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 13981,
+      "endIndex": 13995,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "melissa.white@company.net",
+      "startIndex": 14068,
+      "endIndex": 14093,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "0361-3139-4414",
+      "startIndex": 14119,
+      "endIndex": 14133,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 14208,
+      "endIndex": 14238,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 14355,
+      "endIndex": 14385,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 14502,
+      "endIndex": 14532,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 14649,
+      "endIndex": 14679,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 14796,
+      "endIndex": 14826,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 14943,
+      "endIndex": 14973,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15090,
+      "endIndex": 15120,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15237,
+      "endIndex": 15267,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15384,
+      "endIndex": 15414,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15531,
+      "endIndex": 15561,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15678,
+      "endIndex": 15708,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15825,
+      "endIndex": 15855,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 15972,
+      "endIndex": 16002,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 16119,
+      "endIndex": 16149,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 16266,
+      "endIndex": 16296,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 16413,
+      "endIndex": 16443,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 16560,
+      "endIndex": 16590,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 16707,
+      "endIndex": 16737,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 16854,
+      "endIndex": 16884,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17001,
+      "endIndex": 17031,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17148,
+      "endIndex": 17178,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17295,
+      "endIndex": 17325,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17442,
+      "endIndex": 17472,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17589,
+      "endIndex": 17619,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17736,
+      "endIndex": 17766,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 17883,
+      "endIndex": 17913,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18030,
+      "endIndex": 18060,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18177,
+      "endIndex": 18207,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18324,
+      "endIndex": 18354,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18471,
+      "endIndex": 18501,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18618,
+      "endIndex": 18648,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18765,
+      "endIndex": 18795,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 18912,
+      "endIndex": 18942,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19059,
+      "endIndex": 19089,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19206,
+      "endIndex": 19236,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19353,
+      "endIndex": 19383,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19500,
+      "endIndex": 19530,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19647,
+      "endIndex": 19677,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19794,
+      "endIndex": 19824,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 19941,
+      "endIndex": 19971,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20088,
+      "endIndex": 20118,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20235,
+      "endIndex": 20265,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20382,
+      "endIndex": 20412,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20529,
+      "endIndex": 20559,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20676,
+      "endIndex": 20706,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20823,
+      "endIndex": 20853,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 20970,
+      "endIndex": 21000,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 21117,
+      "endIndex": 21147,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 21264,
+      "endIndex": 21294,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White acknowledges and",
+      "startIndex": 21411,
+      "endIndex": 21441,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Jessica Taylor",
+      "startIndex": 21595,
+      "endIndex": 21609,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21612,
+      "endIndex": 21623,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Megan Garcia",
+      "startIndex": 21649,
+      "endIndex": 21661,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21664,
+      "endIndex": 21675,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 21701,
+      "endIndex": 21716,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21719,
+      "endIndex": 21730,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith",
+      "startIndex": 21756,
+      "endIndex": 21767,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21770,
+      "endIndex": 21781,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 21807,
+      "endIndex": 21820,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21823,
+      "endIndex": 21834,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Michael Miller",
+      "startIndex": 21860,
+      "endIndex": 21874,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21877,
+      "endIndex": 21888,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 21914,
+      "endIndex": 21927,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21930,
+      "endIndex": 21941,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Megan Garcia",
+      "startIndex": 21967,
+      "endIndex": 21979,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21982,
+      "endIndex": 21993,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 22019,
+      "endIndex": 22030,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22033,
+      "endIndex": 22044,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 22070,
+      "endIndex": 22083,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22086,
+      "endIndex": 22097,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 22123,
+      "endIndex": 22136,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22139,
+      "endIndex": 22150,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 22176,
+      "endIndex": 22189,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22192,
+      "endIndex": 22203,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 22229,
+      "endIndex": 22242,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22245,
+      "endIndex": 22256,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Megan Garcia",
+      "startIndex": 22282,
+      "endIndex": 22294,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22297,
+      "endIndex": 22308,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 22334,
+      "endIndex": 22345,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22348,
+      "endIndex": 22359,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Onboarding Services",
+      "startIndex": 22479,
+      "endIndex": 22498,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

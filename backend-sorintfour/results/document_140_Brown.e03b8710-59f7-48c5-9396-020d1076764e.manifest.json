@@ -1,0 +1,2224 @@
+{
+  "documentId": "e03b8710-59f7-48c5-9396-020d1076764e",
+  "originalFilename": "document_140_Brown.txt",
+  "exportedAt": "2026-06-30T12:00:41.493Z",
+  "redactionCount": 246,
+  "approvedCount": 246,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 67,
+      "endIndex": 79,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "SSN",
+      "value": "842-55-4005",
+      "startIndex": 89,
+      "endIndex": 100,
+      "confidence": 96,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "05/17/1953",
+      "startIndex": 110,
+      "endIndex": 120,
+      "confidence": 78,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "5781 Washington St, Franklin, TN 82982",
+      "startIndex": 134,
+      "endIndex": 172,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "685) 714-6465",
+      "startIndex": 185,
+      "endIndex": 198,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 210,
+      "endIndex": 234,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "BANK ACCOUNT",
+      "startIndex": 237,
+      "endIndex": 249,
+      "confidence": 84,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 272,
+      "endIndex": 286,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Bank Account",
+      "startIndex": 423,
+      "endIndex": 435,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 436,
+      "endIndex": 450,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 569,
+      "endIndex": 581,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 716,
+      "endIndex": 728,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 863,
+      "endIndex": 875,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1010,
+      "endIndex": 1022,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1157,
+      "endIndex": 1169,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1304,
+      "endIndex": 1316,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1451,
+      "endIndex": 1463,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1598,
+      "endIndex": 1610,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1745,
+      "endIndex": 1757,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 1892,
+      "endIndex": 1904,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2039,
+      "endIndex": 2051,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2186,
+      "endIndex": 2198,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2333,
+      "endIndex": 2345,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2480,
+      "endIndex": 2492,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2627,
+      "endIndex": 2639,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2774,
+      "endIndex": 2786,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 2921,
+      "endIndex": 2933,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3068,
+      "endIndex": 3080,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3215,
+      "endIndex": 3227,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3362,
+      "endIndex": 3374,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3509,
+      "endIndex": 3521,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3656,
+      "endIndex": 3668,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3803,
+      "endIndex": 3815,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 3950,
+      "endIndex": 3962,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4097,
+      "endIndex": 4109,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4244,
+      "endIndex": 4256,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4391,
+      "endIndex": 4403,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4538,
+      "endIndex": 4550,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4685,
+      "endIndex": 4697,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4832,
+      "endIndex": 4844,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 4979,
+      "endIndex": 4991,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 5126,
+      "endIndex": 5138,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 5273,
+      "endIndex": 5285,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 5420,
+      "endIndex": 5432,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 5567,
+      "endIndex": 5579,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 5714,
+      "endIndex": 5726,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 5861,
+      "endIndex": 5873,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6008,
+      "endIndex": 6020,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6155,
+      "endIndex": 6167,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6302,
+      "endIndex": 6314,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6513,
+      "endIndex": 6525,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6568,
+      "endIndex": 6580,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6623,
+      "endIndex": 6635,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6678,
+      "endIndex": 6690,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6733,
+      "endIndex": 6745,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6788,
+      "endIndex": 6800,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6843,
+      "endIndex": 6855,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6898,
+      "endIndex": 6910,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 6953,
+      "endIndex": 6965,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7008,
+      "endIndex": 7020,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7063,
+      "endIndex": 7075,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7118,
+      "endIndex": 7130,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7173,
+      "endIndex": 7185,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7228,
+      "endIndex": 7240,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7283,
+      "endIndex": 7295,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7338,
+      "endIndex": 7350,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7393,
+      "endIndex": 7405,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7448,
+      "endIndex": 7460,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7503,
+      "endIndex": 7515,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7558,
+      "endIndex": 7570,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7613,
+      "endIndex": 7625,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7668,
+      "endIndex": 7680,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7723,
+      "endIndex": 7735,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7778,
+      "endIndex": 7790,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 7833,
+      "endIndex": 7845,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 7938,
+      "endIndex": 7962,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 7988,
+      "endIndex": 8002,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8074,
+      "endIndex": 8098,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8124,
+      "endIndex": 8138,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8210,
+      "endIndex": 8234,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8260,
+      "endIndex": 8274,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8346,
+      "endIndex": 8370,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8396,
+      "endIndex": 8410,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8482,
+      "endIndex": 8506,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8532,
+      "endIndex": 8546,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8618,
+      "endIndex": 8642,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8668,
+      "endIndex": 8682,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8754,
+      "endIndex": 8778,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8804,
+      "endIndex": 8818,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 8890,
+      "endIndex": 8914,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 8940,
+      "endIndex": 8954,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9026,
+      "endIndex": 9050,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9076,
+      "endIndex": 9090,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9163,
+      "endIndex": 9187,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9213,
+      "endIndex": 9227,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9300,
+      "endIndex": 9324,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9350,
+      "endIndex": 9364,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9437,
+      "endIndex": 9461,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9487,
+      "endIndex": 9501,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9574,
+      "endIndex": 9598,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9624,
+      "endIndex": 9638,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9711,
+      "endIndex": 9735,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9761,
+      "endIndex": 9775,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9848,
+      "endIndex": 9872,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 9898,
+      "endIndex": 9912,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 9985,
+      "endIndex": 10009,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10035,
+      "endIndex": 10049,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10122,
+      "endIndex": 10146,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10172,
+      "endIndex": 10186,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10259,
+      "endIndex": 10283,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10309,
+      "endIndex": 10323,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10396,
+      "endIndex": 10420,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10446,
+      "endIndex": 10460,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10533,
+      "endIndex": 10557,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10583,
+      "endIndex": 10597,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10670,
+      "endIndex": 10694,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10720,
+      "endIndex": 10734,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10807,
+      "endIndex": 10831,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10857,
+      "endIndex": 10871,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 10944,
+      "endIndex": 10968,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 10994,
+      "endIndex": 11008,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11081,
+      "endIndex": 11105,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11131,
+      "endIndex": 11145,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11218,
+      "endIndex": 11242,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11268,
+      "endIndex": 11282,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11355,
+      "endIndex": 11379,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11405,
+      "endIndex": 11419,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11492,
+      "endIndex": 11516,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11542,
+      "endIndex": 11556,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11629,
+      "endIndex": 11653,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11679,
+      "endIndex": 11693,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11766,
+      "endIndex": 11790,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11816,
+      "endIndex": 11830,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 11903,
+      "endIndex": 11927,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 11953,
+      "endIndex": 11967,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12040,
+      "endIndex": 12064,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12090,
+      "endIndex": 12104,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12177,
+      "endIndex": 12201,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12227,
+      "endIndex": 12241,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12314,
+      "endIndex": 12338,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12364,
+      "endIndex": 12378,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12451,
+      "endIndex": 12475,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12501,
+      "endIndex": 12515,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12588,
+      "endIndex": 12612,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12638,
+      "endIndex": 12652,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12725,
+      "endIndex": 12749,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12775,
+      "endIndex": 12789,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12862,
+      "endIndex": 12886,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 12912,
+      "endIndex": 12926,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 12999,
+      "endIndex": 13023,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13049,
+      "endIndex": 13063,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13136,
+      "endIndex": 13160,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13186,
+      "endIndex": 13200,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13273,
+      "endIndex": 13297,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13323,
+      "endIndex": 13337,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13410,
+      "endIndex": 13434,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13460,
+      "endIndex": 13474,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13547,
+      "endIndex": 13571,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13597,
+      "endIndex": 13611,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13684,
+      "endIndex": 13708,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13734,
+      "endIndex": 13748,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13821,
+      "endIndex": 13845,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 13871,
+      "endIndex": 13885,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "robert.brown@outlook.com",
+      "startIndex": 13958,
+      "endIndex": 13982,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "9218-4748-1541",
+      "startIndex": 14008,
+      "endIndex": 14022,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14097,
+      "endIndex": 14126,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14243,
+      "endIndex": 14272,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14389,
+      "endIndex": 14418,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14535,
+      "endIndex": 14564,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14681,
+      "endIndex": 14710,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14827,
+      "endIndex": 14856,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 14973,
+      "endIndex": 15002,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15119,
+      "endIndex": 15148,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15265,
+      "endIndex": 15294,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15411,
+      "endIndex": 15440,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15557,
+      "endIndex": 15586,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15703,
+      "endIndex": 15732,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15849,
+      "endIndex": 15878,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 15995,
+      "endIndex": 16024,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 16141,
+      "endIndex": 16170,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 16287,
+      "endIndex": 16316,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 16433,
+      "endIndex": 16462,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 16579,
+      "endIndex": 16608,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 16725,
+      "endIndex": 16754,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 16871,
+      "endIndex": 16900,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17017,
+      "endIndex": 17046,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17163,
+      "endIndex": 17192,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17309,
+      "endIndex": 17338,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17455,
+      "endIndex": 17484,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17601,
+      "endIndex": 17630,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17747,
+      "endIndex": 17776,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 17893,
+      "endIndex": 17922,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18039,
+      "endIndex": 18068,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18185,
+      "endIndex": 18214,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18331,
+      "endIndex": 18360,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18477,
+      "endIndex": 18506,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18623,
+      "endIndex": 18652,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18769,
+      "endIndex": 18798,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 18915,
+      "endIndex": 18944,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19061,
+      "endIndex": 19090,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19207,
+      "endIndex": 19236,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19353,
+      "endIndex": 19382,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19499,
+      "endIndex": 19528,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19645,
+      "endIndex": 19674,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19791,
+      "endIndex": 19820,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 19937,
+      "endIndex": 19966,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20083,
+      "endIndex": 20112,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20229,
+      "endIndex": 20258,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20375,
+      "endIndex": 20404,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20521,
+      "endIndex": 20550,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20667,
+      "endIndex": 20696,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20813,
+      "endIndex": 20842,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 20959,
+      "endIndex": 20988,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 21105,
+      "endIndex": 21134,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown acknowledges and",
+      "startIndex": 21251,
+      "endIndex": 21280,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Megan Garcia",
+      "startIndex": 21434,
+      "endIndex": 21446,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21449,
+      "endIndex": 21460,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Michael Miller",
+      "startIndex": 21486,
+      "endIndex": 21500,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21503,
+      "endIndex": 21514,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 21540,
+      "endIndex": 21552,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21555,
+      "endIndex": 21566,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 21592,
+      "endIndex": 21605,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21608,
+      "endIndex": 21619,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 21645,
+      "endIndex": 21658,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21661,
+      "endIndex": 21672,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Linda Martinez",
+      "startIndex": 21698,
+      "endIndex": 21712,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21715,
+      "endIndex": 21726,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 21752,
+      "endIndex": 21763,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21766,
+      "endIndex": 21777,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 21803,
+      "endIndex": 21818,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21821,
+      "endIndex": 21832,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 21858,
+      "endIndex": 21871,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21874,
+      "endIndex": 21885,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Stephanie Robinson",
+      "startIndex": 21911,
+      "endIndex": 21929,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21932,
+      "endIndex": 21943,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 21969,
+      "endIndex": 21982,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21985,
+      "endIndex": 21996,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Michael Miller",
+      "startIndex": 22022,
+      "endIndex": 22036,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22039,
+      "endIndex": 22050,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 22076,
+      "endIndex": 22089,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22092,
+      "endIndex": 22103,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 22129,
+      "endIndex": 22142,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22145,
+      "endIndex": 22156,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 22182,
+      "endIndex": 22195,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22198,
+      "endIndex": 22209,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Onboarding Services",
+      "startIndex": 22329,
+      "endIndex": 22348,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

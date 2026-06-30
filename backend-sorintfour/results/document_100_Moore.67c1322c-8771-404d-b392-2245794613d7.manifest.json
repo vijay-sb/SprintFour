@@ -1,0 +1,2224 @@
+{
+  "documentId": "67c1322c-8771-404d-b392-2245794613d7",
+  "originalFilename": "document_100_Moore.txt",
+  "exportedAt": "2026-06-30T12:00:50.984Z",
+  "redactionCount": 246,
+  "approvedCount": 246,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 67,
+      "endIndex": 80,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "SSN",
+      "value": "625-03-5965",
+      "startIndex": 90,
+      "endIndex": 101,
+      "confidence": 96,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "03/10/1979",
+      "startIndex": 111,
+      "endIndex": 121,
+      "confidence": 78,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "3549 Elm Dr, Greenville, SC 94442",
+      "startIndex": 135,
+      "endIndex": 168,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "843) 961-6157",
+      "startIndex": 181,
+      "endIndex": 194,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 206,
+      "endIndex": 229,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "BANK ACCOUNT",
+      "startIndex": 232,
+      "endIndex": 244,
+      "confidence": 84,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 267,
+      "endIndex": 281,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Bank Account",
+      "startIndex": 418,
+      "endIndex": 430,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 431,
+      "endIndex": 445,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 564,
+      "endIndex": 577,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 712,
+      "endIndex": 725,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 860,
+      "endIndex": 873,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1008,
+      "endIndex": 1021,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1156,
+      "endIndex": 1169,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1304,
+      "endIndex": 1317,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1452,
+      "endIndex": 1465,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1600,
+      "endIndex": 1613,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1748,
+      "endIndex": 1761,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 1896,
+      "endIndex": 1909,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2044,
+      "endIndex": 2057,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2192,
+      "endIndex": 2205,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2340,
+      "endIndex": 2353,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2488,
+      "endIndex": 2501,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2636,
+      "endIndex": 2649,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2784,
+      "endIndex": 2797,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 2932,
+      "endIndex": 2945,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3080,
+      "endIndex": 3093,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3228,
+      "endIndex": 3241,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3376,
+      "endIndex": 3389,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3524,
+      "endIndex": 3537,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3672,
+      "endIndex": 3685,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3820,
+      "endIndex": 3833,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 3968,
+      "endIndex": 3981,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 4116,
+      "endIndex": 4129,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 4264,
+      "endIndex": 4277,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 4412,
+      "endIndex": 4425,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 4560,
+      "endIndex": 4573,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 4708,
+      "endIndex": 4721,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 4856,
+      "endIndex": 4869,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5004,
+      "endIndex": 5017,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5152,
+      "endIndex": 5165,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5300,
+      "endIndex": 5313,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5448,
+      "endIndex": 5461,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5596,
+      "endIndex": 5609,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5744,
+      "endIndex": 5757,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 5892,
+      "endIndex": 5905,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6040,
+      "endIndex": 6053,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6188,
+      "endIndex": 6201,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6336,
+      "endIndex": 6349,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6548,
+      "endIndex": 6561,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6604,
+      "endIndex": 6617,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6660,
+      "endIndex": 6673,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6716,
+      "endIndex": 6729,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6772,
+      "endIndex": 6785,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6828,
+      "endIndex": 6841,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6884,
+      "endIndex": 6897,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6940,
+      "endIndex": 6953,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 6996,
+      "endIndex": 7009,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7052,
+      "endIndex": 7065,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7108,
+      "endIndex": 7121,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7164,
+      "endIndex": 7177,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7220,
+      "endIndex": 7233,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7276,
+      "endIndex": 7289,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7332,
+      "endIndex": 7345,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7388,
+      "endIndex": 7401,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7444,
+      "endIndex": 7457,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7500,
+      "endIndex": 7513,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7556,
+      "endIndex": 7569,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7612,
+      "endIndex": 7625,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7668,
+      "endIndex": 7681,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7724,
+      "endIndex": 7737,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7780,
+      "endIndex": 7793,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7836,
+      "endIndex": 7849,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 7892,
+      "endIndex": 7905,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 7998,
+      "endIndex": 8021,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8047,
+      "endIndex": 8061,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8133,
+      "endIndex": 8156,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8182,
+      "endIndex": 8196,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8268,
+      "endIndex": 8291,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8317,
+      "endIndex": 8331,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8403,
+      "endIndex": 8426,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8452,
+      "endIndex": 8466,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8538,
+      "endIndex": 8561,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8587,
+      "endIndex": 8601,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8673,
+      "endIndex": 8696,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8722,
+      "endIndex": 8736,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8808,
+      "endIndex": 8831,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8857,
+      "endIndex": 8871,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 8943,
+      "endIndex": 8966,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 8992,
+      "endIndex": 9006,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9078,
+      "endIndex": 9101,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9127,
+      "endIndex": 9141,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9214,
+      "endIndex": 9237,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9263,
+      "endIndex": 9277,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9350,
+      "endIndex": 9373,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9399,
+      "endIndex": 9413,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9486,
+      "endIndex": 9509,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9535,
+      "endIndex": 9549,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9622,
+      "endIndex": 9645,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9671,
+      "endIndex": 9685,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9758,
+      "endIndex": 9781,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9807,
+      "endIndex": 9821,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 9894,
+      "endIndex": 9917,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 9943,
+      "endIndex": 9957,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10030,
+      "endIndex": 10053,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10079,
+      "endIndex": 10093,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10166,
+      "endIndex": 10189,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10215,
+      "endIndex": 10229,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10302,
+      "endIndex": 10325,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10351,
+      "endIndex": 10365,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10438,
+      "endIndex": 10461,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10487,
+      "endIndex": 10501,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10574,
+      "endIndex": 10597,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10623,
+      "endIndex": 10637,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10710,
+      "endIndex": 10733,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10759,
+      "endIndex": 10773,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10846,
+      "endIndex": 10869,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 10895,
+      "endIndex": 10909,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 10982,
+      "endIndex": 11005,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11031,
+      "endIndex": 11045,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11118,
+      "endIndex": 11141,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11167,
+      "endIndex": 11181,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11254,
+      "endIndex": 11277,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11303,
+      "endIndex": 11317,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11390,
+      "endIndex": 11413,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11439,
+      "endIndex": 11453,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11526,
+      "endIndex": 11549,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11575,
+      "endIndex": 11589,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11662,
+      "endIndex": 11685,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11711,
+      "endIndex": 11725,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11798,
+      "endIndex": 11821,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11847,
+      "endIndex": 11861,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 11934,
+      "endIndex": 11957,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 11983,
+      "endIndex": 11997,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12070,
+      "endIndex": 12093,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12119,
+      "endIndex": 12133,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12206,
+      "endIndex": 12229,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12255,
+      "endIndex": 12269,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12342,
+      "endIndex": 12365,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12391,
+      "endIndex": 12405,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12478,
+      "endIndex": 12501,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12527,
+      "endIndex": 12541,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12614,
+      "endIndex": 12637,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12663,
+      "endIndex": 12677,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12750,
+      "endIndex": 12773,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12799,
+      "endIndex": 12813,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 12886,
+      "endIndex": 12909,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 12935,
+      "endIndex": 12949,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13022,
+      "endIndex": 13045,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13071,
+      "endIndex": 13085,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13158,
+      "endIndex": 13181,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13207,
+      "endIndex": 13221,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13294,
+      "endIndex": 13317,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13343,
+      "endIndex": 13357,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13430,
+      "endIndex": 13453,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13479,
+      "endIndex": 13493,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13566,
+      "endIndex": 13589,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13615,
+      "endIndex": 13629,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13702,
+      "endIndex": 13725,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13751,
+      "endIndex": 13765,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13838,
+      "endIndex": 13861,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 13887,
+      "endIndex": 13901,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "william.moore@gmail.com",
+      "startIndex": 13974,
+      "endIndex": 13997,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "3629-9854-4134",
+      "startIndex": 14023,
+      "endIndex": 14037,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14112,
+      "endIndex": 14142,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14259,
+      "endIndex": 14289,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14406,
+      "endIndex": 14436,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14553,
+      "endIndex": 14583,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14700,
+      "endIndex": 14730,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14847,
+      "endIndex": 14877,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 14994,
+      "endIndex": 15024,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 15141,
+      "endIndex": 15171,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 15288,
+      "endIndex": 15318,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 15435,
+      "endIndex": 15465,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 15582,
+      "endIndex": 15612,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 15729,
+      "endIndex": 15759,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 15876,
+      "endIndex": 15906,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16023,
+      "endIndex": 16053,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16170,
+      "endIndex": 16200,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16317,
+      "endIndex": 16347,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16464,
+      "endIndex": 16494,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16611,
+      "endIndex": 16641,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16758,
+      "endIndex": 16788,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 16905,
+      "endIndex": 16935,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17052,
+      "endIndex": 17082,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17199,
+      "endIndex": 17229,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17346,
+      "endIndex": 17376,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17493,
+      "endIndex": 17523,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17640,
+      "endIndex": 17670,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17787,
+      "endIndex": 17817,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 17934,
+      "endIndex": 17964,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18081,
+      "endIndex": 18111,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18228,
+      "endIndex": 18258,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18375,
+      "endIndex": 18405,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18522,
+      "endIndex": 18552,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18669,
+      "endIndex": 18699,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18816,
+      "endIndex": 18846,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 18963,
+      "endIndex": 18993,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19110,
+      "endIndex": 19140,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19257,
+      "endIndex": 19287,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19404,
+      "endIndex": 19434,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19551,
+      "endIndex": 19581,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19698,
+      "endIndex": 19728,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19845,
+      "endIndex": 19875,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 19992,
+      "endIndex": 20022,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 20139,
+      "endIndex": 20169,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 20286,
+      "endIndex": 20316,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 20433,
+      "endIndex": 20463,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 20580,
+      "endIndex": 20610,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 20727,
+      "endIndex": 20757,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 20874,
+      "endIndex": 20904,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 21021,
+      "endIndex": 21051,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 21168,
+      "endIndex": 21198,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore acknowledges and",
+      "startIndex": 21315,
+      "endIndex": 21345,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 21499,
+      "endIndex": 21511,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21514,
+      "endIndex": 21525,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amanda Thomas",
+      "startIndex": 21551,
+      "endIndex": 21564,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21567,
+      "endIndex": 21578,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 21604,
+      "endIndex": 21617,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21620,
+      "endIndex": 21631,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Jessica Taylor",
+      "startIndex": 21657,
+      "endIndex": 21671,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21674,
+      "endIndex": 21685,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 21711,
+      "endIndex": 21724,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21727,
+      "endIndex": 21738,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amanda Thomas",
+      "startIndex": 21764,
+      "endIndex": 21777,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21780,
+      "endIndex": 21791,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amanda Thomas",
+      "startIndex": 21817,
+      "endIndex": 21830,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21833,
+      "endIndex": 21844,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Megan Garcia",
+      "startIndex": 21870,
+      "endIndex": 21882,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21885,
+      "endIndex": 21896,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith",
+      "startIndex": 21922,
+      "endIndex": 21933,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21936,
+      "endIndex": 21947,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 21973,
+      "endIndex": 21984,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 21987,
+      "endIndex": 21998,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Melissa White",
+      "startIndex": 22024,
+      "endIndex": 22037,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22040,
+      "endIndex": 22051,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amanda Thomas",
+      "startIndex": 22077,
+      "endIndex": 22090,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22093,
+      "endIndex": 22104,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 22130,
+      "endIndex": 22141,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22144,
+      "endIndex": 22155,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 22181,
+      "endIndex": 22192,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22195,
+      "endIndex": 22206,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Richard Jackson",
+      "startIndex": 22232,
+      "endIndex": 22247,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Contact Ext",
+      "startIndex": 22250,
+      "endIndex": 22261,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Onboarding Services",
+      "startIndex": 22381,
+      "endIndex": 22400,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

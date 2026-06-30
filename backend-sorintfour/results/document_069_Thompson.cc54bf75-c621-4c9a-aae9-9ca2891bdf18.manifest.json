@@ -1,0 +1,1765 @@
+{
+  "documentId": "cc54bf75-c621-4c9a-aae9-9ca2891bdf18",
+  "originalFilename": "document_069_Thompson.txt",
+  "exportedAt": "2026-06-30T12:00:53.368Z",
+  "redactionCount": 195,
+  "approvedCount": 195,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "2023-0412-1187",
+      "startIndex": 194,
+      "endIndex": 208,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Superior Court",
+      "startIndex": 220,
+      "endIndex": 234,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 238,
+      "endIndex": 252,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Criminal Investigation Unit",
+      "startIndex": 267,
+      "endIndex": 294,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Document Type",
+      "startIndex": 328,
+      "endIndex": 341,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Discovery Exhibit",
+      "startIndex": 345,
+      "endIndex": 362,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Traffic Stop",
+      "startIndex": 367,
+      "endIndex": 379,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Associated Digital Evidence",
+      "startIndex": 384,
+      "endIndex": 411,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Defendant Information",
+      "startIndex": 417,
+      "endIndex": 438,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 462,
+      "endIndex": 477,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "05/18/1982",
+      "startIndex": 499,
+      "endIndex": 509,
+      "confidence": 78,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "License Number",
+      "startIndex": 523,
+      "endIndex": 537,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "559-5080",
+      "startIndex": 544,
+      "endIndex": 552,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "VEHICLE_ID",
+      "value": "1HGCM82633A119557",
+      "startIndex": 577,
+      "endIndex": 594,
+      "confidence": 87,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Vehicle Registration Number",
+      "startIndex": 599,
+      "endIndex": 626,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Registered Address",
+      "startIndex": 645,
+      "endIndex": 663,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "1653 Pine Blvd, Riverside, CA 43568",
+      "startIndex": 667,
+      "endIndex": 702,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "209) 837-9985",
+      "startIndex": 724,
+      "endIndex": 737,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "thomas.thompson@outlook.com",
+      "startIndex": 759,
+      "endIndex": 786,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Emergency Contact",
+      "startIndex": 792,
+      "endIndex": 809,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Thompson",
+      "startIndex": 823,
+      "endIndex": 838,
+      "confidence": 84,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "573) 615-9914",
+      "startIndex": 889,
+      "endIndex": 902,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Pine Blvd",
+      "startIndex": 918,
+      "endIndex": 927,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "On April",
+      "startIndex": 971,
+      "endIndex": 979,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Officer Daniel Cooper",
+      "startIndex": 1016,
+      "endIndex": 1037,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Badge No",
+      "startIndex": 1039,
+      "endIndex": 1047,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Interstate Route",
+      "startIndex": 1102,
+      "endIndex": 1118,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Mile Marker",
+      "startIndex": 1127,
+      "endIndex": 1138,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson and produced",
+      "startIndex": 1303,
+      "endIndex": 1331,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "559-5080",
+      "startIndex": 1369,
+      "endIndex": 1377,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "consented to",
+      "startIndex": 1505,
+      "endIndex": 1517,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "VEHICLE_ID",
+      "value": "1HGCM82633A119557",
+      "startIndex": 1767,
+      "endIndex": 1784,
+      "confidence": 87,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "License Plate",
+      "startIndex": 1789,
+      "endIndex": 1802,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Registration Expiry",
+      "startIndex": 1817,
+      "endIndex": 1836,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Insurance Policy Number",
+      "startIndex": 1862,
+      "endIndex": 1885,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Insurance Provider",
+      "startIndex": 1909,
+      "endIndex": 1927,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood Mutual Insurance",
+      "startIndex": 1930,
+      "endIndex": 1954,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2030,
+      "endIndex": 2057,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2152,
+      "endIndex": 2179,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2274,
+      "endIndex": 2301,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2396,
+      "endIndex": 2423,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2518,
+      "endIndex": 2545,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2640,
+      "endIndex": 2667,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2762,
+      "endIndex": 2789,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 2884,
+      "endIndex": 2911,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3006,
+      "endIndex": 3033,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3130,
+      "endIndex": 3157,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3254,
+      "endIndex": 3281,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3378,
+      "endIndex": 3405,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3502,
+      "endIndex": 3529,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3626,
+      "endIndex": 3653,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3750,
+      "endIndex": 3777,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3874,
+      "endIndex": 3901,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 3998,
+      "endIndex": 4025,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4122,
+      "endIndex": 4149,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4246,
+      "endIndex": 4273,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4370,
+      "endIndex": 4397,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4494,
+      "endIndex": 4521,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4618,
+      "endIndex": 4645,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4742,
+      "endIndex": 4769,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4866,
+      "endIndex": 4893,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "was cooperative but nervous",
+      "startIndex": 4990,
+      "endIndex": 5017,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Device Information",
+      "startIndex": 5107,
+      "endIndex": 5125,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Operating System",
+      "startIndex": 5183,
+      "endIndex": 5199,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Device Identifier",
+      "startIndex": 5218,
+      "endIndex": 5235,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Network Information",
+      "startIndex": 5328,
+      "endIndex": 5347,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "IP_ADDRESS",
+      "value": "192.168.22.69",
+      "startIndex": 5374,
+      "endIndex": 5387,
+      "confidence": 92,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Previous Connection",
+      "startIndex": 5392,
+      "endIndex": 5411,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "IP_ADDRESS",
+      "value": "10.42.55.92",
+      "startIndex": 5415,
+      "endIndex": 5426,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Public Session Identifier",
+      "startIndex": 5431,
+      "endIndex": 5456,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Connection Timestamp",
+      "startIndex": 5512,
+      "endIndex": 5532,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "04/12/2023",
+      "startIndex": 5536,
+      "endIndex": 5546,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "traffic stop",
+      "startIndex": 5649,
+      "endIndex": 5661,
+      "confidence": 84,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Payment Method",
+      "startIndex": 5668,
+      "endIndex": 5682,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Credit Card",
+      "startIndex": 5686,
+      "endIndex": 5697,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Card Number",
+      "startIndex": 5702,
+      "endIndex": 5713,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "CREDIT_CARD",
+      "value": "4030-9207-0881-7604",
+      "startIndex": 5717,
+      "endIndex": 5736,
+      "confidence": 94,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ORGANIZATION",
+      "value": "North Valley Fuel Center",
+      "startIndex": 5795,
+      "endIndex": 5819,
+      "confidence": 85,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Purchase Amount",
+      "startIndex": 5824,
+      "endIndex": 5839,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$61.28",
+      "startIndex": 5843,
+      "endIndex": 5849,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Authorization Code",
+      "startIndex": 5854,
+      "endIndex": 5872,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "04/12/2023",
+      "startIndex": 5900,
+      "endIndex": 5910,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Call Records",
+      "startIndex": 5952,
+      "endIndex": 5964,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "078) 251-8059",
+      "startIndex": 6038,
+      "endIndex": 6051,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "264) 916-3975",
+      "startIndex": 6076,
+      "endIndex": 6089,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "385) 224-3317",
+      "startIndex": 6114,
+      "endIndex": 6127,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "161) 136-6414",
+      "startIndex": 6152,
+      "endIndex": 6165,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "812) 621-8925",
+      "startIndex": 6190,
+      "endIndex": 6203,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "650) 596-7658",
+      "startIndex": 6228,
+      "endIndex": 6241,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "272) 132-8931",
+      "startIndex": 6266,
+      "endIndex": 6279,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "447) 034-9684",
+      "startIndex": 6304,
+      "endIndex": 6317,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "683) 234-0878",
+      "startIndex": 6342,
+      "endIndex": 6355,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "183) 278-7456",
+      "startIndex": 6380,
+      "endIndex": 6393,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "945) 193-9346",
+      "startIndex": 6418,
+      "endIndex": 6431,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "117) 321-3182",
+      "startIndex": 6456,
+      "endIndex": 6469,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "401) 785-3309",
+      "startIndex": 6494,
+      "endIndex": 6507,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "979) 818-4809",
+      "startIndex": 6532,
+      "endIndex": 6545,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "409) 704-1351",
+      "startIndex": 6570,
+      "endIndex": 6583,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "946) 919-3740",
+      "startIndex": 6608,
+      "endIndex": 6621,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "312) 872-6814",
+      "startIndex": 6646,
+      "endIndex": 6659,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "855) 078-4738",
+      "startIndex": 6684,
+      "endIndex": 6697,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "518) 002-2664",
+      "startIndex": 6722,
+      "endIndex": 6735,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "664) 484-9220",
+      "startIndex": 6760,
+      "endIndex": 6773,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Text Message Summary",
+      "startIndex": 6781,
+      "endIndex": 6801,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8208,
+      "endIndex": 8222,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8258,
+      "endIndex": 8272,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8308,
+      "endIndex": 8322,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8358,
+      "endIndex": 8372,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8408,
+      "endIndex": 8422,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8458,
+      "endIndex": 8472,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8508,
+      "endIndex": 8522,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8558,
+      "endIndex": 8572,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8608,
+      "endIndex": 8622,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8660,
+      "endIndex": 8674,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8712,
+      "endIndex": 8726,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8764,
+      "endIndex": 8778,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8816,
+      "endIndex": 8830,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8868,
+      "endIndex": 8882,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8920,
+      "endIndex": 8934,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 8972,
+      "endIndex": 8986,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 9024,
+      "endIndex": 9038,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 9076,
+      "endIndex": 9090,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 9128,
+      "endIndex": 9142,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Redwood County",
+      "startIndex": 9180,
+      "endIndex": 9194,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 9248,
+      "endIndex": 9259,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Maple Ave",
+      "startIndex": 9271,
+      "endIndex": 9280,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "892) 057-0450",
+      "startIndex": 9305,
+      "endIndex": 9318,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 9342,
+      "endIndex": 9355,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Pine Blvd",
+      "startIndex": 9367,
+      "endIndex": 9376,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "869) 577-7315",
+      "startIndex": 9403,
+      "endIndex": 9416,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Jessica Taylor",
+      "startIndex": 9440,
+      "endIndex": 9454,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Park Ave",
+      "startIndex": 9466,
+      "endIndex": 9474,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "864) 104-0181",
+      "startIndex": 9500,
+      "endIndex": 9513,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 9537,
+      "endIndex": 9550,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Washington St",
+      "startIndex": 9562,
+      "endIndex": 9575,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "906) 183-8179",
+      "startIndex": 9602,
+      "endIndex": 9615,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Maria Garcia",
+      "startIndex": 9639,
+      "endIndex": 9651,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Park Ave",
+      "startIndex": 9663,
+      "endIndex": 9671,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "719) 765-0165",
+      "startIndex": 9696,
+      "endIndex": 9709,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 9733,
+      "endIndex": 9746,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Oak Ln",
+      "startIndex": 9758,
+      "endIndex": 9764,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "464) 559-6976",
+      "startIndex": 9791,
+      "endIndex": 9804,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "William Moore",
+      "startIndex": 9828,
+      "endIndex": 9841,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Maple Ave",
+      "startIndex": 9853,
+      "endIndex": 9862,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "593) 446-3967",
+      "startIndex": 9888,
+      "endIndex": 9901,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 9925,
+      "endIndex": 9938,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Main St",
+      "startIndex": 9950,
+      "endIndex": 9957,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "509) 232-0570",
+      "startIndex": 9985,
+      "endIndex": 9998,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 10022,
+      "endIndex": 10037,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Elm Dr",
+      "startIndex": 10049,
+      "endIndex": 10055,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "371) 514-8320",
+      "startIndex": 10079,
+      "endIndex": 10092,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 10117,
+      "endIndex": 10132,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Cedar Rd",
+      "startIndex": 10144,
+      "endIndex": 10152,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "383) 691-7892",
+      "startIndex": 10176,
+      "endIndex": 10189,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10244,
+      "endIndex": 10257,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10285,
+      "endIndex": 10298,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10326,
+      "endIndex": 10339,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10367,
+      "endIndex": 10380,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10408,
+      "endIndex": 10421,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10449,
+      "endIndex": 10462,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10490,
+      "endIndex": 10503,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10531,
+      "endIndex": 10544,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10572,
+      "endIndex": 10585,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10615,
+      "endIndex": 10628,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10658,
+      "endIndex": 10671,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10701,
+      "endIndex": 10714,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10744,
+      "endIndex": 10757,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10787,
+      "endIndex": 10800,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10830,
+      "endIndex": 10843,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10873,
+      "endIndex": 10886,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10916,
+      "endIndex": 10929,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 10959,
+      "endIndex": 10972,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11002,
+      "endIndex": 11015,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11045,
+      "endIndex": 11058,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11088,
+      "endIndex": 11101,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11131,
+      "endIndex": 11144,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11174,
+      "endIndex": 11187,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11217,
+      "endIndex": 11230,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "vehicle cargo",
+      "startIndex": 11260,
+      "endIndex": 11273,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Evidence Tag",
+      "startIndex": 11353,
+      "endIndex": 11365,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Storage Locker",
+      "startIndex": 11384,
+      "endIndex": 11398,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Custody Form",
+      "startIndex": 11416,
+      "endIndex": 11428,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Seizure Time",
+      "startIndex": 11443,
+      "endIndex": 11455,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Badge Number",
+      "startIndex": 12824,
+      "endIndex": 12836,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "555) 882-1701",
+      "startIndex": 12874,
+      "endIndex": 12887,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Badge Number",
+      "startIndex": 12905,
+      "endIndex": 12917,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "555) 882-1702",
+      "startIndex": 12955,
+      "endIndex": 12968,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Badge Number",
+      "startIndex": 12986,
+      "endIndex": 12998,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "555) 882-1703",
+      "startIndex": 13036,
+      "endIndex": 13049,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Badge Number",
+      "startIndex": 13067,
+      "endIndex": 13079,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "555) 882-1704",
+      "startIndex": 13117,
+      "endIndex": 13130,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Badge Number",
+      "startIndex": 13148,
+      "endIndex": 13160,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "555) 882-1705",
+      "startIndex": 13198,
+      "endIndex": 13211,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Prepared By",
+      "startIndex": 13316,
+      "endIndex": 13327,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Dataset Generation Unit",
+      "startIndex": 13331,
+      "endIndex": 13354,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

@@ -1,0 +1,1531 @@
+{
+  "documentId": "21693e94-6929-433f-969c-e4cd75bc3f8c",
+  "originalFilename": "document_178_Davis.txt",
+  "exportedAt": "2026-06-30T12:00:46.000Z",
+  "redactionCount": 169,
+  "approvedCount": 169,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 137,
+      "endIndex": 148,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "8141 Main St, Springfield, IL 99509",
+      "startIndex": 162,
+      "endIndex": 197,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "572) 956-1727",
+      "startIndex": 212,
+      "endIndex": 225,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "sarah.davis@yahoo.com",
+      "startIndex": 228,
+      "endIndex": 249,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "SSN",
+      "value": "279-88-6949",
+      "startIndex": 276,
+      "endIndex": 287,
+      "confidence": 96,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "BANK ACCOUNT",
+      "startIndex": 290,
+      "endIndex": 302,
+      "confidence": 84,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 325,
+      "endIndex": 339,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 367,
+      "endIndex": 388,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 573,
+      "endIndex": 594,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 779,
+      "endIndex": 800,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 985,
+      "endIndex": 1006,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 1191,
+      "endIndex": 1212,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 1397,
+      "endIndex": 1418,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 1603,
+      "endIndex": 1624,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 1809,
+      "endIndex": 1830,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 2015,
+      "endIndex": 2036,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 2221,
+      "endIndex": 2242,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 2427,
+      "endIndex": 2448,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 2633,
+      "endIndex": 2654,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 2839,
+      "endIndex": 2860,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 3045,
+      "endIndex": 3066,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 3251,
+      "endIndex": 3272,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 3457,
+      "endIndex": 3478,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 3663,
+      "endIndex": 3684,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 3869,
+      "endIndex": 3890,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 4075,
+      "endIndex": 4096,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 4281,
+      "endIndex": 4302,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 4487,
+      "endIndex": 4508,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 4693,
+      "endIndex": 4714,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 4899,
+      "endIndex": 4920,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 5105,
+      "endIndex": 5126,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 5311,
+      "endIndex": 5332,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 5517,
+      "endIndex": 5538,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 5723,
+      "endIndex": 5744,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 5929,
+      "endIndex": 5950,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 6135,
+      "endIndex": 6156,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 6341,
+      "endIndex": 6362,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 6547,
+      "endIndex": 6568,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 6753,
+      "endIndex": 6774,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 6959,
+      "endIndex": 6980,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 7165,
+      "endIndex": 7186,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Plaintiff Sarah Davis",
+      "startIndex": 7371,
+      "endIndex": 7392,
+      "confidence": 99,
+      "provider": "heuristic-ner",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Settlement Payment",
+      "startIndex": 7596,
+      "endIndex": 7614,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$45,000.00",
+      "startIndex": 7647,
+      "endIndex": 7657,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Bank Account",
+      "startIndex": 7661,
+      "endIndex": 7673,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 7674,
+      "endIndex": 7688,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Due Date",
+      "startIndex": 12404,
+      "endIndex": 12412,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Target Bank Account",
+      "startIndex": 12415,
+      "endIndex": 12434,
+      "confidence": 94,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12482,
+      "endIndex": 12491,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/1/2023",
+      "startIndex": 12494,
+      "endIndex": 12503,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12514,
+      "endIndex": 12528,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12550,
+      "endIndex": 12559,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/2/2023",
+      "startIndex": 12562,
+      "endIndex": 12571,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12582,
+      "endIndex": 12596,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12618,
+      "endIndex": 12627,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/3/2023",
+      "startIndex": 12630,
+      "endIndex": 12639,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12650,
+      "endIndex": 12664,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12686,
+      "endIndex": 12695,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/4/2023",
+      "startIndex": 12698,
+      "endIndex": 12707,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12718,
+      "endIndex": 12732,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12754,
+      "endIndex": 12763,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/5/2023",
+      "startIndex": 12766,
+      "endIndex": 12775,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12786,
+      "endIndex": 12800,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12822,
+      "endIndex": 12831,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/6/2023",
+      "startIndex": 12834,
+      "endIndex": 12843,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12854,
+      "endIndex": 12868,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12890,
+      "endIndex": 12899,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/7/2023",
+      "startIndex": 12902,
+      "endIndex": 12911,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12922,
+      "endIndex": 12936,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 12958,
+      "endIndex": 12967,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/8/2023",
+      "startIndex": 12970,
+      "endIndex": 12979,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 12990,
+      "endIndex": 13004,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13026,
+      "endIndex": 13035,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/9/2023",
+      "startIndex": 13038,
+      "endIndex": 13047,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13058,
+      "endIndex": 13072,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13095,
+      "endIndex": 13104,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/10/2023",
+      "startIndex": 13107,
+      "endIndex": 13117,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13128,
+      "endIndex": 13142,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13165,
+      "endIndex": 13174,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/11/2023",
+      "startIndex": 13177,
+      "endIndex": 13187,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13198,
+      "endIndex": 13212,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13235,
+      "endIndex": 13244,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/12/2023",
+      "startIndex": 13247,
+      "endIndex": 13257,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13268,
+      "endIndex": 13282,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13305,
+      "endIndex": 13314,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/13/2023",
+      "startIndex": 13317,
+      "endIndex": 13327,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13338,
+      "endIndex": 13352,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13375,
+      "endIndex": 13384,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/14/2023",
+      "startIndex": 13387,
+      "endIndex": 13397,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13408,
+      "endIndex": 13422,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13445,
+      "endIndex": 13454,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/15/2023",
+      "startIndex": 13457,
+      "endIndex": 13467,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13478,
+      "endIndex": 13492,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13515,
+      "endIndex": 13524,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/16/2023",
+      "startIndex": 13527,
+      "endIndex": 13537,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13548,
+      "endIndex": 13562,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13585,
+      "endIndex": 13594,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/17/2023",
+      "startIndex": 13597,
+      "endIndex": 13607,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13618,
+      "endIndex": 13632,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13655,
+      "endIndex": 13664,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/18/2023",
+      "startIndex": 13667,
+      "endIndex": 13677,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13688,
+      "endIndex": 13702,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13725,
+      "endIndex": 13734,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/19/2023",
+      "startIndex": 13737,
+      "endIndex": 13747,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13758,
+      "endIndex": 13772,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13795,
+      "endIndex": 13804,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/20/2023",
+      "startIndex": 13807,
+      "endIndex": 13817,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13828,
+      "endIndex": 13842,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13865,
+      "endIndex": 13874,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/21/2023",
+      "startIndex": 13877,
+      "endIndex": 13887,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13898,
+      "endIndex": 13912,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 13935,
+      "endIndex": 13944,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/22/2023",
+      "startIndex": 13947,
+      "endIndex": 13957,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 13968,
+      "endIndex": 13982,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 14005,
+      "endIndex": 14014,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/23/2023",
+      "startIndex": 14017,
+      "endIndex": 14027,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 14038,
+      "endIndex": 14052,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 14075,
+      "endIndex": 14084,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/24/2023",
+      "startIndex": 14087,
+      "endIndex": 14097,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 14108,
+      "endIndex": 14122,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$3,000.00",
+      "startIndex": 14145,
+      "endIndex": 14154,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "11/25/2023",
+      "startIndex": 14157,
+      "endIndex": 14167,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "6968-8276-6949",
+      "startIndex": 14178,
+      "endIndex": 14192,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 24328,
+      "endIndex": 24340,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24349,
+      "endIndex": 24362,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "959) 882-0975",
+      "startIndex": 24365,
+      "endIndex": 24378,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Linda Martinez",
+      "startIndex": 24405,
+      "endIndex": 24419,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24428,
+      "endIndex": 24441,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "511) 239-0069",
+      "startIndex": 24444,
+      "endIndex": 24457,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Robert Brown",
+      "startIndex": 24484,
+      "endIndex": 24496,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24505,
+      "endIndex": 24518,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "717) 766-7112",
+      "startIndex": 24521,
+      "endIndex": 24534,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Ashley Martin",
+      "startIndex": 24561,
+      "endIndex": 24574,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24583,
+      "endIndex": 24596,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "008) 625-4372",
+      "startIndex": 24599,
+      "endIndex": 24612,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 24639,
+      "endIndex": 24654,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24663,
+      "endIndex": 24676,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "329) 348-2711",
+      "startIndex": 24679,
+      "endIndex": 24692,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Charles Martinez",
+      "startIndex": 24719,
+      "endIndex": 24735,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24744,
+      "endIndex": 24757,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "875) 695-3093",
+      "startIndex": 24760,
+      "endIndex": 24773,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Linda Martinez",
+      "startIndex": 24800,
+      "endIndex": 24814,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24823,
+      "endIndex": 24836,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "671) 812-4993",
+      "startIndex": 24839,
+      "endIndex": 24852,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 24879,
+      "endIndex": 24892,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24901,
+      "endIndex": 24914,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "928) 288-3730",
+      "startIndex": 24917,
+      "endIndex": 24930,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Charles Martinez",
+      "startIndex": 24957,
+      "endIndex": 24973,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 24982,
+      "endIndex": 24995,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "482) 403-7710",
+      "startIndex": 24998,
+      "endIndex": 25011,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 25038,
+      "endIndex": 25053,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 25062,
+      "endIndex": 25075,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "062) 024-4061",
+      "startIndex": 25078,
+      "endIndex": 25091,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Charles Martinez",
+      "startIndex": 25118,
+      "endIndex": 25134,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 25143,
+      "endIndex": 25156,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "932) 496-8849",
+      "startIndex": 25159,
+      "endIndex": 25172,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Charles Martinez",
+      "startIndex": 25199,
+      "endIndex": 25215,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 25224,
+      "endIndex": 25237,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "295) 184-5661",
+      "startIndex": 25240,
+      "endIndex": 25253,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 25280,
+      "endIndex": 25293,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 25302,
+      "endIndex": 25315,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "736) 058-0579",
+      "startIndex": 25318,
+      "endIndex": 25331,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Emily Wilson",
+      "startIndex": 25358,
+      "endIndex": 25370,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 25379,
+      "endIndex": 25392,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "273) 647-1191",
+      "startIndex": 25395,
+      "endIndex": 25408,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Charles Martinez",
+      "startIndex": 25435,
+      "endIndex": 25451,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Counsel Phone",
+      "startIndex": 25460,
+      "endIndex": 25473,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "495) 879-3283",
+      "startIndex": 25476,
+      "endIndex": 25489,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Legal Registry Services",
+      "startIndex": 25561,
+      "endIndex": 25584,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "provider": {
+    "tier1": "heuristic-ner",
+    "glinerActive": false,
+    "ollamaActive": true
+  },
+  "documents": 200,
+  "efficiency": {
+    "totalOccurrences": 47251,
+    "uniqueEntities": 3948,
+    "repeatsResolved": 43303,
+    "repeatRate": 0.916,
+    "dedupFactor": 12,
+    "propagatedOnline": 12968,
+    "cacheHitRate": 0.274
+  },
+  "speed": {
+    "timeToFirstRedactionMs": 5.28,
+    "batchWallMs": 3817.5,
+    "throughputDocsPerSec": 52.4,
+    "perDocP50Ms": 0,
+    "perDocP95Ms": 0,
+    "llmOnlyProjectedMs": 600000,
+    "speedupVsLlmOnly": 157.2
+  },
+  "priority": {
+    "proRatio": 0.3,
+    "concurrency": 2,
+    "proDocs": 60,
+    "freeDocs": 140,
+    "proAvgWaitMs": 1160,
+    "freeAvgWaitMs": 5160,
+    "proP95WaitMs": 2240,
+    "freeP95WaitMs": 7680,
+    "prioritySpeedup": 4.4
+  },
+  "generatedAt": "2026-06-30T11:52:04.688Z"
+}

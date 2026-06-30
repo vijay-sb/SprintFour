@@ -4,7 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "tsx --watch src/index.ts"
+    "dev": "tsx --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "benchmark": "bun scripts/benchmark.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -20,6 +22,7 @@
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
+    "gliner": "^0.0.19",
     "multer": "^2.2.0",
     "pdf-parse": "^2.4.5",
     "uuid": "^14.0.1"

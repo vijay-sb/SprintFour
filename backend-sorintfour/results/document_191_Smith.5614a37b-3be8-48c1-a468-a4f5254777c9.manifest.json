@@ -1,0 +1,2890 @@
+{
+  "documentId": "5614a37b-3be8-48c1-a468-a4f5254777c9",
+  "originalFilename": "document_191_Smith.txt",
+  "exportedAt": "2026-06-30T12:00:43.019Z",
+  "redactionCount": 320,
+  "approvedCount": 320,
+  "rejectedCount": 0,
+  "redactions": [
+    {
+      "type": "PERSON",
+      "value": "Senior Litigation Partner",
+      "startIndex": 73,
+      "endIndex": 98,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Legal Department",
+      "startIndex": 109,
+      "endIndex": 125,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Pending Case Evaluation",
+      "startIndex": 134,
+      "endIndex": 157,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith",
+      "startIndex": 169,
+      "endIndex": 180,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Full Name",
+      "startIndex": 336,
+      "endIndex": 345,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith",
+      "startIndex": 356,
+      "endIndex": 367,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "06/22/1984",
+      "startIndex": 389,
+      "endIndex": 399,
+      "confidence": 78,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Social Security Number",
+      "startIndex": 404,
+      "endIndex": 426,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "SSN",
+      "value": "996-14-1910",
+      "startIndex": 430,
+      "endIndex": 441,
+      "confidence": 96,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Billing Account Number",
+      "startIndex": 446,
+      "endIndex": 468,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "8186-8074-0686",
+      "startIndex": 472,
+      "endIndex": 486,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "451) 890-5536",
+      "startIndex": 508,
+      "endIndex": 521,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 543,
+      "endIndex": 566,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Primary Address",
+      "startIndex": 571,
+      "endIndex": 586,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "ADDRESS",
+      "value": "8334 Elm Dr, Bristol, VA 71474",
+      "startIndex": 590,
+      "endIndex": 620,
+      "confidence": 95,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith",
+      "startIndex": 759,
+      "endIndex": 770,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "alleges that the opposition",
+      "startIndex": 803,
+      "endIndex": 830,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 981,
+      "endIndex": 1011,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 1246,
+      "endIndex": 1276,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 1511,
+      "endIndex": 1541,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 1776,
+      "endIndex": 1806,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 2041,
+      "endIndex": 2071,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 2306,
+      "endIndex": 2336,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 2571,
+      "endIndex": 2601,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 2836,
+      "endIndex": 2866,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 3101,
+      "endIndex": 3131,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 3366,
+      "endIndex": 3396,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 3631,
+      "endIndex": 3661,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 3896,
+      "endIndex": 3926,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 4161,
+      "endIndex": 4191,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 4426,
+      "endIndex": 4456,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 4691,
+      "endIndex": 4721,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 4956,
+      "endIndex": 4986,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 5221,
+      "endIndex": 5251,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 5486,
+      "endIndex": 5516,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 5751,
+      "endIndex": 5781,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 6016,
+      "endIndex": 6046,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 6281,
+      "endIndex": 6311,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 6546,
+      "endIndex": 6576,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 6811,
+      "endIndex": 6841,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 7076,
+      "endIndex": 7106,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 7341,
+      "endIndex": 7371,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 7606,
+      "endIndex": 7636,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 7871,
+      "endIndex": 7901,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 8136,
+      "endIndex": 8166,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 8401,
+      "endIndex": 8431,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Verification of the electronic",
+      "startIndex": 8666,
+      "endIndex": 8696,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/1/2023",
+      "startIndex": 8955,
+      "endIndex": 8964,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 8967,
+      "endIndex": 8983,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$250.00",
+      "startIndex": 8992,
+      "endIndex": 8999,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/2/2023",
+      "startIndex": 9016,
+      "endIndex": 9025,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9028,
+      "endIndex": 9044,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$300.00",
+      "startIndex": 9053,
+      "endIndex": 9060,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/3/2023",
+      "startIndex": 9077,
+      "endIndex": 9086,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9089,
+      "endIndex": 9105,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$350.00",
+      "startIndex": 9114,
+      "endIndex": 9121,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/4/2023",
+      "startIndex": 9138,
+      "endIndex": 9147,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9150,
+      "endIndex": 9166,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$400.00",
+      "startIndex": 9175,
+      "endIndex": 9182,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/5/2023",
+      "startIndex": 9199,
+      "endIndex": 9208,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9211,
+      "endIndex": 9227,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$450.00",
+      "startIndex": 9236,
+      "endIndex": 9243,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/6/2023",
+      "startIndex": 9260,
+      "endIndex": 9269,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9272,
+      "endIndex": 9288,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$500.00",
+      "startIndex": 9297,
+      "endIndex": 9304,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/7/2023",
+      "startIndex": 9321,
+      "endIndex": 9330,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9333,
+      "endIndex": 9349,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$550.00",
+      "startIndex": 9358,
+      "endIndex": 9365,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/8/2023",
+      "startIndex": 9382,
+      "endIndex": 9391,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9394,
+      "endIndex": 9410,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$600.00",
+      "startIndex": 9419,
+      "endIndex": 9426,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/9/2023",
+      "startIndex": 9443,
+      "endIndex": 9452,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9455,
+      "endIndex": 9471,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$650.00",
+      "startIndex": 9480,
+      "endIndex": 9487,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/10/2023",
+      "startIndex": 9504,
+      "endIndex": 9514,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9517,
+      "endIndex": 9533,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$700.00",
+      "startIndex": 9542,
+      "endIndex": 9549,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/11/2023",
+      "startIndex": 9566,
+      "endIndex": 9576,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9579,
+      "endIndex": 9595,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$750.00",
+      "startIndex": 9604,
+      "endIndex": 9611,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/12/2023",
+      "startIndex": 9628,
+      "endIndex": 9638,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9641,
+      "endIndex": 9657,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$800.00",
+      "startIndex": 9666,
+      "endIndex": 9673,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/13/2023",
+      "startIndex": 9690,
+      "endIndex": 9700,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9703,
+      "endIndex": 9719,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$850.00",
+      "startIndex": 9728,
+      "endIndex": 9735,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/14/2023",
+      "startIndex": 9752,
+      "endIndex": 9762,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9765,
+      "endIndex": 9781,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$900.00",
+      "startIndex": 9790,
+      "endIndex": 9797,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/15/2023",
+      "startIndex": 9814,
+      "endIndex": 9824,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9827,
+      "endIndex": 9843,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$950.00",
+      "startIndex": 9852,
+      "endIndex": 9859,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/16/2023",
+      "startIndex": 9876,
+      "endIndex": 9886,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9889,
+      "endIndex": 9905,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$1000.00",
+      "startIndex": 9914,
+      "endIndex": 9922,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/17/2023",
+      "startIndex": 9939,
+      "endIndex": 9949,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 9952,
+      "endIndex": 9968,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$1050.00",
+      "startIndex": 9977,
+      "endIndex": 9985,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/18/2023",
+      "startIndex": 10002,
+      "endIndex": 10012,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 10015,
+      "endIndex": 10031,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$1100.00",
+      "startIndex": 10040,
+      "endIndex": 10048,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/19/2023",
+      "startIndex": 10065,
+      "endIndex": 10075,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 10078,
+      "endIndex": 10094,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$1150.00",
+      "startIndex": 10103,
+      "endIndex": 10111,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/20/2023",
+      "startIndex": 10128,
+      "endIndex": 10138,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Retainer Billing",
+      "startIndex": 10141,
+      "endIndex": 10157,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "FINANCIAL",
+      "value": "$1200.00",
+      "startIndex": 10166,
+      "endIndex": 10174,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "client James Smith",
+      "startIndex": 10241,
+      "endIndex": 10259,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "BANK_ACCOUNT",
+      "value": "8186-8074-0686",
+      "startIndex": 10295,
+      "endIndex": 10309,
+      "confidence": 86,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/1/2023",
+      "startIndex": 10315,
+      "endIndex": 10324,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 10362,
+      "endIndex": 10391,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/1/2023",
+      "startIndex": 10403,
+      "endIndex": 10412,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 10445,
+      "endIndex": 10468,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/2/2023",
+      "startIndex": 10502,
+      "endIndex": 10511,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 10549,
+      "endIndex": 10578,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/2/2023",
+      "startIndex": 10590,
+      "endIndex": 10599,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 10632,
+      "endIndex": 10655,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/3/2023",
+      "startIndex": 10689,
+      "endIndex": 10698,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 10736,
+      "endIndex": 10765,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/3/2023",
+      "startIndex": 10777,
+      "endIndex": 10786,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 10819,
+      "endIndex": 10842,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/4/2023",
+      "startIndex": 10876,
+      "endIndex": 10885,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 10923,
+      "endIndex": 10952,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/4/2023",
+      "startIndex": 10964,
+      "endIndex": 10973,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 11006,
+      "endIndex": 11029,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/5/2023",
+      "startIndex": 11063,
+      "endIndex": 11072,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 11110,
+      "endIndex": 11139,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/5/2023",
+      "startIndex": 11151,
+      "endIndex": 11160,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 11193,
+      "endIndex": 11216,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/6/2023",
+      "startIndex": 11250,
+      "endIndex": 11259,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 11297,
+      "endIndex": 11326,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/6/2023",
+      "startIndex": 11338,
+      "endIndex": 11347,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 11380,
+      "endIndex": 11403,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/7/2023",
+      "startIndex": 11437,
+      "endIndex": 11446,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 11484,
+      "endIndex": 11513,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/7/2023",
+      "startIndex": 11525,
+      "endIndex": 11534,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 11567,
+      "endIndex": 11590,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/8/2023",
+      "startIndex": 11624,
+      "endIndex": 11633,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 11671,
+      "endIndex": 11700,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/8/2023",
+      "startIndex": 11712,
+      "endIndex": 11721,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 11754,
+      "endIndex": 11777,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/9/2023",
+      "startIndex": 11811,
+      "endIndex": 11820,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 11858,
+      "endIndex": 11887,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/9/2023",
+      "startIndex": 11899,
+      "endIndex": 11908,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 11941,
+      "endIndex": 11964,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/10/2023",
+      "startIndex": 11998,
+      "endIndex": 12008,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 12046,
+      "endIndex": 12075,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/10/2023",
+      "startIndex": 12087,
+      "endIndex": 12097,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 12130,
+      "endIndex": 12153,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/11/2023",
+      "startIndex": 12187,
+      "endIndex": 12197,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 12235,
+      "endIndex": 12264,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/11/2023",
+      "startIndex": 12276,
+      "endIndex": 12286,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 12319,
+      "endIndex": 12342,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/12/2023",
+      "startIndex": 12376,
+      "endIndex": 12386,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 12424,
+      "endIndex": 12453,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/12/2023",
+      "startIndex": 12465,
+      "endIndex": 12475,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 12508,
+      "endIndex": 12531,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/13/2023",
+      "startIndex": 12565,
+      "endIndex": 12575,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 12613,
+      "endIndex": 12642,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/13/2023",
+      "startIndex": 12654,
+      "endIndex": 12664,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 12697,
+      "endIndex": 12720,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/14/2023",
+      "startIndex": 12754,
+      "endIndex": 12764,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 12802,
+      "endIndex": 12831,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/14/2023",
+      "startIndex": 12843,
+      "endIndex": 12853,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 12886,
+      "endIndex": 12909,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/15/2023",
+      "startIndex": 12943,
+      "endIndex": 12953,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 12991,
+      "endIndex": 13020,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/15/2023",
+      "startIndex": 13032,
+      "endIndex": 13042,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 13075,
+      "endIndex": 13098,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/16/2023",
+      "startIndex": 13132,
+      "endIndex": 13142,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 13180,
+      "endIndex": 13209,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/16/2023",
+      "startIndex": 13221,
+      "endIndex": 13231,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 13264,
+      "endIndex": 13287,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/17/2023",
+      "startIndex": 13321,
+      "endIndex": 13331,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 13369,
+      "endIndex": 13398,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/17/2023",
+      "startIndex": 13410,
+      "endIndex": 13420,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 13453,
+      "endIndex": 13476,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/18/2023",
+      "startIndex": 13510,
+      "endIndex": 13520,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 13558,
+      "endIndex": 13587,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/18/2023",
+      "startIndex": 13599,
+      "endIndex": 13609,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 13642,
+      "endIndex": 13665,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/19/2023",
+      "startIndex": 13699,
+      "endIndex": 13709,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 13747,
+      "endIndex": 13776,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/19/2023",
+      "startIndex": 13788,
+      "endIndex": 13798,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 13831,
+      "endIndex": 13854,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/20/2023",
+      "startIndex": 13888,
+      "endIndex": 13898,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 13936,
+      "endIndex": 13965,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/20/2023",
+      "startIndex": 13977,
+      "endIndex": 13987,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 14020,
+      "endIndex": 14043,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/21/2023",
+      "startIndex": 14077,
+      "endIndex": 14087,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 14125,
+      "endIndex": 14154,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/21/2023",
+      "startIndex": 14166,
+      "endIndex": 14176,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 14209,
+      "endIndex": 14232,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/22/2023",
+      "startIndex": 14266,
+      "endIndex": 14276,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 14314,
+      "endIndex": 14343,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/22/2023",
+      "startIndex": 14355,
+      "endIndex": 14365,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 14398,
+      "endIndex": 14421,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/23/2023",
+      "startIndex": 14455,
+      "endIndex": 14465,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 14503,
+      "endIndex": 14532,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/23/2023",
+      "startIndex": 14544,
+      "endIndex": 14554,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 14587,
+      "endIndex": 14610,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/24/2023",
+      "startIndex": 14644,
+      "endIndex": 14654,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 14692,
+      "endIndex": 14721,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/24/2023",
+      "startIndex": 14733,
+      "endIndex": 14743,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 14776,
+      "endIndex": 14799,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/25/2023",
+      "startIndex": 14833,
+      "endIndex": 14843,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 14881,
+      "endIndex": 14910,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/25/2023",
+      "startIndex": 14922,
+      "endIndex": 14932,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 14965,
+      "endIndex": 14988,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/26/2023",
+      "startIndex": 15022,
+      "endIndex": 15032,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 15070,
+      "endIndex": 15099,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/26/2023",
+      "startIndex": 15111,
+      "endIndex": 15121,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 15154,
+      "endIndex": 15177,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/27/2023",
+      "startIndex": 15211,
+      "endIndex": 15221,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 15259,
+      "endIndex": 15288,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/27/2023",
+      "startIndex": 15300,
+      "endIndex": 15310,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 15343,
+      "endIndex": 15366,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/28/2023",
+      "startIndex": 15400,
+      "endIndex": 15410,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 15448,
+      "endIndex": 15477,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/28/2023",
+      "startIndex": 15489,
+      "endIndex": 15499,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 15532,
+      "endIndex": 15555,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/29/2023",
+      "startIndex": 15589,
+      "endIndex": 15599,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 15637,
+      "endIndex": 15666,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/29/2023",
+      "startIndex": 15678,
+      "endIndex": 15688,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 15721,
+      "endIndex": 15744,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/30/2023",
+      "startIndex": 15778,
+      "endIndex": 15788,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 15826,
+      "endIndex": 15855,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/30/2023",
+      "startIndex": 15867,
+      "endIndex": 15877,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 15910,
+      "endIndex": 15933,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/31/2023",
+      "startIndex": 15967,
+      "endIndex": 15977,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 16015,
+      "endIndex": 16044,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/31/2023",
+      "startIndex": 16056,
+      "endIndex": 16066,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 16099,
+      "endIndex": 16122,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/32/2023",
+      "startIndex": 16156,
+      "endIndex": 16166,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 16204,
+      "endIndex": 16233,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/32/2023",
+      "startIndex": 16245,
+      "endIndex": 16255,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 16288,
+      "endIndex": 16311,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/33/2023",
+      "startIndex": 16345,
+      "endIndex": 16355,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 16393,
+      "endIndex": 16422,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/33/2023",
+      "startIndex": 16434,
+      "endIndex": 16444,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 16477,
+      "endIndex": 16500,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/34/2023",
+      "startIndex": 16534,
+      "endIndex": 16544,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 16582,
+      "endIndex": 16611,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/34/2023",
+      "startIndex": 16623,
+      "endIndex": 16633,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 16666,
+      "endIndex": 16689,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/35/2023",
+      "startIndex": 16723,
+      "endIndex": 16733,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 16771,
+      "endIndex": 16800,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/35/2023",
+      "startIndex": 16812,
+      "endIndex": 16822,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 16855,
+      "endIndex": 16878,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/36/2023",
+      "startIndex": 16912,
+      "endIndex": 16922,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 16960,
+      "endIndex": 16989,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/36/2023",
+      "startIndex": 17001,
+      "endIndex": 17011,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 17044,
+      "endIndex": 17067,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/37/2023",
+      "startIndex": 17101,
+      "endIndex": 17111,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 17149,
+      "endIndex": 17178,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/37/2023",
+      "startIndex": 17190,
+      "endIndex": 17200,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 17233,
+      "endIndex": 17256,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/38/2023",
+      "startIndex": 17290,
+      "endIndex": 17300,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 17338,
+      "endIndex": 17367,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/38/2023",
+      "startIndex": 17379,
+      "endIndex": 17389,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 17422,
+      "endIndex": 17445,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/39/2023",
+      "startIndex": 17479,
+      "endIndex": 17489,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 17527,
+      "endIndex": 17556,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/39/2023",
+      "startIndex": 17568,
+      "endIndex": 17578,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 17611,
+      "endIndex": 17634,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/40/2023",
+      "startIndex": 17668,
+      "endIndex": 17678,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 17716,
+      "endIndex": 17745,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/40/2023",
+      "startIndex": 17757,
+      "endIndex": 17767,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 17800,
+      "endIndex": 17823,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/41/2023",
+      "startIndex": 17857,
+      "endIndex": 17867,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 17905,
+      "endIndex": 17934,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/41/2023",
+      "startIndex": 17946,
+      "endIndex": 17956,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 17989,
+      "endIndex": 18012,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/42/2023",
+      "startIndex": 18046,
+      "endIndex": 18056,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 18094,
+      "endIndex": 18123,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/42/2023",
+      "startIndex": 18135,
+      "endIndex": 18145,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 18178,
+      "endIndex": 18201,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/43/2023",
+      "startIndex": 18235,
+      "endIndex": 18245,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 18283,
+      "endIndex": 18312,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/43/2023",
+      "startIndex": 18324,
+      "endIndex": 18334,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 18367,
+      "endIndex": 18390,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/44/2023",
+      "startIndex": 18424,
+      "endIndex": 18434,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 18472,
+      "endIndex": 18501,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/44/2023",
+      "startIndex": 18513,
+      "endIndex": 18523,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 18556,
+      "endIndex": 18579,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/45/2023",
+      "startIndex": 18613,
+      "endIndex": 18623,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "James Smith regarding invoice",
+      "startIndex": 18661,
+      "endIndex": 18690,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "DATE",
+      "value": "10/45/2023",
+      "startIndex": 18702,
+      "endIndex": 18712,
+      "confidence": 99,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "EMAIL",
+      "value": "james.smith@company.net",
+      "startIndex": 18745,
+      "endIndex": 18768,
+      "confidence": 98,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Richard Jackson",
+      "startIndex": 22467,
+      "endIndex": 22482,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "525) 996-8602",
+      "startIndex": 22493,
+      "endIndex": 22506,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 22529,
+      "endIndex": 22540,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "418) 864-2980",
+      "startIndex": 22551,
+      "endIndex": 22564,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 22587,
+      "endIndex": 22600,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "229) 057-5654",
+      "startIndex": 22611,
+      "endIndex": 22624,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Sarah Davis",
+      "startIndex": 22647,
+      "endIndex": 22658,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "967) 172-1193",
+      "startIndex": 22669,
+      "endIndex": 22682,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Joseph Harris",
+      "startIndex": 22705,
+      "endIndex": 22718,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "346) 875-3854",
+      "startIndex": 22729,
+      "endIndex": 22742,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amanda Thomas",
+      "startIndex": 22765,
+      "endIndex": 22778,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "575) 439-8931",
+      "startIndex": 22789,
+      "endIndex": 22802,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "John Anderson",
+      "startIndex": 22825,
+      "endIndex": 22838,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "598) 737-4047",
+      "startIndex": 22849,
+      "endIndex": 22862,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Stephanie Robinson",
+      "startIndex": 22885,
+      "endIndex": 22903,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "126) 415-8588",
+      "startIndex": 22914,
+      "endIndex": 22927,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Thomas Thompson",
+      "startIndex": 22950,
+      "endIndex": 22965,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "317) 521-1655",
+      "startIndex": 22976,
+      "endIndex": 22989,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "David Johnson",
+      "startIndex": 23013,
+      "endIndex": 23026,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "536) 349-8545",
+      "startIndex": 23037,
+      "endIndex": 23050,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Amanda Thomas",
+      "startIndex": 23074,
+      "endIndex": 23087,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "848) 601-2951",
+      "startIndex": 23098,
+      "endIndex": 23111,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Richard Jackson",
+      "startIndex": 23135,
+      "endIndex": 23150,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "736) 369-2826",
+      "startIndex": 23161,
+      "endIndex": 23174,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Megan Garcia",
+      "startIndex": 23198,
+      "endIndex": 23210,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "182) 486-5928",
+      "startIndex": 23221,
+      "endIndex": 23234,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Michael Miller",
+      "startIndex": 23258,
+      "endIndex": 23272,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "154) 203-7927",
+      "startIndex": 23283,
+      "endIndex": 23296,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Emily Wilson",
+      "startIndex": 23320,
+      "endIndex": 23332,
+      "confidence": 99,
+      "provider": "cache-propagated",
+      "status": "approved"
+    },
+    {
+      "type": "PHONE",
+      "value": "880) 032-2688",
+      "startIndex": 23343,
+      "endIndex": 23356,
+      "confidence": 90,
+      "provider": "regex",
+      "status": "approved"
+    },
+    {
+      "type": "PERSON",
+      "value": "Dataset Generation Unit",
+      "startIndex": 23502,
+      "endIndex": 23525,
+      "confidence": 89,
+      "provider": "cache-propagated",
+      "status": "approved"
+    }
+  ]
+}

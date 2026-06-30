@@ -6,9 +6,11 @@ import { fileURLToPath } from "url";
 import { dirname, join, extname, basename } from "path";
 import { v4 as uuidv4 } from "uuid";
 import { runRegexEngine } from "./services/regexEngine.js";
-import { isOllamaAvailable } from "./services/ollamaEngine.js";
 import { priorityQueue } from "./services/priorityQueue.js";
 import type { ProcessedDocument } from "./services/priorityQueue.js";
+import { resolveProviders, providerSummary } from "./services/detectionPipeline.js";
+import { metrics } from "./services/metrics.js";
+import { runBenchmark, type BenchmarkResult } from "./services/benchmark.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -193,12 +195,42 @@ function exportDocument(
 
 // Health check
 app.get("/api/health", async (_req, res) => {
-  const ollamaUp = await isOllamaAvailable();
+  await resolveProviders(true);
   res.json({
     status: "ok",
-    ollama: ollamaUp,
+    providers: providerSummary(),
     queueStatus: priorityQueue.getQueueStatus(),
   });
+});
+
+// Live pipeline metrics (powers the dashboard / pro-vs-free comparison)
+app.get("/api/metrics", (_req, res) => {
+  res.json({
+    ...metrics.snapshot(),
+    providers: providerSummary(),
+    queueStatus: priorityQueue.getQueueStatus(),
+  });
+});
+
+// Benchmark — speed / efficiency / priority numbers for the pitch.
+let cachedBenchmark: (BenchmarkResult & { generatedAt: string }) | null = null;
+app.get("/api/benchmark", async (req, res) => {
+  try {
+    const refresh = req.query.refresh === "1" || req.query.refresh === "true";
+    const sampleSize = req.query.sample ? Number(req.query.sample) : undefined;
+    if (!cachedBenchmark || refresh || sampleSize) {
+      const result = await runBenchmark({
+        datasetDir: join(__dirname, "..", "dataset"),
+        sampleSize,
+        proRatio: 0.3,
+        concurrency: 2,
+      });
+      cachedBenchmark = { ...result, generatedAt: new Date().toISOString() };
+    }
+    res.json(cachedBenchmark);
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
 });
 
 // Upload & process document
@@ -249,16 +281,10 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
 
     priorityQueue.setDocument(doc);
 
-    // Phase 2: Queue AI processing (async, non-blocking)
-    const ollamaUp = await isOllamaAvailable();
-    if (ollamaUp) {
-      priorityQueue.enqueueAIJob(docId, userTier);
-    } else {
-      // If Ollama is not available, mark as complete with regex-only results
-      doc.phase = "complete";
-      priorityQueue.setDocument(doc);
-      console.log("⚠️ Ollama not available — using regex-only results");
-    }
+    // Phase 2: Queue AI enrichment (async, non-blocking). The AI tier is
+    // always available (GLiNER or heuristic NER), so we always enqueue —
+    // Ollama being down no longer skips enrichment.
+    priorityQueue.enqueueAIJob(docId, userTier);
 
     // Return immediately with regex results
     res.json({
@@ -287,7 +313,6 @@ app.post("/api/upload-batch", upload.array("files", 500), async (req, res) => {
     }
 
     const userTier = (req.body?.userTier as "free" | "pro") || "free";
-    const ollamaUp = await isOllamaAvailable();
     const results: Array<{
       documentId: string;
       filename: string;
@@ -329,13 +354,7 @@ app.post("/api/upload-batch", upload.array("files", 500), async (req, res) => {
         };
 
         priorityQueue.setDocument(doc);
-
-        if (ollamaUp) {
-          priorityQueue.enqueueAIJob(docId, userTier);
-        } else {
-          doc.phase = "complete";
-          priorityQueue.setDocument(doc);
-        }
+        priorityQueue.enqueueAIJob(docId, userTier);
 
         results.push({
           documentId: docId,
@@ -477,7 +496,17 @@ app.get("/api/documents", (_req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Conseal Triage Engine Backend running on http://localhost:${PORT}`);
   console.log(`📂 Uploads directory: ${UPLOADS_DIR}`);
-  isOllamaAvailable().then((up) =>
-    console.log(up ? "🤖 Ollama connected" : "⚠️ Ollama not available — regex-only mode")
-  );
+  resolveProviders(true).then(() => {
+    const p = providerSummary();
+    console.log(
+      `🧩 Detection tiers — tier0: ${p.tier0} · tier1: ${p.tier1} · tier2: ${p.tier2}`
+    );
+    console.log(
+      p.gliner
+        ? "🧠 GLiNER local NER online"
+        : p.ollama
+          ? "🤖 Ollama online (deep-verify tier)"
+          : "✅ AI tier running on heuristic NER (no external model needed)"
+    );
+  });
 });

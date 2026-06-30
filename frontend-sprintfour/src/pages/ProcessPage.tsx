@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { AdminDashboard } from "@/components/AdminDashboard";
 import { BatchTriage } from "@/components/BatchTriage";
+import { SystemBenchmark } from "@/components/SystemBenchmark";
 
 const API_BASE = "http://localhost:3001";
 
@@ -599,6 +600,10 @@ function UploadState({
           {uploadError}
         </div>
       ) : null}
+
+      <div className="mt-8">
+        <SystemBenchmark />
+      </div>
     </div>
   );
 }

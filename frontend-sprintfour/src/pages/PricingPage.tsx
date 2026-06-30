@@ -1,4 +1,5 @@
 import { useTriageStore } from "@/store/useTriageStore";
+import { SystemBenchmark } from "@/components/SystemBenchmark";
 
 const FREE_FEATURES = [
   { text: "Batch Triage workflow", included: true },
@@ -104,6 +105,16 @@ export function PricingPage() {
               </div>
             </div>
           </PlanCard>
+        </div>
+
+        {/* Live proof that Pro is prioritized */}
+        <div className="mt-16">
+          <h3 className="mb-2 text-center text-lg font-bold text-white">Why Pro is faster — measured</h3>
+          <p className="mx-auto mb-8 max-w-xl text-center text-xs text-slate-400">
+            These are live numbers from the engine: Pro documents are dequeued before Free, so they
+            start sooner under load. The same run shows the pipeline's speed and de-duplication.
+          </p>
+          <SystemBenchmark />
         </div>
 
         {/* Comparison */}

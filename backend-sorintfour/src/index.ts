@@ -83,11 +83,10 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
     // Extract text based on file type
     let text = "";
     if (req.file.mimetype === "application/pdf") {
-      // Handle different module structures between Node/Bun and CJS/ESM
-      const pdfModule = await import("pdf-parse");
-      const parseFunc = (pdfModule as any).PDFParse || (pdfModule as any).default || pdfModule;
+      const { PDFParse } = await import("pdf-parse");
       const buffer = readFileSync(filePath);
-      const pdfData = await parseFunc(buffer);
+      const parser = new PDFParse({ data: buffer });
+      const pdfData = await parser.getText();
       text = pdfData.text;
     } else {
       // Text files

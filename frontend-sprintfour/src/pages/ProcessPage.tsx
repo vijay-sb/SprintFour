@@ -91,6 +91,12 @@ export function ProcessPage() {
       const target = event.target as HTMLElement | null;
       if (target && ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName)) return;
 
+      if (event.key === "Escape" || event.key === "q") {
+        event.preventDefault();
+        setTriageMode("normal");
+        return;
+      }
+
       if (event.key === "Enter" && event.shiftKey) {
         event.preventDefault();
         void finalizeDocument();
@@ -115,6 +121,7 @@ export function ProcessPage() {
       finalizeDocument,
       navigateRedaction,
       rejectRedaction,
+      setTriageMode,
       triageMode,
     ]
   );
@@ -216,6 +223,7 @@ export function ProcessPage() {
         onReject={rejectRedaction}
         onApproveAll={approveAllRedactions}
         onFinalize={() => void finalizeDocument()}
+        onExit={() => setTriageMode("normal")}
       />
     );
   }
@@ -993,6 +1001,7 @@ function VimWorkspace({
   onReject,
   onApproveAll,
   onFinalize,
+  onExit,
 }: {
   doc: UploadedDocument;
   redactions: Redaction[];
@@ -1006,6 +1015,7 @@ function VimWorkspace({
   onReject: () => void;
   onApproveAll: () => void;
   onFinalize: () => void;
+  onExit: () => void;
 }) {
   return (
     <div className="mx-auto flex h-[calc(100svh-24px)] max-w-[1400px] flex-col overflow-hidden px-4 py-3">
@@ -1013,19 +1023,27 @@ function VimWorkspace({
         <div>
           <div className="text-[11px] uppercase tracking-[0.26em] text-cyan-200/80">Vim Focus</div>
           <div className="mt-1 text-sm text-slate-300">
-            J/K move, Y approve, X reject, A approve all, Shift+Enter finalize.
+            J/K move, Y approve, X reject, A approve all, Shift+Enter finalize, Esc to exit.
           </div>
         </div>
-        {isPdf ? (
-          <div className="flex rounded-xl border border-white/10 bg-black/20 p-1">
-            <ToggleButton active={viewMode === "text"} onClick={() => setViewMode("text")}>
-              Text
-            </ToggleButton>
-            <ToggleButton active={viewMode === "pdf"} onClick={() => setViewMode("pdf")}>
-              PDF
-            </ToggleButton>
-          </div>
-        ) : null}
+        <div className="flex items-center gap-2">
+          {isPdf ? (
+            <div className="flex rounded-xl border border-white/10 bg-black/20 p-1">
+              <ToggleButton active={viewMode === "text"} onClick={() => setViewMode("text")}>
+                Text
+              </ToggleButton>
+              <ToggleButton active={viewMode === "pdf"} onClick={() => setViewMode("pdf")}>
+                PDF
+              </ToggleButton>
+            </div>
+          ) : null}
+          <button
+            onClick={onExit}
+            className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-slate-200 transition hover:bg-white/10"
+          >
+            <span className="kbd-key">Esc</span> Exit Vim
+          </button>
+        </div>
       </div>
 
       <div className="grid min-h-0 flex-1 gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">

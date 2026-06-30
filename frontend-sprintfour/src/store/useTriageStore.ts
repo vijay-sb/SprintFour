@@ -491,7 +491,21 @@ export const useTriageStore = create<TriageState>((set, get) => {
       });
     },
 
-    setTriageMode: (mode) => set({ triageMode: mode }),
+    setTriageMode: (mode) => {
+      // Entering Vim focus: land on the first item that needs review.
+      if (mode === "vim") {
+        const doc = get().uploadedQueue[get().currentDocIndex];
+        const firstPending = doc
+          ? doc.redactions.findIndex((r) => r.status === "pending")
+          : -1;
+        set({
+          triageMode: mode,
+          currentRedactionIndex: firstPending >= 0 ? firstPending : get().currentRedactionIndex,
+        });
+        return;
+      }
+      set({ triageMode: mode });
+    },
 
     approveRedaction: () => {
       const state = get();
@@ -624,11 +638,31 @@ export const useTriageStore = create<TriageState>((set, get) => {
       const doc = get().uploadedQueue[get().currentDocIndex];
       if (!doc || doc.redactions.length === 0) return;
 
-      const maxIndex = doc.redactions.length - 1;
-      const nextIndex =
-        direction === "next"
-          ? Math.min(get().currentRedactionIndex + 1, maxIndex)
-          : Math.max(get().currentRedactionIndex - 1, 0);
+      const current = get().currentRedactionIndex;
+      const n = doc.redactions.length;
+
+      // Only stop on items that still need review (pending). Auto-approved /
+      // already-decided redactions are skipped so the reviewer never lands on
+      // something there's nothing to do about.
+      let nextIndex = current;
+      if (direction === "next") {
+        for (let i = current + 1; i < n; i++) {
+          if (doc.redactions[i]?.status === "pending") {
+            nextIndex = i;
+            break;
+          }
+        }
+      } else {
+        for (let i = current - 1; i >= 0; i--) {
+          if (doc.redactions[i]?.status === "pending") {
+            nextIndex = i;
+            break;
+          }
+        }
+      }
+
+      // No pending item in that direction → stay put (nothing to move to).
+      if (nextIndex === current) return;
 
       set({
         currentDocId: doc.id,

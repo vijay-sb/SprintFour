@@ -29,9 +29,21 @@ export interface BenchmarkOptions {
   concurrency?: number; // worker pool size for the priority sim
 }
 
+export interface StageTiming {
+  totalMs: number;
+  avgMs: number;
+  p50Ms: number;
+  p95Ms: number;
+}
+
 export interface BenchmarkResult {
   provider: { tier1: string; glinerActive: boolean; ollamaActive: boolean };
   documents: number;
+  stages: {
+    regex: StageTiming; // Tier 0
+    ner: StageTiming; // Tier 1 (AI)
+    cache: StageTiming; // Aho-Corasick propagation lookup
+  };
   efficiency: {
     totalOccurrences: number;
     uniqueEntities: number;
@@ -67,6 +79,21 @@ function percentile(values: number[], p: number): number {
   if (values.length === 0) return 0;
   const sorted = [...values].sort((a, b) => a - b);
   return Math.round(sorted[Math.min(sorted.length - 1, Math.floor((p / 100) * sorted.length))]!);
+}
+
+// Fractional-precision stage timing (stages are often sub-millisecond).
+function stat(values: number[]): StageTiming {
+  if (values.length === 0) return { totalMs: 0, avgMs: 0, p50Ms: 0, p95Ms: 0 };
+  const sorted = [...values].sort((a, b) => a - b);
+  const total = values.reduce((a, b) => a + b, 0);
+  const at = (p: number) => sorted[Math.min(sorted.length - 1, Math.floor((p / 100) * sorted.length))]!;
+  const round = (n: number) => Number(n.toFixed(3));
+  return {
+    totalMs: round(total),
+    avgMs: round(total / values.length),
+    p50Ms: round(at(50)),
+    p95Ms: round(at(95)),
+  };
 }
 
 function mergeSimple(groups: Detection[][]): Detection[] {
@@ -124,7 +151,9 @@ export async function runBenchmark(opts: BenchmarkOptions): Promise<BenchmarkRes
 
   const cache = new EntityCache();
   const uniqueKeys = new Set<string>();
-  const perDocMs: number[] = [];
+  const perDocMs: number[] = []; // tier-1 NER time per doc
+  const regexMs: number[] = [];
+  const cacheMs: number[] = [];
   const tierAssignments: { tier: "free" | "pro"; ms: number }[] = [];
 
   let totalOccurrences = 0;
@@ -137,13 +166,17 @@ export async function runBenchmark(opts: BenchmarkOptions): Promise<BenchmarkRes
   for (const file of files) {
     const text = readFileSync(join(opts.datasetDir, file), "utf-8");
 
-    // Tier 0 timing → time-to-first-redaction
+    // Tier 0 — regex
     const t0 = performance.now();
     const regexHits = await regexProvider.detect(text);
-    if (idx === 0) timeToFirstRedactionMs = Number((performance.now() - t0).toFixed(2));
+    const regexDocMs = performance.now() - t0;
+    regexMs.push(regexDocMs);
+    if (idx === 0) timeToFirstRedactionMs = Number(regexDocMs.toFixed(2));
 
     // Cache propagation (free) — entities confirmed by earlier docs
+    const cStart = performance.now();
     const propagated = cache.propagate(text);
+    cacheMs.push(performance.now() - cStart);
 
     // Tier 1 NER (the "inference")
     const nerStart = performance.now();
@@ -180,6 +213,11 @@ export async function runBenchmark(opts: BenchmarkOptions): Promise<BenchmarkRes
   return {
     provider: { tier1: tier1.name, glinerActive, ollamaActive },
     documents: files.length,
+    stages: {
+      regex: stat(regexMs),
+      ner: stat(perDocMs),
+      cache: stat(cacheMs),
+    },
     efficiency: {
       totalOccurrences,
       uniqueEntities,

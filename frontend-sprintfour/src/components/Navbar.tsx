@@ -8,6 +8,7 @@ export function Navbar() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/process", label: "Process" },
+    { to: "/benchmarks", label: "Benchmarks" },
     { to: "/pricing", label: "Pricing" },
   ];
 

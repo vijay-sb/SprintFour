@@ -1,5 +1,7 @@
 import { create } from "zustand";
 
+const API_BASE = "http://localhost:3001";
+
 export interface Redaction {
   type: string;
   value: string;
@@ -17,6 +19,19 @@ export interface Document {
   status: "in-review" | "finalized";
 }
 
+export interface UploadedDocument {
+  id: string;
+  filename: string;
+  mimeType: string;
+  text: string;
+  filePath: string;
+  redactions: Redaction[];
+  phase: "uploaded" | "regex" | "ai-queued" | "ai-processing" | "complete" | "error";
+  userTier: "free" | "pro";
+  uploadedAt: number;
+  processedAt?: number;
+}
+
 export interface Metrics {
   processed: number;
   totalApproved: number;
@@ -29,6 +44,23 @@ export interface Metrics {
 }
 
 interface TriageState {
+  // User
+  userTier: "free" | "pro";
+  setUserTier: (tier: "free" | "pro") => void;
+
+  // Upload flow
+  uploadedDoc: UploadedDocument | null;
+  uploadLoading: boolean;
+  uploadError: string | null;
+  uploadDocument: (file: File) => Promise<void>;
+  pollDocumentStatus: (id: string) => Promise<void>;
+  clearUploadedDoc: () => void;
+
+  // Triage mode
+  triageMode: "normal" | "vim";
+  setTriageMode: (mode: "normal" | "vim") => void;
+
+  // Queue mode (legacy / demo)
   documents: Document[];
   currentDocIndex: number;
   currentRedactionIndex: number;
@@ -37,6 +69,9 @@ interface TriageState {
   metrics: Metrics;
   flashEffect: string | null;
 
+  // Current uploaded doc redaction navigation
+  currentUploadRedactionIndex: number;
+
   // Actions
   fetchQueue: () => Promise<void>;
   approveRedaction: () => void;
@@ -44,11 +79,145 @@ interface TriageState {
   navigateRedaction: (direction: "next" | "prev") => void;
   finalizeDocument: () => void;
   clearFlash: () => void;
+
+  // Uploaded doc triage actions
+  approveUploadRedaction: () => void;
+  rejectUploadRedaction: () => void;
+  navigateUploadRedaction: (direction: "next" | "prev") => void;
+  finalizeUploadedDocument: () => void;
 }
 
 const AUTO_APPROVE_THRESHOLD = 90;
 
+function getStoredTier(): "free" | "pro" {
+  try {
+    const stored = localStorage.getItem("conseal_tier");
+    return stored === "pro" ? "pro" : "free";
+  } catch {
+    return "free";
+  }
+}
+
 export const useTriageStore = create<TriageState>((set, get) => ({
+  // User
+  userTier: getStoredTier(),
+  setUserTier: (tier) => {
+    localStorage.setItem("conseal_tier", tier);
+    set({ userTier: tier });
+  },
+
+  // Upload
+  uploadedDoc: null,
+  uploadLoading: false,
+  uploadError: null,
+  currentUploadRedactionIndex: 0,
+
+  uploadDocument: async (file: File) => {
+    set({ uploadLoading: true, uploadError: null, uploadedDoc: null });
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("userTier", get().userTier);
+
+      const res = await fetch(`${API_BASE}/api/upload`, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.error || `Upload failed: ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      // Fetch full document
+      const docRes = await fetch(`${API_BASE}/api/document/${data.documentId}`);
+      const docData = await docRes.json();
+
+      const doc: UploadedDocument = {
+        id: docData.id,
+        filename: docData.filename,
+        mimeType: docData.mimeType,
+        text: docData.text,
+        filePath: docData.filePath,
+        redactions: docData.redactions.map((r: Omit<Redaction, "status">) => ({
+          ...r,
+          status: r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending",
+        })),
+        phase: docData.phase,
+        userTier: docData.userTier,
+        uploadedAt: docData.uploadedAt,
+      };
+
+      set({
+        uploadedDoc: doc,
+        uploadLoading: false,
+        currentUploadRedactionIndex: 0,
+        metrics: {
+          ...get().metrics,
+          documentStartTime: Date.now(),
+        },
+      });
+
+      // Start polling for AI results if not complete
+      if (doc.phase !== "complete") {
+        get().pollDocumentStatus(doc.id);
+      }
+    } catch (err) {
+      set({ uploadLoading: false, uploadError: (err as Error).message });
+    }
+  },
+
+  pollDocumentStatus: async (id: string) => {
+    const poll = async () => {
+      try {
+        const res = await fetch(`${API_BASE}/api/document/${id}/status`);
+        if (!res.ok) return;
+
+        const data = await res.json();
+        const doc = get().uploadedDoc;
+        if (!doc || doc.id !== id) return;
+
+        const updatedDoc: UploadedDocument = {
+          ...doc,
+          phase: data.phase,
+          redactions: data.redactions.map((r: Omit<Redaction, "status">) => {
+            // Preserve existing decisions
+            const existing = doc.redactions.find(
+              (e) => e.startIndex === r.startIndex && e.endIndex === r.endIndex
+            );
+            return {
+              ...r,
+              status: existing?.status !== "pending"
+                ? existing?.status || (r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending")
+                : r.confidence >= AUTO_APPROVE_THRESHOLD ? "approved" : "pending",
+            };
+          }),
+        };
+
+        set({ uploadedDoc: updatedDoc });
+
+        // Keep polling if not complete
+        if (data.phase !== "complete" && data.phase !== "error") {
+          setTimeout(poll, 1500);
+        }
+      } catch {
+        // Silently fail, try again
+        setTimeout(poll, 3000);
+      }
+    };
+
+    setTimeout(poll, 2000);
+  },
+
+  clearUploadedDoc: () => set({ uploadedDoc: null, uploadError: null, currentUploadRedactionIndex: 0 }),
+
+  // Triage mode
+  triageMode: "normal",
+  setTriageMode: (mode) => set({ triageMode: mode }),
+
+  // Queue (legacy)
   documents: [],
   currentDocIndex: 0,
   currentRedactionIndex: 0,
@@ -69,24 +238,20 @@ export const useTriageStore = create<TriageState>((set, get) => ({
   fetchQueue: async () => {
     set({ loading: true, error: null });
     try {
-      const res = await fetch("http://localhost:3001/api/queue");
+      const res = await fetch(`${API_BASE}/api/queue`);
       if (!res.ok) throw new Error(`API error: ${res.status}`);
       const raw = await res.json();
       const documents: Document[] = raw.map(
         (doc: Omit<Document, "status"> & { suggestedRedactions: Omit<Redaction, "status">[] }) => ({
           ...doc,
           status: "in-review" as const,
-          suggestedRedactions: doc.suggestedRedactions.map((r) => {
-            const isAutoApproved = r.confidence >= AUTO_APPROVE_THRESHOLD;
-            return {
-              ...r,
-              status: isAutoApproved ? ("approved" as const) : ("pending" as const),
-            };
-          }),
+          suggestedRedactions: doc.suggestedRedactions.map((r) => ({
+            ...r,
+            status: r.confidence >= AUTO_APPROVE_THRESHOLD ? ("approved" as const) : ("pending" as const),
+          })),
         })
       );
 
-      // Count auto-approves
       let autoApproved = 0;
       documents.forEach((doc) => {
         doc.suggestedRedactions.forEach((r) => {
@@ -128,9 +293,7 @@ export const useTriageStore = create<TriageState>((set, get) => ({
     };
 
     const metrics = { ...get().metrics };
-    if (!wasAutoApproved) {
-      metrics.totalApproved++;
-    }
+    if (!wasAutoApproved) metrics.totalApproved++;
 
     set({ documents: newDocs, metrics, flashEffect: "approve" });
   },
@@ -161,19 +324,15 @@ export const useTriageStore = create<TriageState>((set, get) => ({
     set({ documents: newDocs, metrics, flashEffect: "reject" });
   },
 
-  navigateRedaction: (direction: "next" | "prev") => {
+  navigateRedaction: (direction) => {
     const { documents, currentDocIndex, currentRedactionIndex } = get();
     const doc = documents[currentDocIndex];
     if (!doc) return;
 
     const maxIdx = doc.suggestedRedactions.length - 1;
-    let newIdx = currentRedactionIndex;
-
-    if (direction === "next") {
-      newIdx = Math.min(currentRedactionIndex + 1, maxIdx);
-    } else {
-      newIdx = Math.max(currentRedactionIndex - 1, 0);
-    }
+    const newIdx = direction === "next"
+      ? Math.min(currentRedactionIndex + 1, maxIdx)
+      : Math.max(currentRedactionIndex - 1, 0);
 
     set({ currentRedactionIndex: newIdx, flashEffect: direction === "next" ? "nav-down" : "nav-up" });
   },
@@ -184,7 +343,6 @@ export const useTriageStore = create<TriageState>((set, get) => ({
     if (!doc) return;
 
     const timeOnDoc = Date.now() - metrics.documentStartTime;
-
     const newDocs = documents.filter((_, i) => i !== currentDocIndex);
     const newIndex = Math.min(currentDocIndex, newDocs.length - 1);
 
@@ -203,4 +361,97 @@ export const useTriageStore = create<TriageState>((set, get) => ({
   },
 
   clearFlash: () => set({ flashEffect: null }),
+
+  // Uploaded doc triage actions
+  approveUploadRedaction: () => {
+    const { uploadedDoc, currentUploadRedactionIndex } = get();
+    if (!uploadedDoc) return;
+    const redaction = uploadedDoc.redactions[currentUploadRedactionIndex];
+    if (!redaction) return;
+
+    const wasAutoApproved = redaction.status === "approved";
+    const newRedactions = uploadedDoc.redactions.map((r, i) =>
+      i === currentUploadRedactionIndex ? { ...r, status: "approved" as const } : r
+    );
+
+    const metrics = { ...get().metrics };
+    if (!wasAutoApproved) metrics.totalApproved++;
+
+    set({
+      uploadedDoc: { ...uploadedDoc, redactions: newRedactions },
+      metrics,
+      flashEffect: "approve",
+    });
+  },
+
+  rejectUploadRedaction: () => {
+    const { uploadedDoc, currentUploadRedactionIndex } = get();
+    if (!uploadedDoc) return;
+    const redaction = uploadedDoc.redactions[currentUploadRedactionIndex];
+    if (!redaction) return;
+
+    const wasAutoApproved = redaction.status === "approved";
+    const newRedactions = uploadedDoc.redactions.map((r, i) =>
+      i === currentUploadRedactionIndex ? { ...r, status: "rejected" as const } : r
+    );
+
+    const metrics = { ...get().metrics };
+    metrics.totalRejected++;
+    if (wasAutoApproved) {
+      metrics.manualOverrides++;
+      metrics.autoApproved--;
+    }
+
+    set({
+      uploadedDoc: { ...uploadedDoc, redactions: newRedactions },
+      metrics,
+      flashEffect: "reject",
+    });
+  },
+
+  navigateUploadRedaction: (direction) => {
+    const { uploadedDoc, currentUploadRedactionIndex } = get();
+    if (!uploadedDoc) return;
+    const maxIdx = uploadedDoc.redactions.length - 1;
+    const newIdx = direction === "next"
+      ? Math.min(currentUploadRedactionIndex + 1, maxIdx)
+      : Math.max(currentUploadRedactionIndex - 1, 0);
+
+    set({
+      currentUploadRedactionIndex: newIdx,
+      flashEffect: direction === "next" ? "nav-down" : "nav-up",
+    });
+  },
+
+  finalizeUploadedDocument: () => {
+    const { uploadedDoc, metrics } = get();
+    if (!uploadedDoc) return;
+
+    const timeOnDoc = Date.now() - metrics.documentStartTime;
+
+    // Send finalize to backend
+    const decisions = uploadedDoc.redactions.map((r) => ({
+      startIndex: r.startIndex,
+      endIndex: r.endIndex,
+      status: r.status === "pending" ? "approved" : r.status,
+    }));
+
+    fetch(`${API_BASE}/api/document/${uploadedDoc.id}/finalize`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ decisions }),
+    }).catch(console.error);
+
+    set({
+      uploadedDoc: null,
+      currentUploadRedactionIndex: 0,
+      flashEffect: "finalize",
+      metrics: {
+        ...metrics,
+        processed: metrics.processed + 1,
+        totalTimeSpent: metrics.totalTimeSpent + timeOnDoc,
+        documentStartTime: Date.now(),
+      },
+    });
+  },
 }));

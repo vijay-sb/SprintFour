@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function TriageWorkspace() {
   const {
-    documents,
+    uploadedQueue,
     currentDocIndex,
     currentRedactionIndex,
     flashEffect,
@@ -20,7 +20,7 @@ export function TriageWorkspace() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [showFinalize, setShowFinalize] = useState(false);
 
-  const currentDoc = documents[currentDocIndex];
+  const currentDoc = uploadedQueue[currentDocIndex];
 
   // Clear flash effect after animation
   useEffect(() => {
@@ -71,8 +71,8 @@ export function TriageWorkspace() {
       setShowFinalize(false);
       return;
     }
-    const allReviewed = currentDoc.suggestedRedactions.every(
-      (r) => r.status !== "pending"
+    const allReviewed = currentDoc.redactions.every(
+      (r: Redaction) => r.status !== "pending"
     );
     setShowFinalize(allReviewed);
   }, [currentDoc]);
@@ -89,7 +89,7 @@ export function TriageWorkspace() {
     );
   }
 
-  const redactions = currentDoc.suggestedRedactions;
+  const redactions = currentDoc.redactions;
   const activeRedaction = redactions[currentRedactionIndex];
 
   return (
@@ -105,13 +105,13 @@ export function TriageWorkspace() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="text-xs font-mono px-2 py-1 rounded bg-slate-800 text-cyan-400 border border-cyan-400/30">
-            {currentDoc.documentId}
+            {currentDoc.id}
           </span>
-          <Badge variant="outline" className="border-amber-500/50 text-amber-400 text-xs">
-            Priority: {currentDoc.priorityScore}
+          <Badge variant="outline" className="border-violet-500/50 text-violet-400 text-xs">
+            Tier: {currentDoc.userTier}
           </Badge>
           <span className="text-xs text-slate-500">
-            {currentDocIndex + 1} of {documents.length} remaining
+            {currentDocIndex + 1} of {uploadedQueue.length} remaining
           </span>
         </div>
         <div
@@ -133,7 +133,7 @@ export function TriageWorkspace() {
           </div>
           <div className="text-base leading-relaxed font-mono">
             <HighlightedContent
-              content={currentDoc.content}
+              content={currentDoc.text}
               redactions={redactions}
               activeIndex={currentRedactionIndex}
             />
@@ -146,7 +146,7 @@ export function TriageWorkspace() {
         <div className="text-xs font-mono text-slate-500 uppercase tracking-wider mb-3">
           Suggested Redactions ({redactions.length})
         </div>
-        {redactions.map((r, i) => (
+        {redactions.map((r: Redaction, i: number) => (
           <RedactionCard
             key={`${r.type}-${r.startIndex}`}
             redaction={r}

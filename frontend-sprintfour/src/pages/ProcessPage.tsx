@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import { useTriageStore } from "@/store/useTriageStore";
 import type { Redaction } from "@/store/useTriageStore";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { AdminDashboard } from "@/components/AdminDashboard";
 
 const API_BASE = "http://localhost:3001";
 
@@ -42,6 +42,18 @@ export function ProcessPage() {
       return () => clearTimeout(t);
     }
   }, [flashEffect, clearFlash]);
+
+  // Toggle body class for Vim Zen Mode
+  useEffect(() => {
+    if (triageMode === "vim") {
+      document.body.classList.add("vim-zen-active");
+    } else {
+      document.body.classList.remove("vim-zen-active");
+    }
+    return () => {
+      document.body.classList.remove("vim-zen-active");
+    };
+  }, [triageMode]);
 
   // Vim-mode keyboard bindings
   const handleKeyDown = useCallback(
@@ -230,6 +242,11 @@ export function ProcessPage() {
 
   return (
     <div className="max-w-[1400px] mx-auto px-6 py-6">
+      {triageMode === "normal" && (
+        <div className="mb-6 rounded-xl overflow-hidden border border-slate-800 bg-slate-950/40">
+          <AdminDashboard />
+        </div>
+      )}
       {/* Top Bar */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
@@ -667,6 +684,7 @@ function RedactionItem({
         flashEffect === "reject" ? "border-red-500 bg-red-500/5" : ""
       }`}
     >
+      <span className="text-[10px] font-mono text-slate-500 w-4">{index + 1}</span>
       <span className={`w-4 text-center font-bold text-xs ${statusColor}`}>{statusIcon}</span>
       <Badge
         variant="outline"

@@ -7,7 +7,7 @@ import { ProcessPage } from "@/pages/ProcessPage";
 function App() {
   return (
     <BrowserRouter>
-      <div className="dark min-h-screen bg-slate-950 text-slate-100">
+      <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />

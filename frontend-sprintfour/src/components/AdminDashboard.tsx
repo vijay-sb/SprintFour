@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
 export function AdminDashboard() {
-  const { documents, metrics } = useTriageStore();
+  const { uploadedQueue, metrics } = useTriageStore();
 
   const avgTime =
     metrics.processed > 0
@@ -23,7 +23,7 @@ export function AdminDashboard() {
       ? Math.round((metrics.autoApproved / totalRedactions) * 100)
       : 0;
 
-  const queueTotal = documents.length + metrics.processed;
+  const queueTotal = uploadedQueue.length + metrics.processed;
   const queueProgress =
     queueTotal > 0 ? Math.round((metrics.processed / queueTotal) * 100) : 0;
 

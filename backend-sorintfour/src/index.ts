@@ -83,8 +83,9 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
     // Extract text based on file type
     let text = "";
     if (req.file.mimetype === "application/pdf") {
-      // Dynamic import for pdf-parse (CommonJS module)
-      const pdfParse = (await import("pdf-parse")).default;
+      // pdf-parse is a CJS module — handle both default and direct export
+      const pdfModule = await import("pdf-parse");
+      const pdfParse = pdfModule.default ?? pdfModule;
       const buffer = readFileSync(filePath);
       const pdfData = await pdfParse(buffer);
       text = pdfData.text;

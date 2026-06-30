@@ -83,11 +83,9 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
     // Extract text based on file type
     let text = "";
     if (req.file.mimetype === "application/pdf") {
-      // pdf-parse is a CJS module — handle both default and direct export
-      const pdfModule = await import("pdf-parse");
-      const pdfParse = pdfModule.default ?? pdfModule;
+      const { PDFParse } = await import("pdf-parse");
       const buffer = readFileSync(filePath);
-      const pdfData = await pdfParse(buffer);
+      const pdfData = await PDFParse(buffer);
       text = pdfData.text;
     } else {
       // Text files

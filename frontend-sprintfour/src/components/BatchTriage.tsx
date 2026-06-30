@@ -53,18 +53,15 @@ const TYPE_META: Record<string, { label: string; tone: string }> = {
   MANUAL_FLAG: { label: "Manual flag", tone: "cyan" },
 };
 
-const TONE: Record<string, { dot: string; text: string; soft: string; ring: string }> = {
-  rose: { dot: "bg-rose-400", text: "text-rose-200", soft: "bg-rose-500/10", ring: "ring-rose-500/30" },
-  sky: { dot: "bg-sky-400", text: "text-sky-200", soft: "bg-sky-500/10", ring: "ring-sky-500/30" },
-  cyan: { dot: "bg-cyan-400", text: "text-cyan-200", soft: "bg-cyan-500/10", ring: "ring-cyan-500/30" },
-  violet: { dot: "bg-violet-400", text: "text-violet-200", soft: "bg-violet-500/10", ring: "ring-violet-500/30" },
-  amber: { dot: "bg-amber-400", text: "text-amber-200", soft: "bg-amber-500/10", ring: "ring-amber-500/30" },
-  emerald: { dot: "bg-emerald-400", text: "text-emerald-200", soft: "bg-emerald-500/10", ring: "ring-emerald-500/30" },
-  slate: { dot: "bg-slate-400", text: "text-slate-200", soft: "bg-slate-500/10", ring: "ring-slate-500/30" },
+const NEUTRAL_TONE = {
+  dot: "bg-neutral-900",
+  text: "text-neutral-700",
+  soft: "bg-neutral-50",
+  ring: "ring-neutral-200",
 };
 
-function tone(type: string) {
-  return TONE[TYPE_META[type]?.tone ?? "slate"] ?? TONE.slate;
+function tone(_type: string) {
+  return NEUTRAL_TONE;
 }
 
 function typeLabel(type: string) {
@@ -126,13 +123,13 @@ export function BatchTriage() {
   return (
     <div className="flex h-full min-h-0 flex-col gap-4">
       {/* Command bar */}
-      <div className="rounded-xl border border-white/10 bg-slate-900/50 p-4">
+      <div className="rounded-xl border border-neutral-200 bg-white p-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-700">
               Batch Triage
             </div>
-            <div className="mt-1 text-sm text-slate-300">
+            <div className="mt-1 text-sm text-neutral-600">
               Decide once, apply everywhere. {totals.total.toLocaleString()} detections across{" "}
               {activeDocs.length} open {activeDocs.length === 1 ? "file" : "files"}.
             </div>
@@ -141,22 +138,22 @@ export function BatchTriage() {
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => sweep({ confidenceGte: AUTO_APPROVE_THRESHOLD, onlyPending: true }, "approved")}
-              className="rounded-lg border border-emerald-400/25 bg-emerald-400/10 px-3 py-2 text-xs font-medium text-emerald-100 transition hover:bg-emerald-400/16"
+              className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-700 transition hover:bg-emerald-100"
             >
               Approve all ≥{AUTO_APPROVE_THRESHOLD}%
             </button>
             <button
               onClick={() => sweep({ onlyPending: true }, "approved")}
-              className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-slate-200 transition hover:bg-white/10"
+              className="rounded-lg border border-neutral-200 bg-neutral-100 px-3 py-2 text-xs font-medium text-neutral-700 transition hover:bg-neutral-100"
             >
               Approve everything pending
             </button>
-            <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-300">
+            <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-neutral-200 bg-neutral-100 px-3 py-2 text-xs text-neutral-600">
               <input
                 type="checkbox"
                 checked={onlyAttention}
                 onChange={(e) => setOnlyAttention(e.target.checked)}
-                className="h-3.5 w-3.5 accent-cyan-400"
+                className="h-3.5 w-3.5 accent-neutral-900"
               />
               Needs attention only
             </label>
@@ -166,16 +163,16 @@ export function BatchTriage() {
         {/* progress + finalize */}
         <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <div className="mb-1.5 flex items-center justify-between text-xs text-slate-400">
+            <div className="mb-1.5 flex items-center justify-between text-xs text-neutral-500">
               <span>{clearedPct}% of decisions resolved</span>
               <span>
                 {totals.pending.toLocaleString()} pending · {totals.approved.toLocaleString()} approved ·{" "}
                 {totals.rejected.toLocaleString()} skipped
               </span>
             </div>
-            <div className="h-2 overflow-hidden rounded-full bg-white/8">
+            <div className="h-2 overflow-hidden rounded-full bg-neutral-100">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-500"
+                className="h-full rounded-full bg-neutral-900 transition-all duration-500"
                 style={{ width: `${clearedPct}%` }}
               />
             </div>
@@ -186,10 +183,10 @@ export function BatchTriage() {
             disabled={batchFinalizing || activeDocs.length === 0}
             className={`rounded-lg px-5 py-3 text-sm font-semibold transition ${
               batchFinalizing || activeDocs.length === 0
-                ? "cursor-not-allowed bg-white/6 text-slate-500"
+                ? "cursor-not-allowed bg-neutral-100 text-neutral-400"
                 : allResolved
-                  ? "bg-cyan-300 text-slate-950 hover:bg-cyan-200"
-                  : "bg-amber-300 text-slate-950 hover:bg-amber-200"
+                  ? "bg-neutral-900 text-white hover:bg-neutral-800"
+                  : "bg-neutral-900 text-white hover:bg-neutral-800"
             }`}
           >
             {batchFinalizing
@@ -200,7 +197,7 @@ export function BatchTriage() {
           </button>
         </div>
 
-        <div className="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-400">
+        <div className="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-500">
           <Stat label="Exported" value={`${finalizedDocs + metrics.autoFinalizedDocs}`} />
           <Stat label="Repeated entities" value={`${totals.repeatedValues}`} />
           <Stat label="PII classes" value={`${groups.length}`} />
@@ -212,7 +209,7 @@ export function BatchTriage() {
         {activeDocs.length === 0 ? (
           <EmptyState />
         ) : visibleGroups.length === 0 ? (
-          <div className="rounded-xl border border-emerald-400/20 bg-emerald-400/8 p-6 text-center text-sm text-emerald-100">
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center text-sm text-emerald-700">
             Nothing left needs your attention. Export when you're ready.
           </div>
         ) : (
@@ -262,17 +259,17 @@ function GroupCard({
   const pct = group.total > 0 ? Math.round((resolved / group.total) * 100) : 100;
 
   return (
-    <div className={`overflow-hidden rounded-xl border border-white/10 bg-slate-900/40 ring-1 ring-inset ${t.ring}`}>
+    <div className={`overflow-hidden rounded-xl border border-neutral-200 bg-white ring-1 ring-inset ${t.ring}`}>
       <div className="flex flex-wrap items-center justify-between gap-3 p-4">
         <button onClick={onToggle} className="flex min-w-0 items-center gap-3 text-left">
           <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${t.dot}`} />
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-semibold text-white">{typeLabel(group.type)}</span>
-              <span className="text-xs text-slate-500">{group.type}</span>
-              <span className={`text-slate-500 transition ${expanded ? "rotate-90" : ""}`}>›</span>
+              <span className="text-sm font-semibold text-neutral-900">{typeLabel(group.type)}</span>
+              <span className="text-xs text-neutral-400">{group.type}</span>
+              <span className={`text-neutral-400 transition ${expanded ? "rotate-90" : ""}`}>›</span>
             </div>
-            <div className="mt-0.5 text-xs text-slate-400">
+            <div className="mt-0.5 text-xs text-neutral-500">
               {group.total} detections · {group.docIds.size}{" "}
               {group.docIds.size === 1 ? "file" : "files"} · {group.minConfidence}–{group.maxConfidence}% confidence
             </div>
@@ -281,11 +278,11 @@ function GroupCard({
 
         <div className="flex items-center gap-3">
           {group.pending > 0 ? (
-            <span className="rounded-full bg-amber-400/12 px-2.5 py-1 text-[11px] font-medium text-amber-200">
+            <span className="rounded-full bg-amber-50 px-2.5 py-1 text-[11px] font-medium text-amber-700">
               {group.pending} pending
             </span>
           ) : (
-            <span className="rounded-full bg-emerald-400/12 px-2.5 py-1 text-[11px] font-medium text-emerald-200">
+            <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-700">
               resolved
             </span>
           )}
@@ -293,14 +290,14 @@ function GroupCard({
             <button
               onClick={onApproveGroup}
               disabled={group.pending === 0}
-              className="rounded-lg border border-emerald-400/25 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-100 transition hover:bg-emerald-400/16 disabled:cursor-not-allowed disabled:opacity-40"
+              className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-40"
             >
               Approve all
             </button>
             <button
               onClick={onRejectGroup}
               disabled={group.pending === 0}
-              className="rounded-lg border border-rose-400/25 bg-rose-400/10 px-3 py-1.5 text-xs font-medium text-rose-100 transition hover:bg-rose-400/16 disabled:cursor-not-allowed disabled:opacity-40"
+              className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-100 disabled:cursor-not-allowed disabled:opacity-40"
             >
               Skip all
             </button>
@@ -308,12 +305,12 @@ function GroupCard({
         </div>
       </div>
 
-      <div className="h-1 bg-white/6">
-        <div className="h-full bg-emerald-400/60 transition-all duration-500" style={{ width: `${pct}%` }} />
+      <div className="h-1 bg-neutral-100">
+        <div className="h-full bg-neutral-900 transition-all duration-500" style={{ width: `${pct}%` }} />
       </div>
 
       {expanded ? (
-        <div className="divide-y divide-white/5 border-t border-white/5">
+        <div className="divide-y divide-neutral-200 border-t border-neutral-200">
           {group.values.map((v) => (
             <ValueRow
               key={v.value}
@@ -344,37 +341,37 @@ function ValueRow({
     <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
-          <span className="truncate font-mono text-sm text-slate-100">{value.value}</span>
+          <span className="truncate font-mono text-sm text-neutral-900">{value.value}</span>
           {repeated ? (
-            <span className="shrink-0 rounded bg-violet-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-violet-200">
+            <span className="shrink-0 rounded bg-neutral-100 px-1.5 py-0.5 text-[10px] font-semibold text-neutral-700">
               {value.docIds.size} files
             </span>
           ) : null}
-          <span className="shrink-0 text-[11px] text-slate-500">
+          <span className="shrink-0 text-[11px] text-neutral-400">
             ×{value.instances.length} · {value.maxConfidence}%
           </span>
         </div>
         {sample ? (
-          <div className="mt-1 truncate text-xs italic text-slate-500">{sample}</div>
+          <div className="mt-1 truncate text-xs italic text-neutral-400">{sample}</div>
         ) : null}
       </div>
 
       <div className="flex items-center gap-2">
         {value.pending === 0 ? (
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[11px] text-neutral-400">
             {value.approved > 0 ? "approved" : "skipped"}
           </span>
         ) : (
           <>
             <button
               onClick={onApprove}
-              className="rounded-md border border-emerald-400/25 bg-emerald-400/10 px-2.5 py-1 text-[11px] font-medium text-emerald-100 transition hover:bg-emerald-400/16"
+              className="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-700 transition hover:bg-emerald-100"
             >
               Approve
             </button>
             <button
               onClick={onReject}
-              className="rounded-md border border-rose-400/25 bg-rose-400/10 px-2.5 py-1 text-[11px] font-medium text-rose-100 transition hover:bg-rose-400/16"
+              className="rounded-md border border-red-200 bg-red-50 px-2.5 py-1 text-[11px] font-medium text-red-600 transition hover:bg-red-100"
             >
               Skip
             </button>
@@ -387,18 +384,18 @@ function ValueRow({
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <span className="rounded-md border border-white/8 bg-white/5 px-2 py-1">
-      <span className="text-slate-500">{label} </span>
-      <span className="font-semibold text-slate-200">{value}</span>
+    <span className="rounded-md border border-neutral-200 bg-neutral-100 px-2 py-1">
+      <span className="text-neutral-400">{label} </span>
+      <span className="font-semibold text-neutral-700">{value}</span>
     </span>
   );
 }
 
 function EmptyState() {
   return (
-    <div className="rounded-xl border border-white/10 bg-slate-900/40 p-10 text-center">
-      <div className="text-sm font-semibold text-white">Every file is exported</div>
-      <div className="mt-1 text-xs text-slate-400">
+    <div className="rounded-xl border border-neutral-200 bg-white p-10 text-center">
+      <div className="text-sm font-semibold text-neutral-900">Every file is exported</div>
+      <div className="mt-1 text-xs text-neutral-500">
         Upload another batch to keep going. Redacted output is in the results folder.
       </div>
     </div>

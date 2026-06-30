@@ -11,7 +11,7 @@ export function LandingPage() {
         <div className="relative max-w-5xl mx-auto px-6 pt-24 pb-20 text-center">
           {/* Status badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-card border border-border text-xs text-muted-foreground mb-8">
-            <span className="w-1.5 h-1.5 bg-secondary" />
+            <span className="w-1.5 h-1.5 bg-neutral-900" />
             AI-Powered PII Detection Engine
             <span className="px-1.5 py-0.5 bg-primary text-primary-foreground text-[10px] font-semibold">v2.0</span>
           </div>
@@ -96,19 +96,19 @@ export function LandingPage() {
 
           {/* Conseal */}
           <div className="border border-border bg-card p-6 relative overflow-hidden">
-            <div className="absolute top-3 right-3 px-2 py-0.5 bg-secondary text-secondary-foreground text-[10px] font-bold">RECOMMENDED</div>
-            <div className="text-xs font-semibold text-secondary uppercase tracking-wider mb-4">Conseal Engine</div>
-            <div className="text-4xl font-bold text-secondary mb-2 font-mono">3s</div>
+            <div className="absolute top-3 right-3 px-2 py-0.5 bg-neutral-900 text-white text-[10px] font-bold">RECOMMENDED</div>
+            <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wider mb-4">Conseal Engine</div>
+            <div className="text-4xl font-bold text-emerald-700 mb-2 font-mono">3s</div>
             <div className="text-sm text-muted-foreground mb-4">per document, AI-assisted</div>
             <ul className="space-y-2 text-xs text-muted-foreground">
-              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> Batch triage across all files at once</li>
-              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> One decision redacts a name everywhere</li>
-              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> Vim-mode keyboard triage</li>
-              <li className="flex items-center gap-2"><span className="text-secondary">✓</span> Auto-approve @ 90%+ confidence</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-700">✓</span> Batch triage across all files at once</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-700">✓</span> One decision redacts a name everywhere</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-700">✓</span> Vim-mode keyboard triage</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-700">✓</span> Auto-approve @ 90%+ confidence</li>
             </ul>
             <div className="mt-4 pt-4 border-t border-border">
               <div className="text-xs text-muted-foreground">200 docs × 3s =</div>
-              <div className="text-lg font-bold text-secondary font-mono">10 minutes</div>
+              <div className="text-lg font-bold text-emerald-700 font-mono">10 minutes</div>
             </div>
           </div>
         </div>

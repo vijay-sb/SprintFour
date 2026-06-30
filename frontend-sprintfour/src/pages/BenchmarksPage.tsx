@@ -126,19 +126,19 @@ export function BenchmarksPage() {
     <div className="mx-auto max-w-6xl px-6 py-10">
       {/* Header */}
       <div className="mb-6">
-        <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200/80">
+        <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-neutral-700">
           Live Engine Benchmarks
         </div>
-        <h1 className="mt-1 text-3xl font-bold text-white">Every metric, measured on demand</h1>
-        <p className="mt-2 max-w-2xl text-sm text-slate-400">
+        <h1 className="mt-1 text-3xl font-bold text-neutral-900">Every metric, measured on demand</h1>
+        <p className="mt-2 max-w-2xl text-sm text-neutral-500">
           Runs the real detection pipeline over the dataset in your browser — regex speed, AI speed,
           cache effectiveness, throughput, and Pro priority. Nothing is hard-coded.
         </p>
       </div>
 
       {/* Controls */}
-      <div className="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-white/10 bg-slate-900/50 p-4">
-        <span className="text-xs font-medium uppercase tracking-wider text-slate-400">Run on</span>
+      <div className="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-neutral-200 bg-white p-4">
+        <span className="text-xs font-medium uppercase tracking-wider text-neutral-500">Run on</span>
         {SAMPLE_SIZES.map((size) => (
           <button
             key={size}
@@ -146,30 +146,30 @@ export function BenchmarksPage() {
             disabled={running}
             className={`rounded-lg border px-3 py-2 text-xs font-semibold transition disabled:opacity-50 ${
               activeSample === size && scaling.length === 0
-                ? "border-cyan-300/50 bg-cyan-400/15 text-cyan-100"
-                : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
+                ? "border-neutral-900 bg-neutral-900 text-white"
+                : "border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-100"
             }`}
           >
             {size} docs
           </button>
         ))}
-        <div className="mx-1 h-6 w-px bg-white/10" />
+        <div className="mx-1 h-6 w-px bg-neutral-200" />
         <button
           onClick={() => void runScaling()}
           disabled={running}
-          className="rounded-lg border border-violet-300/40 bg-violet-400/15 px-3 py-2 text-xs font-semibold text-violet-100 transition hover:bg-violet-400/20 disabled:opacity-50"
+          className="rounded-lg border border-neutral-300 bg-white px-3 py-2 text-xs font-semibold text-neutral-900 transition hover:bg-neutral-100 disabled:opacity-50"
         >
           Run scaling test
         </button>
 
         <div className="ml-auto flex items-center gap-3 text-xs">
           {running ? (
-            <span className="flex items-center gap-2 text-cyan-200">
-              <span className="h-3 w-3 animate-spin rounded-full border-2 border-cyan-300 border-t-transparent" />
+            <span className="flex items-center gap-2 text-neutral-700">
+              <span className="h-3 w-3 animate-spin rounded-full border-2 border-neutral-200 border-t-transparent" />
               running… {(elapsed / 1000).toFixed(1)}s
             </span>
           ) : data ? (
-            <span className="text-slate-500">
+            <span className="text-neutral-400">
               {data.provider.tier1} · {data.provider.ollamaActive ? "ollama on" : "ollama off"} ·{" "}
               {data.provider.glinerActive ? "gliner on" : "heuristic"}
             </span>
@@ -178,7 +178,7 @@ export function BenchmarksPage() {
       </div>
 
       {error ? (
-        <div className="rounded-xl border border-amber-400/20 bg-amber-400/8 p-5 text-sm text-amber-100">
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-700">
           Couldn't reach the benchmark API ({error}). Start the backend with{" "}
           <span className="font-mono">bun start</span> in <span className="font-mono">backend-sorintfour</span>.
         </div>
@@ -293,8 +293,8 @@ export function BenchmarksPage() {
                   bottomLabel="Unique entities (need inference)"
                   bottomValue={data.efficiency.uniqueEntities}
                 />
-                <div className="mt-3 text-xs text-slate-400">
-                  <span className="font-semibold text-emerald-300">
+                <div className="mt-3 text-xs text-neutral-500">
+                  <span className="font-semibold text-emerald-700">
                     {data.efficiency.repeatsResolved.toLocaleString()} repeats
                   </span>{" "}
                   resolved by propagation — never sent to a model.
@@ -333,8 +333,8 @@ export function BenchmarksPage() {
           >
             <div className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
               <div className="space-y-3">
-                <WaitBar label="Pro avg wait" value={data.priority.proAvgWaitMs} max={data.priority.freeAvgWaitMs} tone="bg-violet-400/80" valueTone="text-violet-200" />
-                <WaitBar label="Free avg wait" value={data.priority.freeAvgWaitMs} max={data.priority.freeAvgWaitMs} tone="bg-slate-500/70" valueTone="text-slate-300" />
+                <WaitBar label="Pro avg wait" value={data.priority.proAvgWaitMs} max={data.priority.freeAvgWaitMs} tone="bg-neutral-900" valueTone="text-neutral-900" />
+                <WaitBar label="Free avg wait" value={data.priority.freeAvgWaitMs} max={data.priority.freeAvgWaitMs} tone="bg-neutral-300" valueTone="text-neutral-500" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <BigStat value={`${data.priority.prioritySpeedup}×`} label="Sooner for Pro" tone="violet" />
@@ -368,13 +368,13 @@ export function BenchmarksPage() {
                 <ScalingChart
                   title="Throughput (docs/sec)"
                   points={scaling.map((s) => ({ label: `${s.documents}`, value: s.speed.throughputDocsPerSec }))}
-                  tone="bg-cyan-400/70"
+                  tone="bg-neutral-900"
                   fmt={(v) => `${v}/s`}
                 />
                 <ScalingChart
                   title="Full batch time"
                   points={scaling.map((s) => ({ label: `${s.documents}`, value: s.speed.batchWallMs }))}
-                  tone="bg-violet-400/70"
+                  tone="bg-neutral-400"
                   fmt={(v) => dur(v)}
                 />
               </div>
@@ -382,7 +382,7 @@ export function BenchmarksPage() {
           ) : null}
 
           {data.generatedAt ? (
-            <div className="text-[11px] text-slate-600">
+            <div className="text-[11px] text-neutral-400">
               Last run {new Date(data.generatedAt).toLocaleTimeString()} · efficiency from cross-document
               de-duplication · speed vs a 3B local LLM at ~3s/doc · priority simulated at ~80ms/doc AI cost.
             </div>
@@ -409,10 +409,10 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-5">
+    <div className="rounded-2xl border border-neutral-200 bg-white p-5">
       <div className="mb-4">
-        <h2 className="text-sm font-semibold text-white">{title}</h2>
-        <p className="text-[11px] text-slate-500">{subtitle}</p>
+        <h2 className="text-sm font-semibold text-neutral-900">{title}</h2>
+        <p className="text-[11px] text-neutral-400">{subtitle}</p>
       </div>
       {children}
       {note ? <MethodNote>{note}</MethodNote> : null}
@@ -422,17 +422,17 @@ function Section({
 
 function MethodNote({ children }: { children: React.ReactNode }) {
   return (
-    <details className="mt-4 rounded-lg border border-white/8 bg-black/25 px-3 py-2 [&_code]:rounded [&_code]:bg-white/10 [&_code]:px-1 [&_code]:py-0.5 [&_code]:font-mono [&_code]:text-[10px] [&_code]:text-cyan-200">
-      <summary className="cursor-pointer select-none text-[10px] font-semibold uppercase tracking-[0.18em] text-cyan-200/70">
+    <details className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 [&_code]:rounded [&_code]:bg-neutral-200 [&_code]:px-1 [&_code]:py-0.5 [&_code]:font-mono [&_code]:text-[10px] [&_code]:text-neutral-700">
+      <summary className="cursor-pointer select-none text-[10px] font-semibold uppercase tracking-[0.18em] text-neutral-700">
         How this is measured
       </summary>
-      <div className="mt-2 space-y-1.5 text-[11px] leading-5 text-slate-400">{children}</div>
+      <div className="mt-2 space-y-1.5 text-[11px] leading-5 text-neutral-500">{children}</div>
     </details>
   );
 }
 
 function Formula({ children }: { children: React.ReactNode }) {
-  return <div className="rounded-md bg-white/5 px-2 py-1 font-mono text-[10px] text-slate-300">{children}</div>;
+  return <div className="rounded-md bg-neutral-100 px-2 py-1 font-mono text-[10px] text-neutral-600">{children}</div>;
 }
 
 function StageCard({
@@ -449,19 +449,19 @@ function StageCard({
   max: number;
 }) {
   const colors = {
-    cyan: { text: "text-cyan-300", bar: "bg-cyan-400/70" },
-    violet: { text: "text-violet-300", bar: "bg-violet-400/70" },
-    emerald: { text: "text-emerald-300", bar: "bg-emerald-400/70" },
+    cyan: { text: "text-neutral-900", bar: "bg-neutral-900" },
+    violet: { text: "text-neutral-900", bar: "bg-neutral-900" },
+    emerald: { text: "text-neutral-900", bar: "bg-neutral-900" },
   }[tone];
   const pct = Math.min(100, (stage.avgMs / max) * 100);
 
   return (
-    <div className="rounded-xl border border-white/8 bg-black/15 p-4">
-      <div className="text-sm font-semibold text-white">{label}</div>
-      <div className="mb-3 text-[11px] text-slate-500">{desc}</div>
+    <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+      <div className="text-sm font-semibold text-neutral-900">{label}</div>
+      <div className="mb-3 text-[11px] text-neutral-400">{desc}</div>
       <div className={`text-3xl font-bold ${colors.text}`}>{dur(stage.avgMs)}</div>
-      <div className="mb-3 text-[11px] text-slate-500">avg / document</div>
-      <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-white/8">
+      <div className="mb-3 text-[11px] text-neutral-400">avg / document</div>
+      <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-neutral-100">
         <div className={`h-full rounded-full ${colors.bar}`} style={{ width: `${pct}%` }} />
       </div>
       <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
@@ -475,42 +475,42 @@ function StageCard({
 
 function MiniStat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-md bg-white/5 py-1.5">
-      <div className="text-slate-500">{label}</div>
-      <div className="font-mono text-slate-200">{value}</div>
+    <div className="rounded-md bg-neutral-100 py-1.5">
+      <div className="text-neutral-400">{label}</div>
+      <div className="font-mono text-neutral-700">{value}</div>
     </div>
   );
 }
 
 function BigStat({ value, label, tone }: { value: string; label: string; tone?: "cyan" | "emerald" | "violet" }) {
-  const color = tone === "emerald" ? "text-emerald-300" : tone === "cyan" ? "text-cyan-300" : tone === "violet" ? "text-violet-300" : "text-white";
+  const color = tone === "emerald" ? "text-emerald-700" : tone === "cyan" ? "text-neutral-700" : tone === "violet" ? "text-neutral-700" : "text-neutral-900";
   return (
-    <div className="rounded-xl border border-white/8 bg-black/15 p-4">
+    <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
       <div className={`text-2xl font-bold ${color}`}>{value}</div>
-      <div className="mt-1 text-[11px] text-slate-400">{label}</div>
+      <div className="mt-1 text-[11px] text-neutral-500">{label}</div>
     </div>
   );
 }
 
 function Row({ label, value, muted }: { label: string; value: string; muted?: boolean }) {
   return (
-    <div className="flex items-center justify-between rounded-lg border border-white/8 bg-black/15 px-3 py-2.5 text-xs">
-      <span className="text-slate-400">{label}</span>
-      <span className={`font-mono font-semibold ${muted ? "text-slate-500" : "text-slate-200"}`}>{value}</span>
+    <div className="flex items-center justify-between rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-xs">
+      <span className="text-neutral-500">{label}</span>
+      <span className={`font-mono font-semibold ${muted ? "text-neutral-400" : "text-neutral-700"}`}>{value}</span>
     </div>
   );
 }
 
 function Meter({ label, rate, tone }: { label: string; rate: number; tone: "emerald" | "cyan" }) {
   const pct = Math.round(rate * 100);
-  const bar = tone === "emerald" ? "bg-emerald-400/70" : "bg-cyan-400/70";
+  const bar = tone === "emerald" ? "bg-emerald-500" : "bg-neutral-900";
   return (
-    <div className="rounded-xl border border-white/8 bg-black/15 p-3 text-xs">
+    <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3 text-xs">
       <div className="mb-1.5 flex items-center justify-between">
-        <span className="text-slate-400">{label}</span>
-        <span className="font-mono text-slate-200">{pct}%</span>
+        <span className="text-neutral-500">{label}</span>
+        <span className="font-mono text-neutral-700">{pct}%</span>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/8">
+      <div className="h-1.5 overflow-hidden rounded-full bg-neutral-100">
         <div className={`h-full rounded-full ${bar}`} style={{ width: `${pct}%` }} />
       </div>
     </div>
@@ -533,20 +533,20 @@ function CompareBar({
     <div className="space-y-3">
       <div>
         <div className="mb-1 flex items-center justify-between text-xs">
-          <span className="text-slate-400">{topLabel}</span>
-          <span className="font-mono font-semibold text-slate-200">{topValue.toLocaleString()}</span>
+          <span className="text-neutral-500">{topLabel}</span>
+          <span className="font-mono font-semibold text-neutral-700">{topValue.toLocaleString()}</span>
         </div>
-        <div className="h-6 overflow-hidden rounded-md bg-white/8">
-          <div className="h-full rounded-md bg-slate-500/60" style={{ width: `${(topValue / max) * 100}%` }} />
+        <div className="h-6 overflow-hidden rounded-md bg-neutral-100">
+          <div className="h-full rounded-md bg-neutral-300" style={{ width: `${(topValue / max) * 100}%` }} />
         </div>
       </div>
       <div>
         <div className="mb-1 flex items-center justify-between text-xs">
-          <span className="text-slate-400">{bottomLabel}</span>
-          <span className="font-mono font-semibold text-emerald-300">{bottomValue.toLocaleString()}</span>
+          <span className="text-neutral-500">{bottomLabel}</span>
+          <span className="font-mono font-semibold text-emerald-700">{bottomValue.toLocaleString()}</span>
         </div>
-        <div className="h-6 overflow-hidden rounded-md bg-white/8">
-          <div className="h-full rounded-md bg-emerald-400/70" style={{ width: `${(bottomValue / max) * 100}%` }} />
+        <div className="h-6 overflow-hidden rounded-md bg-neutral-100">
+          <div className="h-full rounded-md bg-neutral-900" style={{ width: `${(bottomValue / max) * 100}%` }} />
         </div>
       </div>
     </div>
@@ -570,10 +570,10 @@ function WaitBar({
   return (
     <div>
       <div className="mb-1 flex items-center justify-between text-xs">
-        <span className="text-slate-400">{label}</span>
+        <span className="text-neutral-500">{label}</span>
         <span className={`font-mono ${valueTone}`}>{dur(value)}</span>
       </div>
-      <div className="h-3 overflow-hidden rounded-full bg-white/8">
+      <div className="h-3 overflow-hidden rounded-full bg-neutral-100">
         <div className={`h-full rounded-full ${tone}`} style={{ width: `${pct}%` }} />
       </div>
     </div>
@@ -593,17 +593,17 @@ function ScalingChart({
 }) {
   const max = Math.max(...points.map((p) => p.value), 0.001);
   return (
-    <div className="rounded-xl border border-white/8 bg-black/15 p-4">
-      <div className="mb-4 text-xs font-semibold text-slate-300">{title}</div>
+    <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+      <div className="mb-4 text-xs font-semibold text-neutral-600">{title}</div>
       <div className="flex h-40 items-end justify-around gap-3">
         {points.map((p) => (
           <div key={p.label} className="flex flex-1 flex-col items-center gap-2">
-            <span className="font-mono text-[10px] text-slate-300">{fmt(p.value)}</span>
+            <span className="font-mono text-[10px] text-neutral-600">{fmt(p.value)}</span>
             <div
               className={`w-full rounded-t-md ${tone}`}
               style={{ height: `${Math.max(4, (p.value / max) * 100)}%` }}
             />
-            <span className="text-[10px] text-slate-500">{p.label} docs</span>
+            <span className="text-[10px] text-neutral-400">{p.label} docs</span>
           </div>
         ))}
       </div>

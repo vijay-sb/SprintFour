@@ -66,8 +66,8 @@ export function SystemBenchmark({ compact = false }: { compact?: boolean }) {
 
   if (loading && !data) {
     return (
-      <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-8 text-center text-sm text-slate-400">
-        <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-cyan-300 border-t-transparent" />
+      <div className="rounded-2xl border border-neutral-200 bg-white p-8 text-center text-sm text-neutral-500">
+        <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-neutral-200 border-t-transparent" />
         Running benchmark over the dataset…
       </div>
     );
@@ -75,7 +75,7 @@ export function SystemBenchmark({ compact = false }: { compact?: boolean }) {
 
   if (error) {
     return (
-      <div className="rounded-2xl border border-amber-400/20 bg-amber-400/8 p-5 text-sm text-amber-100">
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-700">
         Couldn't reach the benchmark API ({error}). Start the backend with{" "}
         <span className="font-mono">bun start</span>, or run{" "}
         <span className="font-mono">bun run benchmark</span> in the backend.
@@ -86,22 +86,22 @@ export function SystemBenchmark({ compact = false }: { compact?: boolean }) {
   if (!data) return null;
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-6">
+    <div className="rounded-2xl border border-neutral-200 bg-white p-6">
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-700">
             Systems Benchmark
           </div>
-          <div className="mt-1 text-sm text-slate-300">
+          <div className="mt-1 text-sm text-neutral-600">
             {data.documents} documents · AI tier:{" "}
-            <span className="text-slate-100">{data.provider.tier1}</span> ·{" "}
+            <span className="text-neutral-900">{data.provider.tier1}</span> ·{" "}
             {data.provider.ollamaActive ? "Ollama deep-verify on" : "Ollama off (not required)"}
           </div>
         </div>
         <button
           onClick={() => void load(true)}
           disabled={loading}
-          className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-slate-200 transition hover:bg-white/10 disabled:opacity-50"
+          className="rounded-lg border border-neutral-200 bg-neutral-100 px-3 py-2 text-xs font-medium text-neutral-700 transition hover:bg-neutral-100 disabled:opacity-50"
         >
           {loading ? "Running…" : "Re-run benchmark"}
         </button>
@@ -139,7 +139,7 @@ export function SystemBenchmark({ compact = false }: { compact?: boolean }) {
       </div>
 
       {!compact && (
-        <div className="mt-4 text-[11px] leading-5 text-slate-500">
+        <div className="mt-4 text-[11px] leading-5 text-neutral-400">
           Efficiency from cross-document entity de-duplication (Aho-Corasick propagation). Speed vs a
           3 B local LLM at ~3 s/doc. Priority simulated over a {Math.round(data.priority.proRatio * 100)}%
           Pro mix on {data.priority.concurrency} workers — Pro jobs are dequeued before Free.
@@ -159,10 +159,10 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-white/8 bg-black/15 p-4">
+    <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
       <div className="mb-3">
-        <div className="text-sm font-semibold text-white">{title}</div>
-        <div className="text-[11px] text-slate-500">{caption}</div>
+        <div className="text-sm font-semibold text-neutral-900">{title}</div>
+        <div className="text-[11px] text-neutral-400">{caption}</div>
       </div>
       <div className="space-y-2.5">{children}</div>
     </div>
@@ -171,14 +171,14 @@ function Panel({
 
 function Hero({ value, label, tone }: { value: string; label: string; tone: "emerald" | "cyan" | "violet" }) {
   const colors = {
-    emerald: "text-emerald-300",
-    cyan: "text-cyan-300",
-    violet: "text-violet-300",
+    emerald: "text-emerald-700",
+    cyan: "text-neutral-700",
+    violet: "text-neutral-700",
   };
   return (
-    <div className="mb-1 border-b border-white/8 pb-3">
+    <div className="mb-1 border-b border-neutral-200 pb-3">
       <div className={`text-3xl font-bold ${colors[tone]}`}>{value}</div>
-      <div className="text-xs text-slate-400">{label}</div>
+      <div className="text-xs text-neutral-500">{label}</div>
     </div>
   );
 }
@@ -196,10 +196,10 @@ function Row({
 }) {
   return (
     <div className="flex items-center justify-between text-xs">
-      <span className="text-slate-400">{label}</span>
+      <span className="text-neutral-500">{label}</span>
       <span
         className={`font-mono font-semibold ${
-          highlight ? "text-emerald-300" : muted ? "text-slate-500" : "text-slate-200"
+          highlight ? "text-emerald-700" : muted ? "text-neutral-400" : "text-neutral-700"
         }`}
       >
         {value}
@@ -210,14 +210,14 @@ function Row({
 
 function Meter({ label, rate, tone }: { label: string; rate: number; tone: "emerald" | "cyan" }) {
   const pct = Math.round(rate * 100);
-  const bar = tone === "emerald" ? "bg-emerald-400/70" : "bg-cyan-400/70";
+  const bar = tone === "emerald" ? "bg-emerald-500" : "bg-neutral-900";
   return (
     <div className="text-xs">
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-slate-400">{label}</span>
-        <span className="font-mono text-slate-300">{pct}%</span>
+        <span className="text-neutral-500">{label}</span>
+        <span className="font-mono text-neutral-600">{pct}%</span>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/8">
+      <div className="h-1.5 overflow-hidden rounded-full bg-neutral-100">
         <div className={`h-full rounded-full ${bar}`} style={{ width: `${pct}%` }} />
       </div>
     </div>
@@ -228,8 +228,8 @@ function WaitBars({ proWait, freeWait }: { proWait: number; freeWait: number }) 
   const max = Math.max(proWait, freeWait, 1);
   return (
     <div className="space-y-2 text-xs">
-      <BarLine label="Pro" value={proWait} pct={(proWait / max) * 100} tone="bg-violet-400/80" valueTone="text-violet-200" />
-      <BarLine label="Free" value={freeWait} pct={(freeWait / max) * 100} tone="bg-slate-500/70" valueTone="text-slate-300" />
+      <BarLine label="Pro" value={proWait} pct={(proWait / max) * 100} tone="bg-neutral-900" valueTone="text-neutral-900" />
+      <BarLine label="Free" value={freeWait} pct={(freeWait / max) * 100} tone="bg-neutral-300" valueTone="text-neutral-500" />
     </div>
   );
 }
@@ -250,10 +250,10 @@ function BarLine({
   return (
     <div>
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-slate-400">{label} avg wait</span>
+        <span className="text-neutral-500">{label} avg wait</span>
         <span className={`font-mono ${valueTone}`}>{fmtMs(value)}</span>
       </div>
-      <div className="h-2 overflow-hidden rounded-full bg-white/8">
+      <div className="h-2 overflow-hidden rounded-full bg-neutral-100">
         <div className={`h-full rounded-full ${tone}`} style={{ width: `${pct}%` }} />
       </div>
     </div>
